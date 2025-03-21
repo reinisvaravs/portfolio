@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  line-height: 1.6;
+  background-color: #070e15;
+  position: relative;
+}
