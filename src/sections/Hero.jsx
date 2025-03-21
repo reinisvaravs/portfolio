@@ -55,7 +55,7 @@ function Hero() {
           <div>
             <p className="date">{animatedDate}</p>
           </div>
-          <div className="timeRight">
+          <div className="dateMonth">
             <p className="month">{animatedMonth}</p>
             <p>available</p>
             <p>for work</p>

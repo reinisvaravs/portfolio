@@ -39,7 +39,7 @@
   padding-bottom: 15px;
 }
 
-.timeRight {
+.dateMonth {
   font-family: "Bodoni Moda", serif;
   p {
     line-height: 19px;
@@ -129,7 +129,7 @@
     font-size: 25px;
     padding-bottom: 7px;
   }
-  .timeRight {
+  .dateMonth {
     line-height: 14px;
   }
   .heroAbout {
@@ -202,7 +202,7 @@
   .date {
     font-size: 50px;
   }
-  .timeRight {
+  .dateMonth {
     font-size: 14px;
   }
   .month {
@@ -219,5 +219,11 @@
 @media screen and (min-width: 1200px) {
   .wanderer {
     background-position: center 45%;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .date {
+    width: 130px;
   }
 }
