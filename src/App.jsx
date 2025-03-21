@@ -12,6 +12,7 @@ function App() {
 
   return (
     <>
+      <div className="bg"></div>
       <Header
         onWorksClick={() =>
           workRef.current?.scrollIntoView({ behavior: "smooth" })
