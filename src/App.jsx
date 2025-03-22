@@ -86,30 +86,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        end: "bottom center",
-        scrub: 1,
-      },
-    });
-
-    tl.to(".bg", { opacity: 0 });
-
-    gsap.to(".bg", {
-      opacity: 0.8,
-      scrollTrigger: {
-        trigger: null,
-        start: "bottom-=300vh bottom",
-        end: "bottom bottom",
-        scrub: 1.5,
-        markers: true,
-      },
-    });
-  }, []);
-
-  useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0 });
     }, 0);
