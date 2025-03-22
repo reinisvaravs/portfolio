@@ -86,31 +86,33 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom center",
+        scrub: 1,
+      },
+    });
+
+    tl.to(".bg", { opacity: 0 });
+
     gsap.to(".bg", {
       opacity: 0.8,
-    });
-
-    gsap.to(".bg", {
-      opacity: 0,
       scrollTrigger: {
-        trigger: ".bg",
-        start: "70% top",
-        end: "bottom 0%",
-        toggleActions: "play none none reverse",
-        scrub: 1,
+        trigger: null,
+        start: "bottom-=300vh bottom",
+        end: "bottom bottom",
+        scrub: 1.5,
+        markers: true,
       },
     });
+  }, []);
 
-    gsap.to(".bg", {
-      opacity: "80%",
-      scrollTrigger: {
-        trigger: ".contactsSection",
-        start: "center 70%",
-        end: "center 30%",
-        toggleActions: "play none none reverse",
-        scrub: 1,
-      },
-    });
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0 });
+    }, 0);
   }, []);
 
   return (
