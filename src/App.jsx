@@ -3,7 +3,7 @@ import Hero from "./sections/Hero";
 import Work from "./sections/Work";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
 
 const VITE_API_BASE_URL = "https://backend-ecom-gbzk.onrender.com";
