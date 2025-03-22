@@ -12,7 +12,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   line-height: 1.6;
-  background-color: black;
+  background-color: #131313;
   position: relative;
 }
 
@@ -25,5 +25,6 @@ body {
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
-  opacity: 0.8;
+  opacity: 80%;
+  transition: opacity 0.5s ease;
 }

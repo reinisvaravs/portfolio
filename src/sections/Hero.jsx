@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
-function Hero() {
+const Hero = () => {
   const [animatedDate, setAnimatedDate] = useState("00");
   const [animatedMonth, setAnimatedMonth] = useState("jan");
+  const heroRef = useRef(null);
 
   useEffect(() => {
     const now = new Date();
@@ -48,8 +50,31 @@ function Hero() {
     animateDate();
   }, []);
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".heroAnim", {
+        y: 100,
+        duration: 0.4,
+        rotation: "5deg",
+        delay: 0.5,
+      });
+      gsap.from(".time", {
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.5,
+      });
+      gsap.from(".heroAbout", {
+        opacity: 0,
+        duration: 0.5,
+        delay: 1,
+      });
+    }, heroRef);
+
+    return () => ctx.revert(); // cleanup
+  }, []);
+
   return (
-    <div className="hero">
+    <div className="hero" ref={heroRef}>
       <div className="heroContent">
         <div className="time">
           <div>
@@ -81,6 +106,6 @@ function Hero() {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

@@ -22,6 +22,7 @@ const Work = forwardRef((props, ref) => {
         bg={appBg}
         link="https://reinisvaravs.com/app"
       />
+
       {/* CSS limit of 6 work items */}
     </div>
   );
