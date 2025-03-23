@@ -24,9 +24,9 @@ const Contact = () => {
           },
         });
       });
-    }, containerRef); // 👈 this scope is important!
+    }, containerRef);
 
-    return () => ctx.revert(); // 👈 cleanup on unmount
+    return () => ctx.revert();
   }, []);
 
   return (

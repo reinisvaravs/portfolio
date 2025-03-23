@@ -97,7 +97,7 @@ const Hero = () => {
         </div>
         <div className="heroAbout">
           <p>
-            I'm a full-stack web developer based in Latvia, specializing in
+            I'm a full-stack web developer in Latvia, specializing in
             PostgreSQL, Express, React, and Node.js — also known as the PERN
             stack. I love designs that stand out. I love music, coffee and ai.
             Always curious. Always building.
