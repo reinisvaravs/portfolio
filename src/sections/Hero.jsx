@@ -9,6 +9,7 @@ const Hero = () => {
   useEffect(() => {
     const now = new Date();
     const date = now.getDate();
+    const monthIndex = now.getMonth();
     const months = [
       "jan",
       "feb",
@@ -24,30 +25,33 @@ const Hero = () => {
       "dec",
     ];
 
-    async function animateMonth() {
-      for (let i = 0; i <= now.getMonth(); i++) {
+    async function animateDateAndMonth() {
+      const dateStr = date < 10 ? `0${date}` : `${date}`;
+      const firstDigit = Number(dateStr[0]); // "2"
+      const secondDigit = Number(dateStr[1]); // "3"
+
+      // Count up to first digit
+      for (let i = 0; i <= firstDigit; i++) {
+        setAnimatedDate(`${i}0`); // e.g. "00", "10", "20"
+        await new Promise((res) => setTimeout(res, 150));
+      }
+
+      // Count up second digit
+      for (let j = 0; j <= secondDigit; j++) {
+        setAnimatedDate(`${firstDigit}${j}`); // e.g. "21", "22", "23"
+        await new Promise((res) => setTimeout(res, 100));
+      }
+
+      // Animate month (letter-by-letter like before)
+      for (let i = 0; i <= monthIndex; i++) {
         setAnimatedMonth(months[i]);
-
-        const delay = Math.max(40, 200 - i * 15); // Slower at beginning of year
-        await new Promise((res) => setTimeout(res, delay));
+        await new Promise((res) => setTimeout(res, 50));
       }
     }
 
-    async function animateDate() {
-      let dateDelay;
-      if (date <= 10) dateDelay = 100;
-      else if (date <= 20) dateDelay = 60;
-      else dateDelay = 40;
-
-      for (let i = 1; i <= date; i++) {
-        const formatted = i < 10 ? `0${i}` : `${i}`;
-        setAnimatedDate(formatted);
-        await new Promise((res) => setTimeout(res, dateDelay));
-      }
-    }
-
-    animateMonth();
-    animateDate();
+    setTimeout(() => {
+      animateDateAndMonth();
+    }, 1000);
   }, []);
 
   useLayoutEffect(() => {
