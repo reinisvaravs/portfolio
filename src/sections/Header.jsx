@@ -29,32 +29,54 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
     });
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      const progressBar = document.querySelector(".progressBar");
+      if (progressBar) {
+        progressBar.style.width = `${scrollPercent}%`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header ref={headerRef}>
-      <div className="name">
-        <p>Reinis Vāravs</p>
-        <p className="headerProf">Full stack web Developer</p>
+    <>
+      <div className="progressBarDiv">
+        <div className="progressBar" />
       </div>
-      <nav>
-        <ul>
-          <li>
-            <button className="throughWhite" onClick={onWorksClick}>
-              works,
-            </button>
-          </li>
-          <li>
-            <button className="throughWhite" onClick={onAboutClick}>
-              about,
-            </button>
-          </li>
-          <li>
-            <button className="throughWhite" onClick={onContactClick}>
-              contact
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <header ref={headerRef}>
+        <div className="name">
+          <p>Reinis Vāravs</p>
+          <p className="headerProf">Full stack web Developer</p>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <button className="throughWhite" onClick={onWorksClick}>
+                works,
+              </button>
+            </li>
+            <li>
+              <button className="throughWhite" onClick={onAboutClick}>
+                about,
+              </button>
+            </li>
+            <li>
+              <button className="throughWhite" onClick={onContactClick}>
+                contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 }
 

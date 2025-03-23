@@ -13,6 +13,24 @@ header {
   justify-content: space-between;
 }
 
+.progressBarDiv {
+  width: 95%;
+  margin: auto;
+  height: 1px;
+  position: fixed;
+  top: 69px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.progressBar {
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transition: width 0.2s ease-out;
+}
+
 header::after {
   content: "";
   position: absolute;
