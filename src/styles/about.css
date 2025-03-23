@@ -1,9 +1,9 @@
 .aboutSection {
   width: 100%;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
 .about {
@@ -29,7 +29,6 @@
   p {
     font-family: Roboto, sans-serif;
     font-size: 24px;
-    /* text-indent: 40%; */
     color: white;
     margin-top: 30px;
     text-transform: uppercase;
@@ -69,5 +68,40 @@
   }
   .portretDiv {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .aboutSection {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portretBorder {
+    transform: translate(10%, 10%);
+  }
+  .portretDiv {
+    transform: translateX(-10px);
+    scale: 0.7;
+  }
+  .about {
+    h1 {
+      font-size: 70px;
+    }
+    h2 {
+      margin-left: 124px;
+      margin-top: -27px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  .portretDiv {
+    margin-top: 20px;
+  }
+  .aboutSection {
+    margin-top: -100px;
   }
 }

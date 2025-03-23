@@ -167,6 +167,9 @@
     font-size: 80px;
     line-height: 130px;
   }
+  .hero {
+    margin-bottom: 100px;
+  }
 }
 
 @media screen and (max-width: 500px) {

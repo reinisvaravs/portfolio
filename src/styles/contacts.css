@@ -1,10 +1,10 @@
 .contactsContainer {
   width: 90%;
   max-width: 1100px;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .contactsHeading {
