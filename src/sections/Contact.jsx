@@ -40,7 +40,8 @@ const Contact = forwardRef((props, ref) => {
       <div className="contactsContainer">
         <h4 className="contactsHeading">contact.</h4>
         <p className="subHeading">
-          Get in touch with me via social media or send me an email.
+          Feel free to reach out! I'm easiest to reach by phone, but you can
+          also connect with me on Instagram or send me an email.
         </p>
         <div className="emailDiv">
           <ContactDetail

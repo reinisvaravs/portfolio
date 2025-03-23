@@ -1,4 +1,4 @@
-function Footer({ onWorksClick, onContactClick }) {
+function Footer({ onWorksClick, onAboutClick, onContactClick }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -13,6 +13,11 @@ function Footer({ onWorksClick, onContactClick }) {
           <li>
             <button className="throughWhite" onClick={onWorksClick}>
               works,
+            </button>
+          </li>
+          <li>
+            <button className="throughWhite" onClick={onAboutClick}>
+              about,
             </button>
           </li>
           <li>

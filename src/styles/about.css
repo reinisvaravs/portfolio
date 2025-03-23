@@ -1,0 +1,73 @@
+.aboutSection {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about {
+  width: 80%;
+  margin: 0 5% 0 15%;
+  margin-top: 200px;
+  position: relative;
+
+  h1 {
+    font-family: "Dorsa", sans-serif;
+    font-size: 90px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f5eee6;
+  }
+  h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 14px;
+    margin-left: 177px;
+    margin-top: -35px;
+    color: #f3dbc7;
+  }
+  p {
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    /* text-indent: 40%; */
+    color: white;
+    margin-top: 30px;
+    text-transform: uppercase;
+    line-height: 32px;
+
+    overflow: "hidden";
+  }
+}
+
+.portretDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 70px;
+}
+
+.portretBorder {
+  width: 351px;
+  height: 351px;
+  border: 1px solid white;
+  position: absolute;
+  transform: translate(15%, 15%);
+  z-index: -1;
+}
+
+.portret {
+  width: 350px;
+  height: 350px;
+}
+
+@media screen and (min-width: 1200px) {
+  .aboutSection {
+    flex-direction: row;
+  }
+  .portretDiv {
+    margin-top: 30px;
+  }
+}

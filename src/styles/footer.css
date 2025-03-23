@@ -33,10 +33,11 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  padding-left: 20px;
 }
 
 .footerButtons ul li {
-  padding: 0 5px;
+  padding-left: 5px;
 }
 
 .footerButtons ul li button {

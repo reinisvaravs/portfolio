@@ -1,6 +1,7 @@
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Work from "./sections/Work";
+import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import { useEffect, useRef } from "react";
@@ -17,6 +18,7 @@ const VITE_API_BASE_URL_PADLET = "https://friends-2v7s.onrender.com";
 function App() {
   const workRef = useRef(null);
   const contactRef = useRef(null);
+  const aboutRef = useRef(null);
 
   useEffect(() => {
     const pingBackend = async (retries = 3, delay = 5000) => {
@@ -98,16 +100,23 @@ function App() {
         onWorksClick={() =>
           workRef.current?.scrollIntoView({ behavior: "smooth" })
         }
+        onAboutClick={() =>
+          aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
         onContactClick={() =>
           contactRef.current?.scrollIntoView({ behavior: "smooth" })
         }
       />
       <Hero />
       <Work ref={workRef} />
+      <About ref={aboutRef} />
       <Contact ref={contactRef} />
       <Footer
         onWorksClick={() =>
           workRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+        onAboutClick={() =>
+          aboutRef.current?.scrollIntoView({ behavior: "smooth" })
         }
         onContactClick={() =>
           contactRef.current?.scrollIntoView({ behavior: "smooth" })

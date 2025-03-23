@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
-function Header({ onWorksClick, onContactClick }) {
+function Header({ onWorksClick, onAboutClick, onContactClick }) {
   const headerRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -40,6 +40,11 @@ function Header({ onWorksClick, onContactClick }) {
           <li>
             <button className="throughWhite" onClick={onWorksClick}>
               works,
+            </button>
+          </li>
+          <li>
+            <button className="throughWhite" onClick={onAboutClick}>
+              about,
             </button>
           </li>
           <li>
