@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function WorkItem({ name, bg, link }) {
   const itemRef = useRef(null);
-  const textRef = useRef(null);
+  const nameRef = useRef(null);
 
   const handleOpen = () => {
     window.open(`${link}`, "_blank");
@@ -62,7 +62,9 @@ function WorkItem({ name, bg, link }) {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const img = itemRef.current.querySelector(".workImg");
-      gsap.from(img, {
+      const ontopDiv = itemRef.current.querySelector(".ontopDiv");
+
+      gsap.from([img, ontopDiv], {
         duration: 0.5,
         y: 200,
         scrollTrigger: {
@@ -73,25 +75,24 @@ function WorkItem({ name, bg, link }) {
       });
     }, itemRef);
 
-    return () => ctx.revert(); // Cleanup on unmount
+    return () => ctx.revert(); 
   }, []);
 
-  useEffect(() => {
-    gsap.from(".nameAnim", {
-      // opacity: 0,
-      rotate: "5deg",
-      y: 100,
-    });
-    gsap.to(".nameAnim", {
-      opacity: 1,
-      rotate: "0deg",
-      y: 0,
-      scrollTrigger: {
-        trigger: ".nameAnim",
-        start: "top 100%",
-        toggleActions: "play none none reverse",
-      },
-    });
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".nameAnim", {
+        opacity: 0,
+        rotate: "5deg",
+        y: 100,
+        scrollTrigger: {
+          trigger: ".nameAnim",
+          start: "top 100%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, nameRef);
+
+    return () => ctx.revert(); 
   }, []);
 
   return (
@@ -105,7 +106,7 @@ function WorkItem({ name, bg, link }) {
           <h1 onClick={() => handleOpen()}>{name}</h1>
         </div>
       </div>
-      <div className="workTextDiv">
+      <div className="workTextDiv" ref={nameRef}>
         <h1 className="nameAnim" onClick={() => handleOpen()}>
           {name}
         </h1>

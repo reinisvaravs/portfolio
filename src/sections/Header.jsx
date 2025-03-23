@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 function Header({ onWorksClick, onContactClick }) {
@@ -14,6 +14,19 @@ function Header({ onWorksClick, onContactClick }) {
     }, headerRef);
 
     return () => ctx.revert(); // Cleanup
+  }, []);
+
+  useEffect(() => {
+    gsap.to("header", {
+      backdropFilter: "blur(5px)",
+      scrollTrigger: {
+        trigger: "body",
+        start: "5% top",
+        end: "30% top",
+        scrub: 2,
+        toggleActions: "play none none reverse",
+      },
+    });
   }, []);
 
   return (
