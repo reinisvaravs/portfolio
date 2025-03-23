@@ -2,11 +2,17 @@ import { useEffect, useRef } from "react";
 import ContactDetail from "../components/ContactDetail";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { forwardRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Contact = () => {
-  const containerRef = useRef(null);
+const Contact = forwardRef((props, ref) => {
+  const contactRef = useRef(null);
+
+  const combinedRef = (el) => {
+    contactRef.current = el;
+    ref.current = el;
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,17 +30,17 @@ const Contact = () => {
           },
         });
       });
-    }, containerRef);
+    }, contactRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section className="contactsSection" ref={containerRef}>
+    <section className="contactsSection" ref={combinedRef}>
       <div className="contactsContainer">
         <h4 className="contactsHeading">contact.</h4>
         <p className="subHeading">
-          Get in touch with me via social media or text me.
+          Get in touch with me via social media or send me an email.
         </p>
         <div className="emailDiv">
           <ContactDetail
@@ -47,10 +53,15 @@ const Contact = () => {
             detailContent="@reinisrvaravs"
             detailType="instagram"
           />
+          <ContactDetail
+            href="mailto:reinisroberts.varavs2@gmail.com"
+            detailContent="reinisroberts.varavs2@gmail.com"
+            detailType="email"
+          />
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default Contact;

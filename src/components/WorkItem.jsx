@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function WorkItem({ name, bg, link }) {
   const itemRef = useRef(null);
+  const textRef = useRef(null);
 
   const handleOpen = () => {
     window.open(`${link}`, "_blank");
@@ -66,13 +67,31 @@ function WorkItem({ name, bg, link }) {
         y: 200,
         scrollTrigger: {
           trigger: itemRef.current,
-          start: "-70% bottom",
+          start: "top 90%",
           toggleActions: "play none none reverse",
         },
       });
     }, itemRef);
 
     return () => ctx.revert(); // Cleanup on unmount
+  }, []);
+
+  useEffect(() => {
+    gsap.from(".nameAnim", {
+      // opacity: 0,
+      rotate: "5deg",
+      y: 100,
+    });
+    gsap.to(".nameAnim", {
+      opacity: 1,
+      rotate: "0deg",
+      y: 0,
+      scrollTrigger: {
+        trigger: ".nameAnim",
+        start: "top 100%",
+        toggleActions: "play none none reverse",
+      },
+    });
   }, []);
 
   return (
@@ -87,7 +106,9 @@ function WorkItem({ name, bg, link }) {
         </div>
       </div>
       <div className="workTextDiv">
-        <h1 onClick={() => handleOpen()}>{name}</h1>
+        <h1 className="nameAnim" onClick={() => handleOpen()}>
+          {name}
+        </h1>
       </div>
     </div>
   );

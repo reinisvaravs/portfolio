@@ -20,6 +20,25 @@ const Work = forwardRef((props, ref) => {
     });
   }, []);
 
+  useEffect(() => {
+    gsap.from(".selectedCasesDiv", {
+      opacity: 0,
+      rotate: "5deg",
+      y: 100,
+    });
+    gsap.to(".selectedCasesDiv", {
+      opacity: 1,
+      rotate: "0deg",
+      y: 0,
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: ".selectedCasesDiv",
+        start: "top 100%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
+
   return (
     <div className="work" ref={ref}>
       <div className="selectedCasesDiv">
@@ -33,10 +52,11 @@ const Work = forwardRef((props, ref) => {
         link="https://reinisvaravs.com/store"
       />
       <WorkItem
-        name="Todo App"
+        name="To-do App"
         bg={appBg}
         link="https://reinisvaravs.com/app"
       />
+      
 
       {/* CSS limit of 6 work items */}
     </div>
