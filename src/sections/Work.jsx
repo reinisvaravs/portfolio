@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import WorkItem from "../components/WorkItem";
 import storeBg from "../assets/store.jpg";
 import appBg from "../assets/app.jpg";
+import botBg from "../assets/bot.webp";
 import { CgWebsite } from "react-icons/cg";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -47,6 +48,11 @@ const Work = forwardRef((props, ref) => {
       </div>
 
       <WorkItem
+        name="Discord OpenAI Bot"
+        bg={botBg}
+        link="https://discord.gg/FSNvh4XtVS"
+      />
+      <WorkItem
         name="E-commerce Store"
         bg={storeBg}
         link="https://reinisvaravs.com/store"
@@ -56,7 +62,6 @@ const Work = forwardRef((props, ref) => {
         bg={appBg}
         link="https://reinisvaravs.com/app"
       />
-      
 
       {/* CSS limit of 6 work items */}
     </div>
