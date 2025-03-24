@@ -1,11 +1,12 @@
 import { forwardRef } from "react";
 import WorkItem from "../components/WorkItem";
-import storeBg from "../assets/store.jpg";
-import appBg from "../assets/app.jpg";
-import botBg from "../assets/walle.webp";
 import { CgWebsite } from "react-icons/cg";
 import { useEffect } from "react";
 import gsap from "gsap";
+
+import storeBg from "../assets/ecom.jpg";
+import appBg from "../assets/app.jpg";
+import botBg from "../assets/walle.webp";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
