@@ -137,8 +137,8 @@
 }
 
 .workImg {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
@@ -179,6 +179,9 @@
   .selectedCasesDiv {
     width: 88%;
     margin-left: 60px;
+  }
+  .workImg {
+    background-position: center 15% !important;
   }
 }
 
