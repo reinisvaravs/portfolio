@@ -51,7 +51,7 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="Discord OpenAI Bot"
         bg={botBg}
-        link="https://discord.gg/FSNvh4XtVS"
+        link=""
       />
       <WorkItem
         name="E-commerce Store"
