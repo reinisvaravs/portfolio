@@ -1,11 +1,13 @@
 import { FaGithub } from "react-icons/fa";
-
 import { closePopup } from "../utils/openPopup";
+import { FiArrowLeftCircle } from "react-icons/fi";
 
 export default function PopupContent({ name, description, link, tech }) {
   return (
     <div className="popupContent">
-      <button onClick={closePopup}>Back</button>
+      <div className="backDiv">
+        <FiArrowLeftCircle onClick={closePopup} className="backBtn" />
+      </div>
       <h1 className="popupHeading">{name}</h1>
 
       <p className="popupParagraph">{description}</p>

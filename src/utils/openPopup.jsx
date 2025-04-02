@@ -30,7 +30,7 @@ export function openPopup({ img, name, link, description, tech }) {
     yPercent: -50,
     width: 450,
     height: 250,
-    ease: "power1",
+    ease: "power2.inOut",
     duration: 1,
   });
 
@@ -55,7 +55,12 @@ export function openPopup({ img, name, link, description, tech }) {
   document.body.appendChild(popupContainer);
 
   createRoot(popupContainer).render(
-    <PopupContent name={name} link={link} description={description} tech={tech} />
+    <PopupContent
+      name={name}
+      link={link}
+      description={description}
+      tech={tech}
+    />
   );
 
   gsap.set(popupContainer, {
@@ -76,6 +81,12 @@ export function openPopup({ img, name, link, description, tech }) {
   });
 
   setTimeout(() => {
+    gsap.fromTo(
+      popupContainer.querySelector(".backBtn"),
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7, delay: 2.5 }
+    );
+
     gsap.fromTo(
       popupContainer.querySelector(".popupHeading"),
       { opacity: 0, rotate: "5deg", y: 100 },
@@ -107,18 +118,25 @@ export function openPopup({ img, name, link, description, tech }) {
   const appContent = document.querySelector(".appContent");
   if (appContent) appContent.classList.add("hidden");
 
-  gsap.to(".bg", {
-    opacity: 0.5,
-    duration: 0.8,
-  });
-
-  document.body.style.overflow = "hidden";
+  // .bg fades on open
+  const bg = document.querySelector(".bg");
+  const currentOpacity = parseFloat(getComputedStyle(bg).opacity);
 
   ScrollTrigger.getAll().forEach((trigger) => {
     if (trigger.vars.trigger === ".work") {
       trigger.kill();
     }
   });
+
+  gsap.set(".bg", { opacity: currentOpacity });
+
+  gsap.to(".bg", {
+    opacity: 0.5,
+    duration: 1.5,
+    ease: "power2.out",
+  });
+
+  document.body.style.overflow = "hidden";
 }
 
 export function closePopup() {
