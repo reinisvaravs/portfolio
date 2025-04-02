@@ -31,3 +31,9 @@ body {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
+
+.appContent.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}

@@ -150,6 +150,84 @@
   opacity: 100%;
 }
 
+.fixedPopup {
+  min-width: 400px;
+  min-height: 250px;
+  pointer-events: none;
+}
+
+.fixedPopupLater {
+  border: 2px solid #f5eee6;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.popupWrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.popupContent {
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  width: 50%;
+  height: 400px;
+  text-align: center;
+}
+
+/* arrow color #ebebe9 */
+
+.popupHeading {
+  font-size: 80px;
+  font-family: "Dorsa", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ece8e2;
+  letter-spacing: 2px;
+}
+
+.popupParagraph {
+  font-size: 16px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #f8fafc;
+  line-height: 25px;
+}
+
+.popupLink {
+  width: 100%;
+  height: 30px;
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.linkIcon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.popupContent button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 400px) {
   .ontopDiv h1 {
     font-size: 65px;
@@ -182,6 +260,13 @@
   }
   .workImg {
     background-position: center 15% !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .popupContent {
+    width: 30%;
+    text-align: left;
   }
 }
 

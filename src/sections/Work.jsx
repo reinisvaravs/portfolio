@@ -52,16 +52,19 @@ const Work = forwardRef((props, ref) => {
         name="Discord OpenAI Bot"
         bg={botBg}
         link="https://github.com/reinisvaravs/discord-openai-bot/blob/main/README.md"
+        description="WALL-E is a smart Discord bot powered by Node.js and OpenAI. It implements a RAG (Retrieval-Augmented Generation) pipeline that compares embedded message vectors with a chunked vector database, retrieving only relevant context to minimize OpenAI token consumption."
       />
       <WorkItem
         name="E-commerce Store"
         bg={storeBg}
         link="https://reinisvaravs.com/store"
+        description="This is a e-commerce store"
       />
       <WorkItem
         name="To-do App"
         bg={appBg}
         link="https://reinisvaravs.com/app"
+        description="This is a to-do app"
       />
 
       {/* CSS limit of 6 work items */}
