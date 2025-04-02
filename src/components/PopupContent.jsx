@@ -20,9 +20,15 @@ export default function PopupContent({ name, description, link, tech }) {
         ))}
       </div>
       <div className="popupLink">
-        <a href={link} target="_blank" rel="noreferrer">
-          <FaGithub className="linkIcon" />
-        </a>
+        {name === "Discord OpenAI Bot" ? (
+          <a href={link} target="_blank" rel="noreferrer">
+            <FaGithub className="linkIcon" />
+          </a>
+        ) : (
+          <a href={link} target="_blank" rel="noreferrer">
+            {link.replace(/^https?:\/\//, "")}
+          </a>
+        )}
       </div>
     </div>
   );
