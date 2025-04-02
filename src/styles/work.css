@@ -151,8 +151,8 @@
 }
 
 .fixedPopup {
-  min-width: 400px;
-  min-height: 250px;
+  min-width: 410px;
+  min-height: 240px;
   pointer-events: none;
 }
 
@@ -172,11 +172,10 @@
 
 .popupContent {
   color: white;
-  /* background-color: rgba(0, 0, 0, 0.8); */
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 150px;
   position: fixed;
-  width: 50%;
+  width: 45%;
   height: 400px;
   text-align: center;
 }

@@ -21,6 +21,8 @@ export function openPopup({ img, name, link, description, tech }) {
     top: img.getBoundingClientRect().top,
     left: img.getBoundingClientRect().left,
     zIndex: 9999,
+    backgroundSize: "163%",
+    backgroundPosition: "center",
   });
 
   gsap.to(clone, {
@@ -32,6 +34,14 @@ export function openPopup({ img, name, link, description, tech }) {
     height: 250,
     ease: "power2.inOut",
     duration: 1,
+  });
+
+  gsap.to(clone, {
+    backgroundSize: "100%",
+    scale: 1.3,
+    delay: 0.1,
+    duration: 0.9,
+    ease: "power1.inOut",
   });
 
   gsap.to("header", {
