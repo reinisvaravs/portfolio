@@ -10,7 +10,10 @@ const About = forwardRef((props, ref) => {
   const headingRef = useRef(null);
   const nameRef = useRef(null);
 
-  const words = `                     I am a Full Stack Developer and I am currently a student in Latvia. I enojoy creating software solutions and constantly looking for new challenges. If you have a project or idea you'd like to collaborate on, feel free to reach out!`.split(" ");
+  const words =
+    `                     I'm a full-stack developer and currently a student in Latvia. I enjoy creating software solutions and I'm always looking for new challenges. I work primarily with JavaScript and PostgreSQL, often building with the PERN stack. If you have a project or idea you'd like to collaborate on, feel free to reach out!`.split(
+      " "
+    );
 
   useEffect(() => {
     const el = headingRef.current;
@@ -62,7 +65,7 @@ const About = forwardRef((props, ref) => {
       });
     }, nameRef);
 
-    return () => ctx.revert(); 
+    return () => ctx.revert();
   }, []);
 
   useEffect(() => {
@@ -73,8 +76,8 @@ const About = forwardRef((props, ref) => {
         start: "top 80%",
         toggleActions: "play none none reverse",
       },
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className="aboutSection" ref={ref}>
