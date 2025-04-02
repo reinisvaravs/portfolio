@@ -79,7 +79,7 @@ const Work = forwardRef((props, ref) => {
         name="To-do App"
         bg={appBg}
         link="https://reinisvaravs.com/app"
-        description="A full-stack To-Do app focused on backend functionality, allowing users to read, create, edit, and delete tasks. The frontend is intentionally simple using React, serving as a demonstration layer."
+        description="A full-stack To-Do app focused on backend functionality. It allows users to perform basic CRUD operations — create, read, update, and delete tasks. The frontend is kept intentionally minimal using React, serving as a demonstration layer."
         tech={toDoTech}
       />
 
