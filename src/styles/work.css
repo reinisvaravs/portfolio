@@ -173,7 +173,6 @@
 .popupContent {
   color: white;
   padding: 20px;
-  border-radius: 150px;
   position: fixed;
   width: 45%;
   height: 400px;
@@ -278,6 +277,41 @@
   .popupContent {
     width: 30%;
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popupContent {
+    width: 90%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .popupHeading {
+    font-size: 36px;
+  }
+
+  .popupParagraph {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .popupLink {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .linkIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .backDiv {
+    transform: translateY(-20px);
   }
 }
 

@@ -50,6 +50,7 @@
   font-size: 35px;
   font-family: "Bodoni Moda", serif;
   color: #edd5c2;
+  margin-left: 10px;
 }
 .web {
   font-size: 140px;
@@ -58,6 +59,7 @@
   font-family: "Dorsa", sans-serif;
   letter-spacing: 4px;
   line-height: 220px;
+  margin-left: 10px;
 
   p {
     font-size: 35px;
@@ -70,6 +72,7 @@
   font-family: "Dorsa", sans-serif;
   letter-spacing: 4px;
   line-height: 220px;
+  margin-left: 10px;
 }
 .heroAbout {
   font-family: "Bodoni Moda", serif;
