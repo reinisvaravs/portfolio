@@ -34,6 +34,18 @@ export function openPopup({ img, name, link, description }) {
     duration: 1,
   });
 
+  gsap.to("header", {
+    y: "-100%",
+    duration: 0.6,
+    ease: "power2.inOut",
+  });
+
+  gsap.to(".progressBarDiv", {
+    y: "-70px",
+    duration: 0.6,
+    ease: "power2.inOut",
+  });
+
   setTimeout(() => {
     clone.classList.add("fixedPopupLater");
   }, 1000);
@@ -112,6 +124,9 @@ export function openPopup({ img, name, link, description }) {
 export function closePopup() {
   if (!popupContainer || !clone) return;
 
+  gsap.set("header", { y: "0%" });
+  gsap.set(".progressBarDiv", { y: "0px" });
+
   // Animate out
   gsap.to([popupContainer, clone], {
     opacity: 0,
@@ -135,14 +150,44 @@ export function closePopup() {
       // Show app content again
       const appContent = document.querySelector(".appContent");
       if (appContent) appContent.classList.remove("hidden");
+
+      gsap.fromTo(
+        "header",
+        { y: "-100%" },
+        {
+          y: "0%",
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.2,
+        }
+      );
+
+      gsap.fromTo(
+        ".progressBarDiv",
+        { y: "-70px" },
+        {
+          y: "0%",
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.2,
+        }
+      );
+
+      gsap.fromTo(
+        "header",
+        { backdropFilter: "blur(0px)" },
+        {
+          backdropFilter: "blur(5px)",
+          duration: 2,
+          ease: "power2.out",
+          delay: 0.5,
+        }
+      );
     },
   });
 
   // Restore background
   gsap.to(".bg", {
-    opacity: 1,
-    duration: 0.8,
-    ease: "power2.out",
     onComplete: () => {
       // Re-enable ScrollTrigger once opacity is restored
       ScrollTrigger.create({

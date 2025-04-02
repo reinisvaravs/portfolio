@@ -32,6 +32,10 @@ body {
   backface-visibility: hidden;
 }
 
+.appContent {
+  transition: opacity 1s ease;
+}
+
 .appContent.hidden {
   opacity: 0;
   pointer-events: none;
