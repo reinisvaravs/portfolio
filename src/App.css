@@ -8,6 +8,10 @@ img {
   user-select: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;

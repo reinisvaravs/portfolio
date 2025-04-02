@@ -25,11 +25,18 @@ export function openPopup({ img, name, link, description, tech }) {
     backgroundPosition: "center",
   });
 
-  const isMobile = window.innerWidth <= 768;
+  const width = window.innerWidth;
 
-  const cloneTarget = isMobile
-    ? { left: "50%", top: "20%", scale: 0.8 }
-    : { left: "70%", top: "50%", scale: 1.3 };
+  const cloneTarget =
+    width <= 900
+      ? { left: "50%", top: "20%", scale: 0.6 } // x-small
+      : width <= 900
+      ? { left: "50%", top: "20%", scale: 0.8 } // small
+      : width <= 1000
+      ? { left: "75%", top: "50%", scale: 0.9 } // smaller medium
+      : width <= 1400
+      ? { left: "70%", top: "50%", scale: 1 } // medium
+      : { left: "70%", top: "50%", scale: 1.3 }; // large
 
   gsap.to(clone, {
     top: cloneTarget.top,
@@ -79,18 +86,17 @@ export function openPopup({ img, name, link, description, tech }) {
     />
   );
 
-  const popupTarget = isMobile
-    ? {
-        // mobile
-        left: "50%",
-        top: "70%",
-        xPercent: -50,
-      }
-    : {
-        // desktop
-        left: "50px",
-        top: "50%",
-      };
+  const popupTarget =
+    width <= 900
+      ? {
+          left: "50%",
+          top: "70%",
+          xPercent: -50,
+        } // medium and small
+      : {
+          left: "50px",
+          top: "50%",
+        }; // desktop
 
   gsap.set(popupContainer, {
     position: "fixed",
