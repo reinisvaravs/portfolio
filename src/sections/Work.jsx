@@ -3,10 +3,18 @@ import WorkItem from "../components/WorkItem";
 import { CgWebsite } from "react-icons/cg";
 import { useEffect } from "react";
 import gsap from "gsap";
-
+//img
 import storeBg from "../assets/ecom.jpg";
 import appBg from "../assets/app.jpg";
 import botBg from "../assets/walle.webp";
+//tech
+import postgressql from "../assets/postgressql.svg";
+import node from "../assets/node.svg";
+import ex from "../assets/express.svg";
+import discord from "../assets/discord.svg";
+import firebase from "../assets/firebase.svg";
+import react from "../assets/react.svg";
+import stripe from "../assets/stripe.svg";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -41,6 +49,10 @@ const Work = forwardRef((props, ref) => {
     });
   }, []);
 
+  const botTech = [postgressql, node, ex, discord];
+  const ecomTech = [postgressql, ex, react, node, stripe];
+  const toDoTech = [firebase, ex, node, react];
+
   return (
     <div className="work" ref={ref}>
       <div className="selectedCasesDiv">
@@ -53,18 +65,21 @@ const Work = forwardRef((props, ref) => {
         bg={botBg}
         link="https://github.com/reinisvaravs/discord-openai-bot/blob/main/README.md"
         description="WALL-E is a smart Discord bot powered by Node.js and OpenAI. It implements a RAG (Retrieval-Augmented Generation) pipeline that compares embedded message vectors with a chunked vector database, retrieving only relevant context to minimize OpenAI token consumption."
+        tech={botTech}
       />
       <WorkItem
         name="E-commerce Store"
         bg={storeBg}
         link="https://reinisvaravs.com/store"
         description="A full-stack e-commerce platform focused on backend architecture, featuring secure user registration, Stripe-powered subscription handling, and dynamic access control for premium course content. The frontend is kept clean and minimal using React for demonstration purposes."
+        tech={ecomTech}
       />
       <WorkItem
         name="To-do App"
         bg={appBg}
         link="https://reinisvaravs.com/app"
         description="A full-stack To-Do app focused on backend functionality, allowing users to read, create, edit, and delete tasks. The frontend is intentionally simple using React, serving as a demonstration layer."
+        tech={toDoTech}
       />
 
       {/* CSS limit of 6 work items */}

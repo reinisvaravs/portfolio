@@ -9,7 +9,7 @@ let popupContainer = null;
 let clone = null;
 let originalImg = null;
 
-export function openPopup({ img, name, link, description }) {
+export function openPopup({ img, name, link, description, tech }) {
   originalImg = img;
   clone = img.cloneNode(true);
   clone.classList.add("fixedPopup");
@@ -55,7 +55,7 @@ export function openPopup({ img, name, link, description }) {
   document.body.appendChild(popupContainer);
 
   createRoot(popupContainer).render(
-    <PopupContent name={name} link={link} description={description} />
+    <PopupContent name={name} link={link} description={description} tech={tech} />
   );
 
   gsap.set(popupContainer, {
