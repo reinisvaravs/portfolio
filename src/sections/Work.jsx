@@ -15,6 +15,7 @@ import discord from "../assets/discord.svg";
 import firebase from "../assets/firebase.svg";
 import react from "../assets/react.svg";
 import stripe from "../assets/stripe.svg";
+import openai from "../assets/openai.svg";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -49,7 +50,7 @@ const Work = forwardRef((props, ref) => {
     });
   }, []);
 
-  const botTech = [postgressql, node, ex, discord];
+  const botTech = [postgressql, node, ex, openai, discord];
   const ecomTech = [postgressql, ex, react, node, stripe];
   const toDoTech = [firebase, ex, node, react];
 
