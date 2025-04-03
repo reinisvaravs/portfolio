@@ -29,6 +29,7 @@
 
 .detail {
   color: white;
+
   a {
     text-decoration: none;
     color: white;
@@ -51,6 +52,29 @@
 
 .detail a:hover::after {
   width: 100%;
+}
+
+.IconDetailDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialMedia {
+  margin-top: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.icons {
+  transition: scale 0.3s ease;
+}
+
+.icons:hover {
+  scale: 1.2;
+  transition: scale 0.3s ease;
 }
 
 @media screen and (max-width: 600px) {

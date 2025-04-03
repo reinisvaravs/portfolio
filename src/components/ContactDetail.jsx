@@ -1,4 +1,4 @@
-function ContactDetail({ href, detailContent, detailType }) {
+export function ContactDetail({ href, detailContent, detailType }) {
   return (
     <p className="detail">
       {detailType}:{" "}
@@ -9,4 +9,10 @@ function ContactDetail({ href, detailContent, detailType }) {
   );
 }
 
-export default ContactDetail;
+export function IconDetail({ href, detailType }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="icons">
+      {detailType}
+    </a>
+  );
+}

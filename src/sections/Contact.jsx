@@ -1,8 +1,11 @@
 import { useEffect, useRef } from "react";
-import ContactDetail from "../components/ContactDetail";
+import { ContactDetail, IconDetail } from "../components/ContactDetail";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { forwardRef } from "react";
+import instagram from "../assets/instagram.png";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,15 +53,24 @@ const Contact = forwardRef((props, ref) => {
             detailType="phone"
           />
           <ContactDetail
-            href="https://www.instagram.com/reinisrvaravs/"
-            detailContent="@reinisrvaravs"
-            detailType="instagram"
-          />
-          <ContactDetail
             href="mailto:reinisroberts.varavs2@gmail.com"
             detailContent="reinisroberts.varavs2@gmail.com"
             detailType="email"
           />
+          <div className="IconDetailDiv">
+            <IconDetail
+              href="https://www.instagram.com/reinisrvaravs/"
+              detailType={<img className="socialMedia" src={instagram} />}
+            />
+            <IconDetail
+              href="https://github.com/reinisvaravs/"
+              detailType={<img className="socialMedia" src={github} />}
+            />
+            <IconDetail
+              href="https://www.linkedin.com/in/reinis-varavs/"
+              detailType={<img className="socialMedia" src={linkedin} />}
+            />
+          </div>
         </div>
       </div>
     </section>
