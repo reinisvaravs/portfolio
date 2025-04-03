@@ -16,7 +16,7 @@ footer {
 .author {
   color: rgb(208, 208, 208);
   text-align: center;
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-size: clamp(10px, 1.5vw, 16px);
 }
 
 .footerButtons {
@@ -46,7 +46,7 @@ footer {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: clamp(10px, 1.5vw, 16px);
   font-family: "Bodoni Moda", serif;
   font-weight: 100;
   letter-spacing: 1px;
@@ -72,13 +72,4 @@ footer {
 .throughWhite:hover::after {
   width: 100%;
   transition: all 0.5s ease;
-}
-
-@media screen and (max-width: 400px) {
-  .footerButtons {
-    width: 40%;
-  }
-  .authorDiv {
-    width: 50%;
-  }
 }
