@@ -75,13 +75,13 @@ const Work = forwardRef((props, ref) => {
         description="A full-stack e-commerce platform focused on backend architecture, featuring secure user registration, Stripe-powered subscription handling, and dynamic access control for premium course content. The frontend is kept clean and minimal using React for demonstration purposes."
         tech={ecomTech}
       />
-      <WorkItem
+      {/* <WorkItem
         name="To-do App"
         bg={appBg}
         link="https://reinisvaravs.com/app"
         description="A full-stack To-Do app focused on backend functionality. It allows users to perform basic CRUD operations — create, read, update, and delete tasks. The frontend is kept intentionally minimal using React, serving as a demonstration layer."
         tech={toDoTech}
-      />
+      /> */}
 
       {/* CSS limit of 6 work items */}
     </div>
