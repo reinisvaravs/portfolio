@@ -8,6 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 let popupContainer = null;
 let clone = null;
 let originalImg = null;
+let resizeTimeout;
+
+// Close popup if user resizes the window
+function handleResize() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    closePopup();
+  }, 150); // Wait until user stops resizing
+}
 
 export function openPopup({ img, name, link, description, tech }) {
   originalImg = img;
@@ -171,6 +180,8 @@ export function openPopup({ img, name, link, description, tech }) {
   });
 
   document.body.style.overflow = "hidden";
+
+  window.addEventListener("resize", handleResize);
 }
 
 export function closePopup() {
@@ -235,6 +246,8 @@ export function closePopup() {
           delay: 0.5,
         }
       );
+
+      window.removeEventListener("resize", handleResize);
     },
   });
 
