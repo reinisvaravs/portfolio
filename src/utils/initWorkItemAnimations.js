@@ -8,13 +8,13 @@ export function setupHoverAnimations(itemRef) {
   const img = item.querySelector(".workImg");
 
   gsap.set(img, {
-    backgroundSize: "120%",
+    backgroundSize: "100%",
     backgroundPosition: "center",
   });
 
   const handleMouseOver = () => {
     gsap.to(img, {
-      backgroundSize: "145%",
+      backgroundSize: "130%",
       backgroundPosition: "center",
       duration: 1,
       ease: "power2.out",
@@ -28,7 +28,7 @@ export function setupHoverAnimations(itemRef) {
 
   const handleMouseOut = () => {
     gsap.to(img, {
-      backgroundSize: "120%",
+      backgroundSize: "100%",
       backgroundPosition: "center",
       duration: 1,
       ease: "power2.out",
