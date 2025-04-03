@@ -72,7 +72,7 @@ export function setupTextEntranceAnimations(nameRef) {
   const ctx = gsap.context(() => {
     gsap.from(".nameAnim", {
       opacity: 0,
-      rotate: "5deg",
+      rotate: "10deg",
       y: 100,
       scrollTrigger: {
         trigger: ".nameAnim",
