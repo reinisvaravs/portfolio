@@ -20,7 +20,21 @@ const Contact = forwardRef((props, ref) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const details = gsap.utils.toArray(".detail");
+      const icons = gsap.utils.toArray(".icons");
       details.forEach((el, i) => {
+        gsap.from(el, {
+          x: -600,
+          opacity: 0,
+          duration: 1,
+          delay: i * 0.2,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+      icons.forEach((el, i) => {
         gsap.from(el, {
           x: -600,
           opacity: 0,
