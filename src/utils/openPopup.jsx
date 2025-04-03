@@ -180,6 +180,7 @@ export function openPopup({ img, name, link, description, tech }) {
   });
 
   document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
 
   window.addEventListener("resize", handleResize);
 }

@@ -1,6 +1,6 @@
 export function ContactDetail({ href, detailContent, detailType }) {
   return (
-    <p className="detail">
+    <p className="detail detailAnim">
       {detailType}:{" "}
       <a href={href} target="_blank" rel="noopener noreferrer">
         {detailContent}
@@ -9,10 +9,10 @@ export function ContactDetail({ href, detailContent, detailType }) {
   );
 }
 
-export function IconDetail({ href, detailType }) {
+export function IconDetail({ href, icon }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="icons">
-      {detailType}
+      {icon}
     </a>
   );
 }

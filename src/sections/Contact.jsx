@@ -20,7 +20,7 @@ const Contact = forwardRef((props, ref) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const details = gsap.utils.toArray(".detail");
-      const icons = gsap.utils.toArray(".icons");
+      const socialMedia = gsap.utils.toArray(".socialMedia");
       details.forEach((el, i) => {
         gsap.from(el, {
           x: -600,
@@ -34,7 +34,7 @@ const Contact = forwardRef((props, ref) => {
           },
         });
       });
-      icons.forEach((el, i) => {
+      socialMedia.forEach((el, i) => {
         gsap.from(el, {
           x: -600,
           opacity: 0,
@@ -50,6 +50,25 @@ const Contact = forwardRef((props, ref) => {
     }, contactRef);
 
     return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const btns = document.querySelectorAll(".detail");
+      const isSmallScreen = window.innerWidth <= 900;
+
+      btns.forEach((btn) => {
+        btn.classList.toggle("detailAnim", !isSmallScreen);
+      });
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen to resize
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -74,15 +93,15 @@ const Contact = forwardRef((props, ref) => {
           <div className="IconDetailDiv">
             <IconDetail
               href="https://www.instagram.com/reinisrvaravs/"
-              detailType={<img className="socialMedia" src={instagram} />}
+              icon={<img className="socialMedia" src={instagram} />}
             />
             <IconDetail
               href="https://github.com/reinisvaravs/"
-              detailType={<img className="socialMedia" src={github} />}
+              icon={<img className="socialMedia" src={github} />}
             />
             <IconDetail
               href="https://www.linkedin.com/in/reinis-varavs/"
-              detailType={<img className="socialMedia" src={linkedin} />}
+              icon={<img className="socialMedia" src={linkedin} />}
             />
           </div>
         </div>

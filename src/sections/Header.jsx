@@ -54,22 +54,22 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
       <header ref={headerRef}>
         <div className="name">
           <p>Reinis Vāravs</p>
-          <p className="headerProf">Full-stack software Developer</p>
+          <p className="headerProf">Full-stack Developer</p>
         </div>
         <nav>
           <ul>
             <li>
-              <button className="throughWhite" onClick={onWorksClick}>
+              <button className="btns throughWhite" onClick={onWorksClick}>
                 works,
               </button>
             </li>
             <li>
-              <button className="throughWhite" onClick={onAboutClick}>
+              <button className="btns throughWhite" onClick={onAboutClick}>
                 about,
               </button>
             </li>
             <li>
-              <button className="throughWhite" onClick={onContactClick}>
+              <button className="btns throughWhite" onClick={onContactClick}>
                 contact
               </button>
             </li>
