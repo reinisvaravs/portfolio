@@ -119,14 +119,24 @@ header ul li button {
     align-items: flex-start;
     justify-content: center;
     line-height: 20px;
+    width: 40%;
   }
-  header {
-    padding: 0 4%;
+  header nav {
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .headerProf {
     display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .name {
+    font-size: 14px;
+  }
+  header ul li button {
+    font-size: 14px;
   }
 }
