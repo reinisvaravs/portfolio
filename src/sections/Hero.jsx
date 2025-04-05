@@ -57,10 +57,11 @@ const Hero = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".heroAnim", {
-        y: 100,
+        y: 50,
         duration: 0.4,
         rotation: "5deg",
         delay: 0.5,
+        opacity: 0,
       });
       gsap.from(".time", {
         opacity: 0,
@@ -94,7 +95,7 @@ const Hero = () => {
           <p>full-stack</p>
         </div>
         <div className="web">
-          <h1 className="heroAnim">WEB</h1>
+          <h1 className="heroAnim">SOFTWARE</h1>
         </div>
         <div className="developer">
           <h1 className="heroAnim">DEVELOPER</h1>

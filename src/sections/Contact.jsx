@@ -3,9 +3,9 @@ import { ContactDetail, IconDetail } from "../components/ContactDetail";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { forwardRef } from "react";
-import instagram from "../assets/instagram.png";
+import instagram from "../assets/instagram.webp";
 import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.png";
+import linkedin from "../assets/linkedin.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 

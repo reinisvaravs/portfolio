@@ -1,6 +1,6 @@
 import { forwardRef, useLayoutEffect } from "react";
-import portret from "../assets/portret.jpg";
-import portretAnime from "../assets/portretAnime.png";
+import portret from "../assets/portret.webp";
+import portretAnime from "../assets/portretAnime.webp";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";

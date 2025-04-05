@@ -4,8 +4,8 @@ import { CgWebsite } from "react-icons/cg";
 import { useEffect } from "react";
 import gsap from "gsap";
 //img
-import storeBg from "../assets/ecom.png";
-import botBg from "../assets/bot.png";
+import storeBg from "../assets/ecom.webp";
+import botBg from "../assets/bot.webp";
 //tech
 import postgressql from "../assets/postgressql.svg";
 import node from "../assets/node.svg";
