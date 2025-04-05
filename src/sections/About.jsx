@@ -1,9 +1,17 @@
 import { forwardRef, useLayoutEffect } from "react";
 import portret from "../assets/portret.jpg";
-import portretAnime from "../assets/portretAnime.png"
+import portretAnime from "../assets/portretAnime.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import postgressql from "../assets/postgressql.svg";
+import node from "../assets/node.svg";
+import ex from "../assets/express.svg";
+import discord from "../assets/discord.svg";
+import react from "../assets/react.svg";
+import stripe from "../assets/stripe.svg";
+import openai from "../assets/openai.svg";
+import css from "../assets/css.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,43 +88,77 @@ const About = forwardRef((props, ref) => {
     });
   }, []);
 
+  useEffect(() => {
+    gsap.from(".techItem", {
+      opacity: 0,
+      y: 50,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".techGrid",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
+
+  const tech = [
+    { name: "Node.js", icon: node },
+    { name: "Express", icon: ex },
+    { name: "PostgreSQL", icon: postgressql },
+    { name: "React", icon: react },
+    { name: "CSS", icon: css },
+    { name: "Stripe", icon: stripe },
+    { name: "OpenAI", icon: openai },
+    { name: "Discord", icon: discord },
+  ];
+
   return (
-    <div className="aboutSection" ref={ref}>
-      <div className="about textHeading" ref={nameRef}>
-        <h1 className="nameAnim">Hello. I am Reinis</h1>
-        <h2 className="nameAnim">Roberts Vāravs</h2>
-        <p ref={headingRef}>
-          {words.map((word, i) => (
-            <span
-              key={i}
-              className="split-child"
-              style={{
-                display: "inline-block",
-                overflow: "hidden",
-                marginRight: "8px",
-              }}
-            >
-              <span style={{ display: "inline-block" }}>{word}</span>
-            </span>
-          ))}
-        </p>
+    <>
+      <div className="techGrid">
+        {tech.map((item, i) => (
+          <div className="techItem" key={i}>
+            <img src={item.icon} alt={item.name} className="techIcon" />
+            <p className="techName">{item.name}</p>
+          </div>
+        ))}
       </div>
-      <div className="portretDiv">
-        <div className="card">
-          <div className="card-face front">
-            <img src={portret} alt="Reinis photo" className="portret" />
-          </div>
-          <div className="card-face back">
-            <img
-              src={portretAnime}
-              alt="Animated Reinis"
-              className="portret"
-            />
-          </div>
+      <div className="aboutSection" ref={ref}>
+        <div className="about textHeading" ref={nameRef}>
+          <h1 className="nameAnim">Hello. I am Reinis</h1>
+          <h2 className="nameAnim">Roberts Vāravs</h2>
+          <p ref={headingRef}>
+            {words.map((word, i) => (
+              <span
+                key={i}
+                className="split-child"
+                style={{
+                  display: "inline-block",
+                  overflow: "hidden",
+                  marginRight: "8px",
+                }}
+              >
+                <span style={{ display: "inline-block" }}>{word}</span>
+              </span>
+            ))}
+          </p>
         </div>
-        <div className="portretBorder" />
+        <div className="portretDiv">
+          <div className="card">
+            <div className="card-face front">
+              <img src={portret} alt="Reinis photo" className="portret" />
+            </div>
+            <div className="card-face back">
+              <img
+                src={portretAnime}
+                alt="Animated Reinis"
+                className="portret"
+              />
+            </div>
+          </div>
+          <div className="portretBorder" />
+        </div>
       </div>
-    </div>
+    </>
   );
 });
 

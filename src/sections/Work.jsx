@@ -65,7 +65,7 @@ const Work = forwardRef((props, ref) => {
     <div className="work" ref={ref}>
       <div className="selectedCasesDiv">
         <CgWebsite className="workIcon" />
-        <h1 className="selectedCases">Selected Cases</h1>
+        <h1 className="selectedCases">Personal Projects</h1>
       </div>
 
       <WorkItem
