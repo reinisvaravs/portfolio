@@ -33,12 +33,12 @@ function Footer({ onWorksClick, onAboutClick, onContactClick }) {
         <ul>
           <li>
             <button className="btns throughWhite" onClick={onWorksClick}>
-              works,
+              works |
             </button>
           </li>
           <li>
             <button className="btns throughWhite" onClick={onAboutClick}>
-              about,
+              about |
             </button>
           </li>
           <li>
