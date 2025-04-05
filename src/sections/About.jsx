@@ -1,5 +1,6 @@
 import { forwardRef, useLayoutEffect } from "react";
 import portret from "../assets/portret.jpg";
+import portretAnime from "../assets/portretAnime.png"
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,7 +12,7 @@ const About = forwardRef((props, ref) => {
   const nameRef = useRef(null);
 
   const words =
-    `                     I'm a full-stack developer and currently a student in Latvia. I enjoy solving real-world tech problems and primarily work with JavaScript and PostgreSQL, often building with the PERN stack. If you have a project or idea you'd like to collaborate on, feel free to reach out!`.split(
+    `                     I’m a full-stack developer and student in Latvia, focused on solving real-world tech problems. I work mainly with JavaScript and PostgreSQL using the PERN stack, and have built AI tools with OpenAI and RAG systems, animated interfaces with GSAP, and developed bots with Discord.js. I’m currently exploring startup ideas and open to joining early-stage teams. Let’s connect!`.split(
       " "
     );
 
@@ -101,7 +102,18 @@ const About = forwardRef((props, ref) => {
         </p>
       </div>
       <div className="portretDiv">
-        <img src={portret} alt="Reinis photo" className="portret" />
+        <div className="card">
+          <div className="card-face front">
+            <img src={portret} alt="Reinis photo" className="portret" />
+          </div>
+          <div className="card-face back">
+            <img
+              src={portretAnime}
+              alt="Animated Reinis"
+              className="portret"
+            />
+          </div>
+        </div>
         <div className="portretBorder" />
       </div>
     </div>
