@@ -21,11 +21,20 @@ const Work = forwardRef((props, ref) => {
     gsap.to(".bg", {
       opacity: 0,
       scrollTrigger: {
-        trigger: ".work", // Make sure this exists
+        trigger: ".work",
         start: "top bottom", // Start when .work hits bottom of viewport
         end: "bottom bottom", // End when .work is fully in view
-        scrub: 2, // Makes it smooth
-        toggleActions: "play none none reverse",
+        scrub: true,
+      },
+    });
+
+    gsap.to(".videoDiv", {
+      opacity: 0.5,
+      scrollTrigger: {
+        trigger: ".contactsSection",
+        start: "top 60%", // Start when hits bottom of viewport
+        end: "bottom bottom", // End when is fully in view
+        scrub: true,
       },
     });
   }, []);

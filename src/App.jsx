@@ -9,6 +9,7 @@ import "./App.css";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import videoBg from "./assets/matrixBg.mp4"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,16 @@ function App() {
   return (
     <>
       <div className="bg" />
+      <div className="videoDiv">
+        <video
+          src={videoBg}
+          className="video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
       <div className="appContent">
         <Header
           onWorksClick={() =>
