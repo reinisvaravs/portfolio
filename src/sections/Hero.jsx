@@ -102,12 +102,10 @@ const Hero = () => {
         </div>
         <div className="heroAbout">
           <p>
-            I’m a full-stack developer in Latvia, 
-            specializing in JavaScript and often building with the PERN stack. 
-            I love creating standout designs with CSS and GSAP, 
-            and I’ve built with AI tools like OpenAI. 
-            I’m into music, coffee, and working out. 
-            My goal is to solve real-life tech problems.
+            Full-stack JavaScript developer from Latvia, building with the PERN
+            stack, OpenAI, and GSAP. I love standout designs. I’m into music,
+            coffee, and working out. My goal is to solve real-life tech
+            problems.
           </p>
         </div>
       </div>
