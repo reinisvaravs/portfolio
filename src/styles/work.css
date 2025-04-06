@@ -211,7 +211,63 @@
   a {
     color: #ece8e2;
     text-decoration: none;
+    font-size: 22px;
   }
+}
+
+.httpsLink {
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.httpsLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 0;
+  height: 1px;
+  background: #f5eee6;
+  transition: width 0.5s ease;
+}
+
+.httpsLink:hover::after {
+  width: 100%;
+}
+
+.githubLinkDiv {
+  width: 85vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.githubLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.githubLink:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+  color: white;
+}
+
+.projectTechIcon {
+  width: 30px;
+  height: 30px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.projectTechIcon:hover {
+  transform: scale(1.3);
+  filter: brightness(1.3);
 }
 
 .linkIcon {
@@ -259,7 +315,7 @@
   }
 
   .popupHeading {
-    font-size: 36px;
+    font-size: 60px;
   }
 
   .popupParagraph {
