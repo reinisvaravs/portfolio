@@ -25,13 +25,12 @@
   position: absolute;
   top: 20%;
   right: 25%;
-  font-family: "Bodoni Moda", serif;
 }
 
 .date {
   width: 90px;
   font-size: 120px;
-  font-family: "Pinyon Script", cursive;
+  font-family: "Pinyon Script", Cambria;
 }
 
 .month {
@@ -52,7 +51,7 @@
   color: #edd5c2;
   margin-left: 10px;
 }
-.web {
+.software {
   font-size: 140px;
   display: flex;
   flex-direction: row;
@@ -60,12 +59,6 @@
   letter-spacing: 4px;
   line-height: 220px;
   margin-left: 10px;
-
-  p {
-    font-size: 35px;
-    font-family: "Bodoni Moda", serif;
-    transform: translate(15px, 76px);
-  }
 }
 .developer {
   font-size: 140px;
@@ -94,7 +87,7 @@
   .fullStack {
     font-size: 30px;
   }
-  .web {
+  .software {
     font-size: 100px;
     line-height: 155px;
 
@@ -119,7 +112,7 @@
 
 @media screen and (max-width: 940px) {
   .fullStack,
-  .web,
+  .software,
   .developer {
     transform: translateY(-40px);
   }
@@ -140,7 +133,6 @@
     right: 3%;
     text-indent: 30vw;
     p {
-      font-family: "Bodoni Moda", serif;
       font-size: 28px;
     }
   }
@@ -156,7 +148,7 @@
   .fullStack {
     font-size: 25px;
   }
-  .web {
+  .software {
     font-size: 80px;
     line-height: 125px;
 
@@ -178,7 +170,7 @@
   .fullStack {
     font-size: 20px;
   }
-  .web {
+  .software {
     font-size: 60px;
     line-height: 95px;
     p {

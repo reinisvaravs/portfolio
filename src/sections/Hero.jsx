@@ -94,7 +94,7 @@ const Hero = () => {
         <div className="fullStack">
           <p>full-stack</p>
         </div>
-        <div className="web">
+        <div className="software">
           <h1 className="heroAnim">SOFTWARE</h1>
         </div>
         <div className="developer">
