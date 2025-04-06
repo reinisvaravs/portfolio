@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Dorsa";
+  src: url("/fonts/Dorsa.woff2") format("woff2");
+  font-display: block;
+}
+
 * {
   margin: 0;
   padding: 0;
