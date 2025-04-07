@@ -24,9 +24,11 @@ This is my personal portfolio built with React and GSAP. It showcases my develop
 
 ---
 
-## 📸 Preview
+## 🎥 Animated Preview
 
-![Portfolio Preview](./screenshot.png)
+Here’s a quick look at the hero animation and page transition:
+
+![Animated Preview](./preview.gif)
 
 ---
 
