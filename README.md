@@ -68,9 +68,3 @@ Reach out via the contact form on the site or:
 
 - [GitHub](https://github.com/your-username)
 - [LinkedIn](https://linkedin.com/in/your-profile)
-
----
-
-## 🪪 License
-
-This project is open source and available under the [MIT License](LICENSE).
