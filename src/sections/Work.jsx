@@ -71,7 +71,7 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="Discord OpenAI Bot"
         bg={botBg}
-        link="https://github.com/reinisvaravs/discord-openai-bot/blob/main/README.md"
+        link="https://github.com/reinisvaravs/portfolio/blob/main/WALLE.md"
         description="WALL-E is a smart Discord bot powered by Node.js and OpenAI. It implements a RAG (Retrieval-Augmented Generation) pipeline that compares embedded message vectors with a chunked vector database, retrieving only relevant context to minimize OpenAI token consumption."
         tech={botTech}
       />
