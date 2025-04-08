@@ -1,6 +1,5 @@
 import { forwardRef, useLayoutEffect } from "react";
 import portret from "../assets/portret.webp";
-import portretAnime from "../assets/portretAnime.webp";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -143,18 +142,7 @@ const About = forwardRef((props, ref) => {
           </p>
         </div>
         <div className="portretDiv">
-          <div className="card">
-            <div className="card-face front">
-              <img src={portret} alt="Reinis photo" className="portret" />
-            </div>
-            <div className="card-face back">
-              <img
-                src={portretAnime}
-                alt="Animated Reinis"
-                className="portret"
-              />
-            </div>
-          </div>
+          <img src={portret} alt="Reinis photo" className="portret" />
           <div className="portretBorder" />
         </div>
       </div>
