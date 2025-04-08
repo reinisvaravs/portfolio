@@ -31,7 +31,7 @@ export default function PopupContent({ name, description, link, tech }) {
               className="githubLink"
             >
               <FaGithub className="linkIcon" />
-              <p>Github repo</p>
+              <p>Github</p>
             </a>
           </div>
         ) : (
