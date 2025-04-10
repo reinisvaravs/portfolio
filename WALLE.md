@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/badge/License-Private-red)
 ![Powered by](https://img.shields.io/badge/Powered_by-GPT--4o-blueviolet)
 ![Status](https://img.shields.io/badge/status-live-success)
+![RAG-Powered](https://img.shields.io/badge/RAG-Powered-blueviolet)
+![Embedding](https://img.shields.io/badge/Embedding-pgvector-lightblue)
 
 WALL-E is an AI assistant. It reads documents from a GitHub repo and responds in real-time with contextual knowledge. Each user has their own memory — so conversations stay personal, even in shared channels.
 
@@ -19,8 +21,9 @@ WALL-E is an AI assistant. It reads documents from a GitHub repo and responds in
 - [File Structure](#-file-structure)
 - [GitHub Integration](#-github-integration)
 - [Getting Started](#-getting-started)
+- [Database Schema](#-database-schema)
+- [RAG (Retrieval-Augmented Generation)](#-rag-retrieval-augmented-generation)
 - [How Knowledge Embedding Works](#-how-knowledge-embedding-works)
-- [Testing](#-testing)
 - [Built With](#-built-with)
 - [Author](#-author)
 
@@ -56,24 +59,26 @@ WALL-E is an AI assistant. It reads documents from a GitHub repo and responds in
 
   - `!bot on` / `!bot off` — toggle response mode
   - `!refresh` — manually re-embed knowledge from GitHub
-  - `!change channel to <channelId>` — move WALL-E to a new channel
+  - `!change channel to <channelId>` — move WUNDER-AI to a new channel
   - `!reset <userId>` — reset any user's memory (admin-only)
-  - `!set model <model name>` — switch between GPT models (`gpt-3.5-turbo`, `gpt-4o`)
+  - `!set model <model name>` - changes the gpt model in use from 2 hardcoded options - gpt-3.5-turbo (cheapest) and gpt-4o (latest)
   - `!sys` — check system resource usage (CPU, memory, load)
   - `!usage` — view total messages sent and token usage per model
   - `!usage reset` — reset all usage and token logs
 
 - ✅ **User Controls (prefix-based)**
 
-  - `!reset` — reset your own memory
-  - `!source` — show which embedded chunks were used in the last GPT reply
-  - `!files` — list filenames used in the last GPT reply
+  - `! <anything>` - will be ignored by the bot
+  - `!files` — show which files were referenced
+  - `!reset` — clear your own conversation history
+  - `!source` — show the text chunks used in the last reply
 
-- ✅ **Custom Personality (System Prompt)**
-
-  - Conversational tone
-  - Does not act like a model or support bot
-  - Supports edgy humor, sarcasm, and relaxed chat
+- ✅ **System Prompt (Custom Personality)**
+  - Stored as `system-prompt.txt` inside `walle-config/` in your GitHub knowledge repo
+  - Fetched via GitHub API and decoded from base64
+  - Auto-refreshes every 10 min + manual `!refresh`
+  - Fully editable via GitHub — no restart or redeploy needed
+  - Guides tone, behavior, and assistant rules (not part of embedded knowledge)
 
 ---
 
@@ -106,11 +111,12 @@ WALL-E is an AI assistant. It reads documents from a GitHub repo and responds in
 
 ## 🌐 GitHub Integration
 
-Knowledge is dynamically loaded from a private repo, which link is in the .env:
-
-- Files must be at root
-- Only supported file types are processed
-- Uses `GITHUB_TOKEN` to increase API limits and access private repos
+- WALL-E pulls both **knowledge files** and the **system prompt** from a private GitHub repo
+- Files in the **repo root** are embedded into vector memory if supported
+- The file `walle-config/system-prompt.txt` defines the bot’s tone, rules, and behavior
+  - It is fetched via GitHub API and decoded at runtime
+  - Not part of embedded knowledge — used only as system instructions
+  - Auto-refreshes every 10 minutes, or immediately via `!refresh`
 
 ---
 
@@ -122,6 +128,8 @@ Knowledge is dynamically loaded from a private repo, which link is in the .env:
 DISCORD_TOKEN=your_discord_token
 OPENAI_KEY=your_openai_key
 GITHUB_TOKEN=your_github_token
+REPO_API_URL=https://api.github.com/repos/reinisvaravs/discord-bot-test-info/contents/
+PROMPT_PATH_URL=https://api.github.com/repos/reinisvaravs/wall-e-info/contents/walle-config/system-prompt.txt
 DATABASE_URL=postgres://username:password@host:port/db
 RENDER=true
 ```
@@ -220,6 +228,20 @@ CREATE TABLE bot_stats (
   value INTEGER
 );
 ```
+
+---
+
+## 🧠 RAG (Retrieval-Augmented Generation)
+
+WALL-E uses a **Retrieval-Augmented Generation (RAG)** architecture to deliver highly relevant and context-aware answers:
+
+- 📄 **Document Ingestion**: Files from a GitHub repository are parsed and chunked for semantic relevance.
+- 🧬 **Embedding**: Chunks are embedded using OpenAI’s `text-embedding-3-small` model and stored in PostgreSQL with pgvector.
+- 🔍 **Retrieval**: When a user sends a message, WALL-E retrieves the most relevant chunks from the vector database using similarity search.
+- 💬 **Generation**: Retrieved chunks are included in the GPT prompt to ground the response in accurate knowledge.
+- ⚙️ **Efficiency**: Re-embedding only occurs when file content changes (via SHA256 hash check), optimizing both speed and token costs.
+
+This setup ensures the bot answers with **real knowledge**, not hallucinated guesses — perfect for technical documentation, FAQs, or internal tools.
 
 ---
 
