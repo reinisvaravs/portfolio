@@ -9,7 +9,7 @@ import "./App.css";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import videoBg from "./assets/matrixBg.mp4"
+import videoBg from "./assets/matrixBg.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,9 +43,24 @@ function App() {
     }, 0);
   }, []);
 
+  useEffect(() => {
+    gsap.to(".loadingCover", {
+      opacity: 0,
+      delay: 1.3,
+      duration: 1,
+    });
+    gsap.to(".video", {
+      opacity: 0.1,
+      delay: 1,
+      duration: 1,
+      display: "block",
+    });
+  }, []);
+
   return (
     <>
       <div className="bg" />
+      <div className="loadingCover" />
       <div className="videoDiv">
         <video
           src={videoBg}

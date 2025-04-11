@@ -60,7 +60,7 @@ const Hero = () => {
         y: 50,
         duration: 0.4,
         rotation: "5deg",
-        delay: 0.5,
+        delay: 0.7,
         opacity: 0,
       });
       gsap.from(".time", {

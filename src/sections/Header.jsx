@@ -9,7 +9,7 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
       gsap.from(headerRef.current, {
         y: -100,
         duration: 0.5,
-        delay: 0.5,
+        delay: 1.7,
       });
     }, headerRef);
 
