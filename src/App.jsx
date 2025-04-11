@@ -39,8 +39,8 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      window.scrollTo({ top: 0 });
-    }, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 200); // 100ms delay should be enough for the layout to settle
   }, []);
 
   useEffect(() => {
@@ -48,12 +48,6 @@ function App() {
       opacity: 0,
       delay: 1.3,
       duration: 1,
-    });
-    gsap.to(".video", {
-      opacity: 0.1,
-      delay: 1,
-      duration: 1,
-      display: "block",
     });
   }, []);
 

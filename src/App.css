@@ -27,7 +27,7 @@ body {
 }
 
 .bg {
-  background-image: url(./assets/car.webp);
+  background-image: url("/assets/car.webp");
   background-position: center 80%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,6 +63,7 @@ body {
   overflow: hidden;
   z-index: -1;
   opacity: 0;
+  display: none;
 }
 
 .video {
@@ -74,8 +75,13 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0;
-  display: none;
+}
+
+@supports (-webkit-backdrop-filter: blur(5px)) {
+  /* Safari-specific styles */
+  .videoDiv {
+    display: none !important;
+  }
 }
 
 .appContent {
