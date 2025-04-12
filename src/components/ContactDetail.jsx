@@ -1,3 +1,5 @@
+import { MdContentCopy } from "react-icons/md";
+
 export function ContactDetail({ href, detailContent, detailType }) {
   return (
     <p className="detail detailAnim">
@@ -5,6 +7,15 @@ export function ContactDetail({ href, detailContent, detailType }) {
       <a href={href} target="_blank" rel="noopener noreferrer">
         {detailContent}
       </a>
+      {detailType === "email" && (
+        <button
+          onClick={() =>
+            navigator.clipboard.writeText("reinisroberts.varavs2@gmail.com")
+          }
+        >
+          <MdContentCopy className="clipboard" />
+        </button>
+      )}
     </p>
   );
 }

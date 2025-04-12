@@ -83,6 +83,17 @@
   transition: scale 0.3s ease;
 }
 
+.detail button {
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.clipboard {
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
   .subHeading,
   .contactsHeading,
