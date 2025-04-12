@@ -12,6 +12,7 @@ import stripe from "../assets/stripe.svg";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
 import make from "../assets/make.png";
+import apify from "../assets/apify.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,18 +108,20 @@ const About = forwardRef((props, ref) => {
 
   const tech = [
     { name: "Node.js", icon: node },
-    { name: "Express", icon: ex },
+    { name: "Express.js", icon: ex },
     { name: "PostgreSQL", icon: postgressql },
     { name: "React", icon: react },
     { name: "CSS", icon: css },
     { name: "Stripe", icon: stripe },
     { name: "OpenAI", icon: openai },
     { name: "Discord.js", icon: discord },
-    { name: "Make.com", icon: make },
+    { name: "Make", icon: make },
+    { name: "Apify", icon: apify },
   ];
 
   return (
     <>
+      <h1 className="techGridH1">Tech stack</h1>
       <div className="techGrid">
         {tech.map((item, i) => (
           <div className="techItem" key={i}>
