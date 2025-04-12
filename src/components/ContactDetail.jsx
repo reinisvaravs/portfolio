@@ -1,21 +1,28 @@
 import { MdContentCopy } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
+import { useState } from "react";
 
 export function ContactDetail({ href, detailContent, detailType }) {
+  const [isCopied, setIsCopied] = useState(false);
+
   return (
     <p className="detail detailAnim">
       {detailType}:{" "}
       <a href={href} target="_blank" rel="noopener noreferrer">
         {detailContent}
       </a>
-      {detailType === "email" && (
-        <button
-          onClick={() =>
-            navigator.clipboard.writeText("reinisroberts.varavs2@gmail.com")
-          }
-        >
-          <MdContentCopy className="clipboard" />
-        </button>
-      )}
+      <button
+        onClick={() => {
+          setIsCopied(true);
+          setTimeout(() => {
+            setIsCopied(false);
+          }, 2000);
+          navigator.clipboard.writeText(detailContent);
+        }}
+      >
+        {!isCopied && <MdContentCopy className="clipboard" />}
+        {isCopied && <FaCheck className="check" />}
+      </button>
     </p>
   );
 }

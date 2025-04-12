@@ -91,7 +91,11 @@
 }
 
 .clipboard {
-  color: white;
+  color: gray;
+}
+
+.check {
+  color: gray;
 }
 
 @media screen and (max-width: 600px) {
