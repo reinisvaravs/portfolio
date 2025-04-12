@@ -102,9 +102,9 @@ const Hero = () => {
         </div>
         <div className="heroAbout">
           <p>
-            Software developer from Latvia, building with the PERN stack,
-            OpenAI, and Make. I love solving technical challenges and helping
-            businesses automate with AI.
+            Software developer from Latvia using the PERN stack, OpenAI, and
+            Make to solve technical challenges and help businesses run faster
+            and more efficiently through smart automation.
           </p>
         </div>
       </div>
