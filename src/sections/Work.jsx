@@ -19,6 +19,7 @@ import make from "../assets/make.png";
 import airtable from "../assets/airtable.svg";
 import stripe from "../assets/stripe.png";
 import apify from "../assets/apify.png";
+import gsap_logo from "../assets/gsap.svg";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -64,7 +65,7 @@ const Work = forwardRef((props, ref) => {
   }, []);
 
   const botTech = [postgressql, node, ex, openai, discord];
-  const ecomTech = [postgressql, ex, react, node, stripe, css];
+  const ecomTech = [postgressql, ex, react, node, stripe, css, gsap_logo];
   const makeTech = [make, apify, airtable];
 
   return (

@@ -13,6 +13,7 @@ import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
 import make from "../assets/make.png";
 import apify from "../assets/apify.png";
+import gsap_logo from "../assets/gsap.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +22,7 @@ const About = forwardRef((props, ref) => {
   const nameRef = useRef(null);
 
   const words =
-    `                     I’m a full-stack developer and student in Latvia, focused on solving real-world tech problems. I work mainly with JavaScript and PostgreSQL using the PERN stack, and have built AI tools with OpenAI and RAG systems, animated interfaces with GSAP, and developed bots with Discord.js. I’m currently exploring startup ideas and open to joining early-stage teams. Let’s connect!`.split(
+    `                     I'm a full-stack software developer and student based in Latvia, using the PERN stack (PostgreSQL, Express, React, Node.js), OpenAI, and Make to help businesses run faster and more efficiently through smart automation. I’ve built AI tools with OpenAI and retrieval-augmented generation (RAG) systems, animated interfaces with GSAP, and developed bots using Discord.js. I also use platforms like Apify and Airtable to extract, organize, and act on real-time data. Let’s connect.`.split(
       " "
     );
 
@@ -117,6 +118,7 @@ const About = forwardRef((props, ref) => {
     { name: "Discord.js", icon: discord },
     { name: "Make", icon: make },
     { name: "Apify", icon: apify },
+    { name: "GSAP", icon: gsap_logo },
   ];
 
   return (
