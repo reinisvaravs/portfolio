@@ -14,6 +14,7 @@ import css from "../assets/css.svg";
 import make from "../assets/make.png";
 import apify from "../assets/apify.png";
 import gsap_logo from "../assets/gsap.svg";
+import js from "../assets/js.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,6 +109,7 @@ const About = forwardRef((props, ref) => {
   }, []);
 
   const tech = [
+    { name: "Javascript", icon: js },
     { name: "Node.js", icon: node },
     { name: "Express.js", icon: ex },
     { name: "PostgreSQL", icon: postgressql },

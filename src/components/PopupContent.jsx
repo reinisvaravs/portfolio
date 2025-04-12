@@ -13,12 +13,10 @@ export default function PopupContent({ name, description, link, tech }) {
       <p className="popupParagraph">{description}</p>
       <div className="popupLink">
         {tech.map((icon, index) => (
-          <img
-            key={index}
-            src={icon}
-            className="projectTechIcon"
-            alt={`Tech ${icon}`}
-          />
+          <div key={index} className="projectTechDiv">
+            <img src={icon.icon} className="projectTechIcon" alt={`Tech ${icon.icon}`} />
+            <p>{icon.name}</p>
+          </div>
         ))}
       </div>
       <div className="popupLink">

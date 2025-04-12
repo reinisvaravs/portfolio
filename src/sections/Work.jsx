@@ -20,6 +20,7 @@ import airtable from "../assets/airtable.svg";
 import stripe from "../assets/stripe.png";
 import apify from "../assets/apify.png";
 import gsap_logo from "../assets/gsap.svg";
+import js from "../assets/js.svg"
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -64,9 +65,28 @@ const Work = forwardRef((props, ref) => {
     });
   }, []);
 
-  const botTech = [postgressql, node, ex, openai, discord];
-  const ecomTech = [postgressql, ex, react, node, stripe, css, gsap_logo];
-  const makeTech = [make, apify, airtable];
+  const botTech = [
+    { name: "Javascript", icon: js },
+    { name: "PostgreSQL", icon: postgressql },
+    { name: "Node.js", icon: node },
+    { name: "Express.js", icon: ex },
+    { name: "OpenAI", icon: openai },
+    { name: "Discord.js", icon: discord },
+  ];
+  const ecomTech = [
+    { name: "PostgreSQL", icon: postgressql },
+    { name: "Express.js", icon: ex },
+    { name: "React", icon: react },
+    { name: "Node.js", icon: node },
+    { name: "Stripe", icon: stripe },
+    { name: "CSS", icon: css },
+    { name: "GSAP", icon: gsap_logo },
+  ];
+  const makeTech = [
+    { name: "Make", icon: make },
+    { name: "Apify", icon: apify },
+    { name: "Airtable", icon: airtable },
+  ];
 
   return (
     <div className="work" ref={ref}>

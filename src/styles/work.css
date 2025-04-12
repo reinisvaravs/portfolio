@@ -201,7 +201,7 @@
 .popupLink {
   width: 100%;
   height: 30px;
-  margin: 20px 0;
+  margin: 40px 0;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -265,9 +265,26 @@
   transition: all 0.2s ease;
 }
 
-.projectTechIcon:hover {
-  transform: scale(1.3);
-  filter: brightness(1.3);
+.projectTechDiv {
+  position: relative;
+  p {
+    opacity: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+  }
+}
+
+.projectTechDiv:hover {
+  p {
+    opacity: 1;
+  }
+  .projectTechIcon {
+    transform: scale(1.3);
+    filter: brightness(1.3);
+  }
 }
 
 .linkIcon {
