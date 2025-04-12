@@ -117,9 +117,9 @@ const About = forwardRef((props, ref) => {
     { name: "CSS", icon: css },
     { name: "Stripe", icon: stripe },
     { name: "OpenAI", icon: openai },
-    { name: "Discord.js", icon: discord },
     { name: "Make", icon: make },
     { name: "Apify", icon: apify },
+    { name: "Discord.js", icon: discord },
     { name: "GSAP", icon: gsap_logo },
   ];
 

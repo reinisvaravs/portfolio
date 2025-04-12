@@ -93,15 +93,18 @@ const Contact = forwardRef((props, ref) => {
           <div className="IconDetailDiv">
             <IconDetail
               href="https://www.instagram.com/reinisrvaravs/"
-              icon={<img className="socialMedia" src={instagram} />}
+              icon={instagram}
+              name="Instagram"
             />
             <IconDetail
               href="https://github.com/reinisvaravs/"
-              icon={<img className="socialMedia" src={github} />}
+              icon={github}
+              name="Github"
             />
             <IconDetail
               href="https://www.linkedin.com/in/reinis-varavs/"
-              icon={<img className="socialMedia" src={linkedin} />}
+              icon={linkedin}
+              name="LinkedIn"
             />
           </div>
         </div>

@@ -27,10 +27,16 @@ export function ContactDetail({ href, detailContent, detailType }) {
   );
 }
 
-export function IconDetail({ href, icon }) {
+export function IconDetail({ href, icon, name }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="icons">
-      {icon}
+    <a
+      className="projectTechDiv contactIcons"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img className="projectTechIcon" src={icon} />
+      <p>{name}</p>
     </a>
   );
 }

@@ -66,22 +66,25 @@ const Work = forwardRef((props, ref) => {
   }, []);
 
   const botTech = [
-    { name: "Javascript", icon: js },
-    { name: "PostgreSQL", icon: postgressql },
+    { name: "JavaScript", icon: js },
     { name: "Node.js", icon: node },
     { name: "Express.js", icon: ex },
+    { name: "PostgreSQL", icon: postgressql },
     { name: "OpenAI", icon: openai },
     { name: "Discord.js", icon: discord },
   ];
+  
   const ecomTech = [
-    { name: "PostgreSQL", icon: postgressql },
-    { name: "Express.js", icon: ex },
+    { name: "JavaScript", icon: js },
     { name: "React", icon: react },
-    { name: "Node.js", icon: node },
-    { name: "Stripe", icon: stripe },
     { name: "CSS", icon: css },
     { name: "GSAP", icon: gsap_logo },
+    { name: "Node.js", icon: node },
+    { name: "Express.js", icon: ex },
+    { name: "PostgreSQL", icon: postgressql },
+    { name: "Stripe", icon: stripe },
   ];
+  
   const makeTech = [
     { name: "Make", icon: make },
     { name: "Apify", icon: apify },
