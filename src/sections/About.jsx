@@ -11,6 +11,7 @@ import react from "../assets/react.svg";
 import stripe from "../assets/stripe.svg";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
+import make from "../assets/make.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,6 +114,7 @@ const About = forwardRef((props, ref) => {
     { name: "Stripe", icon: stripe },
     { name: "OpenAI", icon: openai },
     { name: "Discord.js", icon: discord },
+    { name: "Make.com", icon: make },
   ];
 
   return (
