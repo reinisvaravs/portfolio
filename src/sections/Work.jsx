@@ -20,7 +20,7 @@ import airtable from "../assets/airtable.svg";
 import stripe from "../assets/stripe.png";
 import apify from "../assets/apify.png";
 import gsap_logo from "../assets/gsap.svg";
-import js from "../assets/js.svg"
+import js from "../assets/js.svg";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -73,7 +73,7 @@ const Work = forwardRef((props, ref) => {
     { name: "OpenAI", icon: openai },
     { name: "Discord.js", icon: discord },
   ];
-  
+
   const ecomTech = [
     { name: "JavaScript", icon: js },
     { name: "React", icon: react },
@@ -84,7 +84,7 @@ const Work = forwardRef((props, ref) => {
     { name: "PostgreSQL", icon: postgressql },
     { name: "Stripe", icon: stripe },
   ];
-  
+
   const makeTech = [
     { name: "Make", icon: make },
     { name: "Apify", icon: apify },
@@ -106,18 +106,18 @@ const Work = forwardRef((props, ref) => {
         tech={botTech}
       />
       <WorkItem
-        name="E-commerce Store"
-        bg={storeBg}
-        link="https://reinisvaravs.com/store"
-        description="A full-stack e-commerce platform focused on backend architecture, featuring secure user registration, Stripe-powered subscription handling, and dynamic access control for premium course content. The frontend is kept clean and minimal using React for demonstration purposes."
-        tech={ecomTech}
-      />
-      <WorkItem
         name="Social Trend Tracker"
         bg={makeBg}
         link=""
         description="Social Media Trend Tracker is an automation built with Make.com that monitors post view counts from selected social accounts. It automatically logs top-performing videos into Airtable, making it easy to spot trends and track what content performs best over time. Ideal for content creators who want data-driven insight without manual work."
         tech={makeTech}
+      />
+      <WorkItem
+        name="E-commerce Store"
+        bg={storeBg}
+        link="https://reinisvaravs.com/store"
+        description="A full-stack e-commerce platform focused on backend architecture, featuring secure user registration, Stripe-powered subscription handling, and dynamic access control for premium course content. The frontend is kept clean and minimal using React for demonstration purposes."
+        tech={ecomTech}
       />
 
       {/* CSS limit of 6 work items */}
