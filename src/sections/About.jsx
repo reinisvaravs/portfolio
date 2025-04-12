@@ -8,7 +8,7 @@ import node from "../assets/node.svg";
 import ex from "../assets/express.svg";
 import discord from "../assets/discord.svg";
 import react from "../assets/react.svg";
-import stripe from "../assets/stripe.svg";
+import stripe from "../assets/stripe.png";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
 import make from "../assets/make.png";

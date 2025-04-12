@@ -13,11 +13,11 @@ import node from "../assets/node.svg";
 import ex from "../assets/express.svg";
 import discord from "../assets/discord.svg";
 import react from "../assets/react.svg";
-import stripe from "../assets/stripe.svg";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
 import make from "../assets/make.png";
 import airtable from "../assets/airtable.svg";
+import stripe from "../assets/stripe.png";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
