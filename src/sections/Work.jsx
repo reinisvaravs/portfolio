@@ -18,6 +18,7 @@ import css from "../assets/css.svg";
 import make from "../assets/make.png";
 import airtable from "../assets/airtable.svg";
 import stripe from "../assets/stripe.png";
+import apify from "../assets/apify.png";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -64,7 +65,7 @@ const Work = forwardRef((props, ref) => {
 
   const botTech = [postgressql, node, ex, openai, discord];
   const ecomTech = [postgressql, ex, react, node, stripe, css];
-  const makeTech = [make, airtable];
+  const makeTech = [make, apify, airtable];
 
   return (
     <div className="work" ref={ref}>
@@ -91,7 +92,7 @@ const Work = forwardRef((props, ref) => {
         name="Social Trend Tracker"
         bg={makeBg}
         link=""
-        description="Social Media Trend Tracker is an automation tool built with Make.com that tracks post view counts from selected social media accounts. It identifies top-performing videos and stores them in an Airtable table for easy trend analysis, helping you spot the best-performing content over time."
+        description="Social Media Trend Tracker is an automation built with Make.com that monitors post view counts from selected social accounts. It automatically logs top-performing videos into Airtable, making it easy to spot trends and track what content performs best over time. Ideal for content creators who want data-driven insight without manual work."
         tech={makeTech}
       />
 
