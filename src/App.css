@@ -43,7 +43,7 @@ body {
 }
 
 .loadingCover {
-  background-color: black;
+  background-color: #131313;
   z-index: -1;
   position: fixed;
   min-width: 100vw;

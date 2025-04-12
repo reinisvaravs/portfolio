@@ -87,17 +87,21 @@ const About = forwardRef((props, ref) => {
     });
   }, []);
 
-  useEffect(() => {
-    gsap.from(".techItem", {
-      opacity: 0,
-      y: 50,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: ".techGrid",
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-      },
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".techItem", {
+        opacity: 0.5,
+        y: 50,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".techGrid",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
     });
+
+    return () => ctx.revert();
   }, []);
 
   const tech = [
