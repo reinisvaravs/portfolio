@@ -16,14 +16,14 @@
 .subHeading {
   color: white;
   margin: -10px 0 0 15%;
-  font-size: clamp(14px, 2.3vw, 25px);
+  font-size: clamp(12px, 2.3vw, 25px);
 }
 
 .emailDiv {
   margin-left: 15%;
   margin-top: 60px;
   p {
-    font-size: clamp(14px, 3vw, 20px);
+    font-size: clamp(12px, 3vw, 20px);
   }
 }
 
@@ -103,8 +103,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .subHeading {
-    line-height: 17px;
+@media screen and (max-width: 380px) {
+  .contactIcons {
+    scale: 0.8;
+    margin-right: -10px;
   }
 }

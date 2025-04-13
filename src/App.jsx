@@ -62,7 +62,7 @@ function App() {
         }
       },
       {
-        rootMargin: "200px", // Load slightly before it's fully visible
+        rootMargin: "1000px", // Load slightly before it's fully visible
         threshold: 0.1,
       }
     );
