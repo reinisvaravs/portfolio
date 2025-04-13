@@ -101,7 +101,7 @@ const Work = forwardRef((props, ref) => {
         name="Discord OpenAI Bot"
         bg={botBg}
         link="https://github.com/reinisvaravs/portfolio/blob/main/WALLE.md"
-        description="This is a smart Discord bot powered by Node.js and OpenAI. It reads documents from a GitHub repository and responds in real-time with contextual knowledge. The bot uses a Retrieval-Augmented Generation (RAG) pipeline to minimize OpenAI token consumption. Each user has their own memory, so conversations remain personal—even in shared channels. It is a closed-source project. Only the README.md is available below."
+        description="A smart Discord bot built with Node.js and OpenAI. It reads GitHub docs and responds with contextual answers using a RAG pipeline to cut token use. Each user has memory for personalized replies. Like having a co-pilot that never logs off and knows all the docs by heart. Closed-source — only the README is public."
         tech={botTech}
       />
       <WorkItem
@@ -115,7 +115,7 @@ const Work = forwardRef((props, ref) => {
         name="E-commerce Store"
         bg={storeBg}
         link="https://reinisvaravs.com/store"
-        description="A full-stack e-commerce platform focused on backend architecture, featuring secure user registration, Stripe-powered subscription handling, and dynamic access control for premium course content. The frontend is kept clean and minimal using React for demonstration purposes."
+        description="A full-stack e-commerce platform with secure user registration, test-mode Stripe subscriptions, and dynamic access control for premium content. No real payments are processed. The React frontend is clean and minimal for demo purposes."
         tech={ecomTech}
       />
 

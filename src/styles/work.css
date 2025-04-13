@@ -177,6 +177,7 @@
   width: 45%;
   height: 400px;
   text-align: center;
+  transform: translateY(-50px);
 }
 
 /* arrow color #ebebe9 */
@@ -320,15 +321,17 @@
     width: 40%;
     text-align: left;
   }
+  .popupParagraph {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 900px) {
   .popupContent {
     width: 90%;
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
   }
 
   .popupHeading {
@@ -383,9 +386,21 @@
     background-position: center 15%;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .popupParagraph {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .ontopDiv h1 {
     font-size: 65px;
+  }
+  .popupParagraph {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
