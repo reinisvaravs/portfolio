@@ -181,6 +181,7 @@ export function openPopup({ img, name, link, description, tech }) {
 
   document.body.style.overflow = "hidden";
   document.documentElement.style.overflow = "hidden";
+  document.querySelector(".videoDiv").style.display = "none";
 
   window.addEventListener("resize", handleResize);
 }
@@ -272,4 +273,6 @@ export function closePopup() {
       });
     },
   });
+
+  document.querySelector(".videoDiv").style.display = "block";
 }

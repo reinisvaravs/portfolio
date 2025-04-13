@@ -36,7 +36,6 @@ const Work = forwardRef((props, ref) => {
 
     gsap.to(".videoDiv", {
       opacity: 0.1,
-      display: "block",
       scrollTrigger: {
         trigger: ".contactsSection",
         start: "top 60%", // Start when hits bottom of viewport
