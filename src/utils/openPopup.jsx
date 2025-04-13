@@ -37,8 +37,8 @@ export function openPopup({ img, name, link, description, tech }) {
   const width = window.innerWidth;
 
   const cloneTarget =
-    width <= 900
-      ? { left: "50%", top: "20%", scale: 0.6 } // x-small
+    width <= 600
+      ? { left: "50%", top: "15%", scale: 0.6 } // x-small
       : width <= 900
       ? { left: "50%", top: "20%", scale: 0.8 } // small
       : width <= 1000
