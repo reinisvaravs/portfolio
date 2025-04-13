@@ -87,7 +87,7 @@ function App() {
             loop
             muted
             playsInline
-            preload="none"
+            preload="auto"
           />
         )}
       </div>
