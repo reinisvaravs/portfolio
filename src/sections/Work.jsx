@@ -6,7 +6,7 @@ import gsap from "gsap";
 //img
 import storeBg from "../assets/ecom.webp";
 import botBg from "../assets/bot.webp";
-import makeBg from "../assets/makeBg.png";
+import makeBg from "../assets/makeBg.webp";
 //tech
 import postgressql from "../assets/postgressql.svg";
 import node from "../assets/node.svg";
@@ -15,10 +15,10 @@ import discord from "../assets/discord.svg";
 import react from "../assets/react.svg";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
-import make from "../assets/make.png";
+import make from "../assets/make.svg";
 import airtable from "../assets/airtable.svg";
-import stripe from "../assets/stripe.png";
-import apify from "../assets/apify.png";
+import stripe from "../assets/stripe.svg";
+import apify from "../assets/apify.svg";
 import gsap_logo from "../assets/gsap.svg";
 import js from "../assets/js.svg";
 
