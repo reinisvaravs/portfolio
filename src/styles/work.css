@@ -156,6 +156,20 @@
   pointer-events: none;
 }
 
+@media screen and (max-width: 900px) {
+  .fixedPopup {
+    min-width: 360px;
+    min-height: 240px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .fixedPopup {
+    min-width: 80vw;
+    min-height: 170px;
+  }
+}
+
 .fixedPopupLater {
   border: 2px solid #f5eee6;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);

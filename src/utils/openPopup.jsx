@@ -25,27 +25,34 @@ export function openPopup({ img, name, link, description, tech }) {
   img.style.opacity = 0;
   document.body.appendChild(clone);
 
-  gsap.set(clone, {
-    position: "fixed",
-    top: img.getBoundingClientRect().top,
-    left: img.getBoundingClientRect().left,
-    zIndex: 9999,
-    backgroundSize: "163%",
-    backgroundPosition: "center",
-  });
-
   const width = window.innerWidth;
 
   const cloneTarget =
     width <= 600
       ? { left: "50%", top: "15%", scale: 0.6 } // x-small
+      : width <= 800
+      ? {
+          left: "50%",
+          top: "20%",
+          scale: 0.8,
+        } // small
       : width <= 900
-      ? { left: "50%", top: "20%", scale: 0.8 } // small
+      ? { left: "50%", top: "20%", scale: 0.8, transform: "translateX(6px)" } // small
       : width <= 1000
-      ? { left: "75%", top: "50%", scale: 0.9 } // smaller medium
+      ? { left: "75%", top: "50%", scale: 0.9, transform: "translateX(8px)" } // smaller medium
       : width <= 1400
-      ? { left: "70%", top: "50%", scale: 1 } // medium
-      : { left: "70%", top: "50%", scale: 1.3 }; // large
+      ? { left: "70%", top: "50%", scale: 1, transform: "translateX(8px)" } // medium
+      : { left: "70%", top: "50%", scale: 1.3, transform: "translateX(8px)" }; // large
+
+    gsap.set(clone, {
+      position: "fixed",
+      top: img.getBoundingClientRect().top,
+      left: img.getBoundingClientRect().left,
+      zIndex: 9999,
+      backgroundSize: "163%",
+      backgroundPosition: "center",
+      transform: cloneTarget.transform || "translate(0)",
+    });
 
   gsap.to(clone, {
     top: cloneTarget.top,
