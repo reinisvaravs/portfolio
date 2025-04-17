@@ -86,8 +86,8 @@ const Contact = forwardRef((props, ref) => {
             detailType="phone"
           />
           <ContactDetail
-            href="mailto:reinisroberts.varavs2@gmail.com"
-            detailContent="reinisroberts.varavs2@gmail.com"
+            href="mailto:rr.varavs@gmail.com"
+            detailContent="rr.varavs@gmail.com"
             detailType="email"
           />
           <div className="IconDetailDiv">
