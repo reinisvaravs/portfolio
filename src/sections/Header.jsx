@@ -54,7 +54,7 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
       <header ref={headerRef}>
         <div className="name">
           <p>Reinis Vāravs</p>
-          <p className="headerProf">Software Developer</p>
+          <p className="headerProf">AI Automation Engineer</p>
         </div>
         <nav>
           <ul>

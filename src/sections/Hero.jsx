@@ -92,19 +92,19 @@ const Hero = () => {
           </div>
         </div>
         <div className="fullStack">
-          <p>full-stack</p>
+          <p>AI</p>
         </div>
         <div className="software">
-          <h1 className="heroAnim">SOFTWARE</h1>
+          <h1 className="heroAnim">AUTOMATION</h1>
         </div>
         <div className="developer">
-          <h1 className="heroAnim">DEVELOPER</h1>
+          <h1 className="heroAnim">ENGINEER</h1>
         </div>
         <div className="heroAbout">
           <p>
-            Software developer from Latvia using the PERN stack, OpenAI, and
-            Make to solve technical challenges and help businesses run faster
-            and more efficiently through smart automation.
+            AI Automation Engineer from Latvia using Make, OpenAI, and the PERN
+            stack to solve technical challenges and help businesses move faster
+            through smart, efficient automation.
           </p>
         </div>
       </div>

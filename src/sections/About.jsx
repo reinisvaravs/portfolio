@@ -14,7 +14,7 @@ import css from "../assets/css.svg";
 import make from "../assets/make.svg";
 import apify from "../assets/apify.svg";
 import gsap_logo from "../assets/gsap.svg";
-import js from "../assets/js.svg"
+import js from "../assets/js.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +23,7 @@ const About = forwardRef((props, ref) => {
   const nameRef = useRef(null);
 
   const words =
-    `                     I'm a full-stack software developer and student based in Latvia, using the PERN stack (PostgreSQL, Express, React, Node.js), OpenAI, and Make to help businesses run faster and more efficiently through smart automation. I’ve built AI tools with OpenAI and retrieval-augmented generation (RAG) systems, animated interfaces with GSAP, and developed bots using Discord.js. I also use platforms like Apify and Airtable to extract, organize, and act on real-time data. Let’s connect.`.split(
+    `                     I’m an AI automation engineer from Latvia focused on helping businesses run faster and more efficiently through smart no-code systems. Using tools like Make and OpenAI — and backed by my full-stack experience with the PERN stack (PostgreSQL, Express, React, Node.js) — I build powerful automations that eliminate manual work and boost performance.`.split(
       " "
     );
 
