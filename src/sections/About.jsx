@@ -6,13 +6,14 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import postgressql from "../assets/postgressql.svg";
 import node from "../assets/node.svg";
 import ex from "../assets/express.svg";
-import discord from "../assets/discord.svg";
+// import discord from "../assets/discord.svg";
 import react from "../assets/react.svg";
-import stripe from "../assets/stripe.svg";
+// import stripe from "../assets/stripe.svg";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
 import make from "../assets/make.svg";
 import apify from "../assets/apify.svg";
+import airtable from "../assets/airtable.svg";
 import gsap_logo from "../assets/gsap.svg";
 import js from "../assets/js.svg";
 
@@ -108,8 +109,6 @@ const About = forwardRef((props, ref) => {
     return () => ctx.revert();
   }, []);
 
- 
-
   const tech = [
     { name: "Javascript", icon: js },
     { name: "Node.js", icon: node },
@@ -117,14 +116,15 @@ const About = forwardRef((props, ref) => {
     { name: "PostgreSQL", icon: postgressql },
     { name: "React", icon: react },
     { name: "CSS", icon: css },
-    { name: "Stripe", icon: stripe },
-    { name: "Discord.js", icon: discord },
+    // { name: "Stripe", icon: stripe },
+    // { name: "Discord.js", icon: discord },
     { name: "GSAP", icon: gsap_logo },
   ];
 
   const makeTech = [
     { name: "Make", icon: make },
     { name: "Apify", icon: apify },
+    { name: "Airtable", icon: airtable },
     { name: "OpenAI", icon: openai },
   ];
 
