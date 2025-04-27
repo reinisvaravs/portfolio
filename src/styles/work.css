@@ -194,8 +194,6 @@
   transform: translateY(-50px);
 }
 
-/* arrow color #ebebe9 */
-
 .popupHeading {
   font-size: 80px;
   font-family: "Dorsa", sans-serif;
@@ -211,6 +209,7 @@
   text-transform: uppercase;
   color: #f8fafc;
   line-height: 25px;
+  text-align: left;
 }
 
 .popupLink {

@@ -9,12 +9,18 @@ export default function PopupContent({ name, description, link, tech }) {
         <FiArrowLeftCircle onClick={closePopup} className="backBtn" />
       </div>
       <h1 className="popupHeading">{name}</h1>
-
-      <p className="popupParagraph">{description}</p>
+      <p
+        className="popupParagraph"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <div className="popupLink">
         {tech.map((icon, index) => (
           <div key={index} className="projectTechDiv">
-            <img src={icon.icon} className="projectTechIcon" alt={`Tech ${icon.icon}`} />
+            <img
+              src={icon.icon}
+              className="projectTechIcon"
+              alt={`Tech ${icon.icon}`}
+            />
             <p>{icon.name}</p>
           </div>
         ))}
