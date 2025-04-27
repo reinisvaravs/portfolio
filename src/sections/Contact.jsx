@@ -92,7 +92,7 @@ const Contact = forwardRef((props, ref) => {
           />
           <div className="IconDetailDiv">
             <IconDetail
-              href="https://www.instagram.com/reinisrvaravs/"
+              href="https://www.instagram.com/reinisvaravs/"
               icon={instagram}
               name="Instagram"
             />
