@@ -101,11 +101,11 @@ const Contact = forwardRef((props, ref) => {
               icon={github}
               name="Github"
             />
-            <IconDetail
+            {/* <IconDetail
               href="https://www.linkedin.com/in/reinis-varavs/"
               icon={linkedin}
               name="LinkedIn"
-            />
+            /> */}
           </div>
         </div>
       </div>

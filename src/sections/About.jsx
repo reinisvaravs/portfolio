@@ -108,6 +108,8 @@ const About = forwardRef((props, ref) => {
     return () => ctx.revert();
   }, []);
 
+ 
+
   const tech = [
     { name: "Javascript", icon: js },
     { name: "Node.js", icon: node },
@@ -116,11 +118,14 @@ const About = forwardRef((props, ref) => {
     { name: "React", icon: react },
     { name: "CSS", icon: css },
     { name: "Stripe", icon: stripe },
-    { name: "OpenAI", icon: openai },
-    { name: "Make", icon: make },
-    { name: "Apify", icon: apify },
     { name: "Discord.js", icon: discord },
     { name: "GSAP", icon: gsap_logo },
+  ];
+
+  const makeTech = [
+    { name: "Make", icon: make },
+    { name: "Apify", icon: apify },
+    { name: "OpenAI", icon: openai },
   ];
 
   return (
@@ -128,6 +133,14 @@ const About = forwardRef((props, ref) => {
       <h1 className="techGridH1">Tech stack</h1>
       <div className="techGrid">
         {tech.map((item, i) => (
+          <div className="techItem" key={i}>
+            <img src={item.icon} alt={item.name} className="techIcon" />
+            <p className="techName">{item.name}</p>
+          </div>
+        ))}
+      </div>
+      <div className="techGrid">
+        {makeTech.map((item, i) => (
           <div className="techItem" key={i}>
             <img src={item.icon} alt={item.name} className="techIcon" />
             <p className="techName">{item.name}</p>

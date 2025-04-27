@@ -100,17 +100,17 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="Discord OpenAI Bot"
         bg={botBg}
-        link="https://github.com/reinisvaravs/portfolio/blob/main/WALLE.md"
+        link="https://github.com/reinisvaravs/all-readme/blob/39cf02d5e423b7f0c84b0b30b664ce7c1c725934/README.md"
         description="A smart Discord bot built with Node.js and OpenAI. It reads GitHub docs and responds with contextual answers using a RAG pipeline to cut token use. Each user has memory for personalized replies. Like having a co-pilot that never logs off and knows all the docs by heart. Closed-source — only the README is public."
         tech={botTech}
       />
-      <WorkItem
+      {/* <WorkItem
         name="Social Trend Tracker"
         bg={makeBg}
         link=""
         description="Social Media Trend Tracker is an automation built with Make.com that monitors post view counts from selected social accounts. It automatically logs top-performing videos into Airtable, making it easy to spot trends and track what content performs best over time. Ideal for content creators who want data-driven insight without manual work."
         tech={makeTech}
-      />
+      /> */}
       <WorkItem
         name="E-commerce Store"
         bg={storeBg}
