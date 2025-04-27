@@ -18,7 +18,7 @@ function handleResize() {
   }, 150); // Wait until user stops resizing
 }
 
-export function openPopup({ img, name, link, description, tech }) {
+export function openPopup({ img, name, link, linkText, description, tech }) {
   originalImg = img;
   clone = img.cloneNode(true);
   clone.classList.add("fixedPopup");
@@ -97,6 +97,7 @@ export function openPopup({ img, name, link, description, tech }) {
     <PopupContent
       name={name}
       link={link}
+      linkText={linkText}
       description={description}
       tech={tech}
     />

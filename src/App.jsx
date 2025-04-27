@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 200); // 100ms delay should be enough for the layout to settle
+    }, 200); 
   }, []);
 
   useEffect(() => {

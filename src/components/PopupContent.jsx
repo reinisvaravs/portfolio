@@ -2,7 +2,13 @@ import { FaGithub } from "react-icons/fa";
 import { closePopup } from "../utils/openPopup";
 import { FiArrowLeftCircle } from "react-icons/fi";
 
-export default function PopupContent({ name, description, link, tech }) {
+export default function PopupContent({
+  name,
+  description,
+  link,
+  linkText,
+  tech,
+}) {
   return (
     <div className="popupContent">
       <div className="backDiv">
@@ -26,7 +32,7 @@ export default function PopupContent({ name, description, link, tech }) {
         ))}
       </div>
       <div className="popupLink">
-        {name === "Discord OpenAI Bot" ? (
+        {linkText === "Github" ? (
           <div className="githubLinkDiv">
             <a
               href={link}
@@ -39,9 +45,16 @@ export default function PopupContent({ name, description, link, tech }) {
             </a>
           </div>
         ) : (
-          <a href={link} target="_blank" rel="noreferrer" className="httpsLink">
-            {link.replace(/^https?:\/\//, "")}
-          </a>
+          <div className="githubLinkDiv">
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="httpsLink"
+            >
+              {linkText}
+            </a>
+          </div>
         )}
       </div>
     </div>

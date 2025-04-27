@@ -10,14 +10,14 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-function WorkItem({ name, bg, link, description, tech }) {
+function WorkItem({ name, bg, link, linkText, description, tech }) {
   const itemRef = useRef(null);
   const nameRef = useRef(null);
 
   const handleOpen = (e) => {
     e.stopPropagation();
     const img = itemRef.current.querySelector(".workImg");
-    openPopup({ img, name, link, description, tech });
+    openPopup({ img, name, link, linkText, description, tech });
   };
 
   useEffect(() => {

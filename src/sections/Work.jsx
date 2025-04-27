@@ -101,13 +101,15 @@ const Work = forwardRef((props, ref) => {
         name="Discord OpenAI Bot"
         bg={botBg}
         link="https://github.com/reinisvaravs/all-readme/blob/39cf02d5e423b7f0c84b0b30b664ce7c1c725934/README.md"
+        linkText={"Github"}
         description="A smart Discord bot built with Node.js and OpenAI. It reads GitHub docs and responds with contextual answers using a RAG pipeline to cut token use. Each user has memory for personalized replies. Like having a co-pilot that never logs off and knows all the docs by heart. Closed-source — only the README is public."
         tech={botTech}
       />
       <WorkItem
         name="Auto IG Analytics"
         bg={makeBg}
-        link="Learn More"
+        link="https://www.notion.so/Auto-Instagram-Analytics-1e2d7db7d9b9808d9215e77627be0d7d?pvs=4"
+        linkText="Learn more"
         description={`Built an automated Instagram analytics system using <strong>Make.com</strong>, <strong>Apify</strong>, and <strong>Airtable</strong>.<br>
           The system scrapes profiles, posts, and reels daily into Airtable.<br>
           Useful for <strong>marketing agencies</strong>, <strong>talent managers</strong>, and <strong>brand teams</strong>.<br>
@@ -118,6 +120,7 @@ const Work = forwardRef((props, ref) => {
         name="E-commerce Store"
         bg={storeBg}
         link="https://reinisvaravs.com/store"
+        linkText="reinisvaravs.com/store"
         description="A full-stack e-commerce platform with secure user registration, test-mode Stripe subscriptions, and dynamic access control for premium content. No real payments are processed. The React frontend is clean and minimal for demo purposes."
         tech={ecomTech}
       />
