@@ -110,7 +110,7 @@ const Work = forwardRef((props, ref) => {
         bg={makeBg}
         link="https://www.notion.so/Auto-Instagram-Analytics-1e2d7db7d9b9808d9215e77627be0d7d?pvs=4"
         linkText="Learn more"
-        description={`Built an automated Instagram analytics system using <strong>Make.com</strong>, <strong>Apify</strong>, and <strong>Airtable</strong>.<br>
+        description={`Built an automated Instagram analytics system using <strong>Make</strong>, <strong>Apify</strong>, and <strong>Airtable</strong>.<br>
           The system scrapes profiles, posts, and reels daily into Airtable.<br>
           Useful for <strong>marketing agencies</strong>, <strong>talent managers</strong>, and <strong>brand teams</strong>.<br>
           Fully automated — no manual tracking needed.`}                  
