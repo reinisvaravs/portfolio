@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { forwardRef } from "react";
 import instagram from "../assets/instagram.webp";
 import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.webp";
+// import linkedin from "../assets/linkedin.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,8 +76,7 @@ const Contact = forwardRef((props, ref) => {
       <div className="contactsContainer">
         <h4 className="contactsHeading">contact.</h4>
         <p className="subHeading">
-          Feel free to reach out! I’m easiest to reach by phone, but you can
-          also connect with me on Instagram or send me an email.
+          Feel free to reach out! Text, DM or send me an email.
         </p>
         <div className="emailDiv">
           <ContactDetail

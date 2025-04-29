@@ -6,9 +6,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import postgressql from "../assets/postgressql.svg";
 import node from "../assets/node.svg";
 import ex from "../assets/express.svg";
-// import discord from "../assets/discord.svg";
+import discord from "../assets/discord.svg";
 import react from "../assets/react.svg";
-// import stripe from "../assets/stripe.svg";
+import stripe from "../assets/stripe.svg";
 import openai from "../assets/openai.svg";
 import css from "../assets/css.svg";
 import make from "../assets/make.svg";
@@ -109,43 +109,79 @@ const About = forwardRef((props, ref) => {
     return () => ctx.revert();
   }, []);
 
-  const tech = [
+  const frontendTech = [
+    { name: "React", icon: react },
+    { name: "CSS", icon: css },
+    { name: "GSAP", icon: gsap_logo },
+  ];
+
+  const backendTech = [
     { name: "Javascript", icon: js },
     { name: "Node.js", icon: node },
     { name: "Express.js", icon: ex },
     { name: "PostgreSQL", icon: postgressql },
-    { name: "React", icon: react },
-    { name: "CSS", icon: css },
-    // { name: "Stripe", icon: stripe },
-    // { name: "Discord.js", icon: discord },
-    { name: "GSAP", icon: gsap_logo },
+  ];
+
+  const apiTech = [
+    { name: "OpenAI", icon: openai },
+    { name: "Stripe", icon: stripe },
+    { name: "Discord.js", icon: discord },
   ];
 
   const makeTech = [
     { name: "Make", icon: make },
     { name: "Apify", icon: apify },
     { name: "Airtable", icon: airtable },
-    { name: "OpenAI", icon: openai },
   ];
 
   return (
     <>
       <h1 className="techGridH1">Tech stack</h1>
-      <div className="techGrid">
-        {tech.map((item, i) => (
-          <div className="techItem" key={i}>
-            <img src={item.icon} alt={item.name} className="techIcon" />
-            <p className="techName">{item.name}</p>
+      <div className="techGridContainer">
+        <div className="techGroup">
+          <h2 className="techGridH2">Frontend</h2>
+          <div className="techGrid">
+            {frontendTech.map((item, i) => (
+              <div className="techItem" key={i}>
+                <img src={item.icon} alt={item.name} className="techIcon" />
+                <p className="techName">{item.name}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="techGrid">
-        {makeTech.map((item, i) => (
-          <div className="techItem" key={i}>
-            <img src={item.icon} alt={item.name} className="techIcon" />
-            <p className="techName">{item.name}</p>
+        </div>
+        <div className="techGroup">
+          <h2 className="techGridH2">Backend</h2>
+          <div className="techGrid">
+            {backendTech.map((item, i) => (
+              <div className="techItem" key={i}>
+                <img src={item.icon} alt={item.name} className="techIcon" />
+                <p className="techName">{item.name}</p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className="techGroup">
+          <h2 className="techGridH2">APIs & Integrations</h2>
+          <div className="techGrid">
+            {apiTech.map((item, i) => (
+              <div className="techItem" key={i}>
+                <img src={item.icon} alt={item.name} className="techIcon" />
+                <p className="techName">{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="techGroup">
+          <h2 className="techGridH2">No-code</h2>
+          <div className="techGrid">
+            {makeTech.map((item, i) => (
+              <div className="techItem" key={i}>
+                <img src={item.icon} alt={item.name} className="techIcon" />
+                <p className="techName">{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="aboutSection" ref={ref}>
         <div className="about textHeading" ref={nameRef}>

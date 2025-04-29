@@ -30,12 +30,12 @@ export function ContactDetail({ href, detailContent, detailType }) {
 export function IconDetail({ href, icon, name }) {
   return (
     <a
-      className="projectTechDiv contactIcons"
+      className="contactIconDiv"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img className="projectTechIcon" src={icon} />
+      <img className="contactIcon" src={icon} />
       <p>{name}</p>
     </a>
   );

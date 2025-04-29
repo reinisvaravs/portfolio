@@ -4,6 +4,12 @@
   margin-top: 250px;
 }
 
+.techGridH2 {
+  text-align: center;
+  color: rgba(243, 219, 199, 0.8);
+  margin: 50px 0 -40px 0;
+}
+
 .techGrid {
   width: 100%;
   display: flex;
@@ -109,6 +115,22 @@
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 }
 
+@media screen and (min-width: 1000px) {
+  .techGridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: auto;
+  }
+  .techGroup {
+    width: 50%;
+    height: 200px;
+  }
+  .techGrid {
+    flex-wrap: nowrap;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .aboutSection {
     flex-direction: row;
@@ -194,5 +216,8 @@
   }
   .portretDiv {
     scale: 0.6;
+  }
+  .techIcon {
+    scale: 0.8;
   }
 }
