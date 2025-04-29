@@ -94,15 +94,22 @@ const About = forwardRef((props, ref) => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".techItem", {
-        opacity: 0.5,
-        y: 50,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".techGrid",
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
+      const grids = document.querySelectorAll(".techGrid");
+
+      grids.forEach((grid) => {
+        gsap.from(grid.querySelectorAll(".techItem"), {
+          opacity: 0.5,
+          y: 30,
+          scale: 0.9,
+          stagger: 0.1,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: grid,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
     });
 
