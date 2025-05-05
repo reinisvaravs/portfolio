@@ -100,7 +100,7 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="Discord OpenAI Bot"
         bg={botBg}
-        link="https://github.com/reinisvaravs/all-readme/blob/39cf02d5e423b7f0c84b0b30b664ce7c1c725934/README.md"
+        link="https://github.com/reinisvaravs/WALL-E/blob/main/README.md"
         linkText={"Github"}
         description="A smart Discord bot built with Node.js and OpenAI. It reads GitHub docs and responds with contextual answers using a RAG pipeline to cut token use. Each user has memory for personalized replies. Like having a co-pilot that never logs off and knows all the docs by heart. Closed-source — only the README is public."
         tech={botTech}
