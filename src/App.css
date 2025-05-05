@@ -5,8 +5,16 @@
 }
 
 /* Universal fallback in case of browser-specific parsing issues */
-::selection,
-::-moz-selection,
+::selection {
+  background: #ffffff;
+  color: #111111;
+}
+
+::-moz-selection {
+  background: #ffffff;
+  color: #111111;
+}
+
 ::-webkit-selection {
   background: #ffffff;
   color: #111111;
