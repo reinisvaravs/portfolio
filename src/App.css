@@ -4,6 +4,14 @@
   font-display: block;
 }
 
+/* Universal fallback in case of browser-specific parsing issues */
+::selection,
+::-moz-selection,
+::-webkit-selection {
+  background: #ffffff;
+  color: #111111;
+}
+
 * {
   margin: 0;
   padding: 0;
