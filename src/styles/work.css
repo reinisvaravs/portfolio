@@ -401,6 +401,12 @@
   }
 }
 
+@media screen and (max-height: 700px) {
+  .backDiv {
+    transform: translateY(0px);
+  }
+}
+
 @media screen and (max-width: 550px) {
   .popupParagraph {
     font-size: 12px;
