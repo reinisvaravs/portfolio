@@ -26,7 +26,7 @@ function Footer({ onWorksClick, onAboutClick, onContactClick }) {
     <footer>
       <div className="authorDiv">
         <p className="author">
-          <span>{currentYear}</span> Reinis R. Vāravs
+          <span>{currentYear}</span> Reinis Vāravs
         </p>
       </div>
       <div className="footerButtons">

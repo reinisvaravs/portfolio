@@ -12,6 +12,7 @@
 
 img {
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
