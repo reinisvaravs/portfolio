@@ -102,7 +102,7 @@ const Work = forwardRef((props, ref) => {
         bg={botBg}
         link="https://github.com/reinisvaravs/WALL-E/blob/main/README.md"
         linkText={"Github"}
-        description="A smart Discord bot built with Node.js and OpenAI. It reads GitHub docs and responds with contextual answers using a RAG pipeline to cut token use. Each user has memory for personalized replies. Like having a co-pilot that never logs off and knows all the docs by heart. Closed-source — only the README is public."
+        description="A smart Discord bot built with Node.js and OpenAI. It reads GitHub docs and responds with contextual answers using a RAG pipeline to cut token use. Each user has memory for personalized replies. Like having a co-pilot that never logs off and knows all the docs by heart. Open-source - check out the README below."
         tech={botTech}
       />
       <WorkItem
@@ -113,7 +113,7 @@ const Work = forwardRef((props, ref) => {
         description={`Built an automated Instagram analytics system using <strong>Make</strong>, <strong>Apify</strong>, and <strong>Airtable</strong>.<br>
           The system scrapes profiles, posts, and reels daily into Airtable.<br>
           Useful for <strong>marketing agencies</strong>, <strong>talent managers</strong>, and <strong>brand teams</strong>.<br>
-          Fully automated — no manual tracking needed.`}                  
+          Fully automated - no manual tracking needed.`}                  
         tech={makeTech}
       />
       <WorkItem
