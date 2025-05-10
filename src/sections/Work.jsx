@@ -7,6 +7,7 @@ import gsap from "gsap";
 import storeBg from "../assets/ecom.webp";
 import botBg from "../assets/bot.webp";
 import makeBg from "../assets/makeBg.webp";
+import voiceAgent from "../assets/ai_voice_agent.png";
 //tech
 import postgressql from "../assets/postgressql.svg";
 import node from "../assets/node.svg";
@@ -21,6 +22,7 @@ import stripe from "../assets/stripe.svg";
 import apify from "../assets/apify.svg";
 import gsap_logo from "../assets/gsap.svg";
 import js from "../assets/js.svg";
+import retell from "../assets/retell.png";
 
 const Work = forwardRef((props, ref) => {
   useEffect(() => {
@@ -90,6 +92,11 @@ const Work = forwardRef((props, ref) => {
     { name: "Airtable", icon: airtable },
   ];
 
+  const agentTech = [
+    { name: "Make", icon: make },
+    { name: "Retell AI", icon: retell },
+  ];
+
   return (
     <div className="work" ref={ref}>
       <div className="selectedCasesDiv">
@@ -97,6 +104,14 @@ const Work = forwardRef((props, ref) => {
         <h1 className="selectedCases">Selected Cases</h1>
       </div>
 
+      <WorkItem
+        name="AI Voice Agent"
+        bg={voiceAgent}
+        link="coming-soon"
+        linkText="Details coming soon"
+        description="A voice-based AI assistant built with Retell.ai and Make.com. It can call real phone numbers, talk naturally with humans, ask questions, take notes, and book meetings. Perfect for automating lead calls or client follow-ups. Feels like a human, but runs 24/7. Integrates with tools like CRMs and calendars. Ideal for sales teams looking to scale without losing the personal touch."
+        tech={agentTech}
+      />
       <WorkItem
         name="Discord OpenAI Bot"
         bg={botBg}
@@ -113,7 +128,7 @@ const Work = forwardRef((props, ref) => {
         description={`Built an automated Instagram analytics system using <strong>Make</strong>, <strong>Apify</strong>, and <strong>Airtable</strong>.<br>
           The system scrapes profiles, posts, and reels daily into Airtable.<br>
           Useful for <strong>marketing agencies</strong>, <strong>talent managers</strong>, and <strong>brand teams</strong>.<br>
-          Fully automated - no manual tracking needed.`}                  
+          Fully automated - no manual tracking needed.`}
         tech={makeTech}
       />
       <WorkItem

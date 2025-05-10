@@ -274,8 +274,8 @@
 }
 
 .projectTechIcon {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   color: white;
   transition: all 0.2s ease;
 }
@@ -289,6 +289,8 @@
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s ease;
+    text-align: center;
+    width: 100px;
   }
 }
 
