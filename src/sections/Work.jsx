@@ -107,8 +107,8 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="AI Voice Agent"
         bg={voiceAgent}
-        link="coming-soon"
-        linkText="Details coming soon"
+        link=""
+        linkText="Details coming soon..."
         description="A voice-based AI assistant built with Retell.ai and Make.com. It can call real phone numbers, talk naturally with humans, ask questions, take notes, and book meetings. Perfect for automating lead calls or client follow-ups. Feels like a human, but runs 24/7. Integrates with tools like CRMs and calendars. Ideal for sales teams looking to scale without losing the personal touch."
         tech={agentTech}
       />

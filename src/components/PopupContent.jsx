@@ -44,7 +44,7 @@ export default function PopupContent({
               <p>Github</p>
             </a>
           </div>
-        ) : (
+        ) : link ? (
           <div className="githubLinkDiv">
             <a
               href={link}
@@ -55,7 +55,11 @@ export default function PopupContent({
               {linkText}
             </a>
           </div>
-        )}
+        ) : linkText ? (
+          <div className="githubLinkDiv">
+            <p>{linkText}</p>
+          </div>
+        ) : null}
       </div>
     </div>
   );
