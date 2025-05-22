@@ -52,7 +52,7 @@
   margin-left: 10px;
 }
 .software {
-  font-size: 100px;
+  font-size: 105px;
   display: flex;
   flex-direction: row;
   font-family: "Dorsa", sans-serif;
@@ -89,7 +89,7 @@
     margin-bottom: -15px;
   }
   .software {
-    font-size: 80px;
+    font-size: 82px;
     line-height: 155px;
   }
   .developer {
@@ -146,7 +146,7 @@
     margin-bottom: 0;
   }
   .software {
-    font-size: 60px;
+    font-size: 63px;
     line-height: 110px;
   }
   .developer {
@@ -164,7 +164,7 @@
     margin-bottom: -5px;
   }
   .software {
-    font-size: 50px;
+    font-size: 51px;
     line-height: 100px;
   }
   .developer {
