@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 200); 
+    }, 200);
   }, []);
 
   useEffect(() => {
@@ -53,6 +53,7 @@ function App() {
 
   return (
     <>
+      {/* <div className="screen"></div> */}
       <div className="bg" />
       <div className="loadingCover" />
       <div className="videoDiv">
