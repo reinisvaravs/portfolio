@@ -87,7 +87,7 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="E-commerce Store"
         bg="/assets/ecom.webp"
-        link="https://reinisvaravs.com/store"
+        link="https://frontend-ecom-r8j6.onrender.com"
         linkText="reinisvaravs.com/store"
         description="A full-stack e-commerce platform with secure user registration, test-mode Stripe subscriptions, and dynamic access control for premium content. No real payments are processed. The React frontend is clean and minimal for demo purposes."
         tech={techStacks.ecom}
