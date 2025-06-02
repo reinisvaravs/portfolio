@@ -1,0 +1,75 @@
+footer {
+  height: 60px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Bodoni Moda", serif;
+}
+
+.authorDiv {
+  width: 40%;
+}
+
+.author {
+  color: rgb(208, 208, 208);
+  text-align: center;
+  font-size: clamp(10px, 1.5vw, 16px);
+}
+
+.footerButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  align-items: center;
+}
+
+.footerButtons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-left: 20px;
+}
+
+.footerButtons ul li {
+  padding-left: 5px;
+}
+
+.footerButtons ul li button {
+  color: rgb(208, 208, 208);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(10px, 1.5vw, 16px);
+  font-family: "Bodoni Moda", serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.throughWhite {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.throughWhite::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: all 0.7s ease;
+}
+
+.throughWhite:hover::after {
+  width: 100%;
+  transition: all 0.5s ease;
+}

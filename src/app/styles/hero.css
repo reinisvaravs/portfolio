@@ -1,0 +1,215 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 3%;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -200px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 20vw;
+  height: 10vh;
+  position: absolute;
+  top: 20%;
+  right: 25%;
+}
+
+.date {
+  width: 90px;
+  font-size: 120px;
+  font-family: "Pinyon Script", Cambria;
+}
+
+.month {
+  font-size: 35px;
+  padding-bottom: 15px;
+}
+
+.dateMonth {
+  font-family: "Bodoni Moda", serif;
+  p {
+    line-height: 19px;
+  }
+}
+
+.fullStack {
+  font-size: 40px;
+  font-family: "Bodoni Moda", serif;
+  color: #edd5c2;
+  margin-left: 10px;
+}
+.software {
+  font-size: 105px;
+  display: flex;
+  flex-direction: row;
+  font-family: "Dorsa", sans-serif;
+  letter-spacing: 4px;
+  line-height: 170px;
+  margin-left: 10px;
+}
+.developer {
+  font-size: 140px;
+  font-family: "Dorsa", sans-serif;
+  letter-spacing: 4px;
+  line-height: 220px;
+  margin-left: 10px;
+}
+.heroAbout {
+  width: 70vw;
+  max-width: 600px;
+  position: absolute;
+  top: 55%;
+  right: 3%;
+  text-indent: 15vw;
+  p {
+    font-family: "Bodoni Moda", serif;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .heroContent {
+    margin-bottom: 0px;
+  }
+  .fullStack {
+    font-size: 35px;
+    margin-bottom: -15px;
+  }
+  .software {
+    font-size: 82px;
+    line-height: 155px;
+  }
+  .developer {
+    font-size: 110px;
+    line-height: 155px;
+  }
+  .heroAbout {
+    width: 80vw;
+    top: 68%;
+    right: 5%;
+    p {
+      font-size: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .software,
+  .developer,
+  .fullStack {
+    transform: translateY(-10px);
+  }
+  .date {
+    font-size: 80px;
+  }
+  .month {
+    font-size: 25px;
+    padding-bottom: 7px;
+  }
+  .dateMonth {
+    line-height: 14px;
+  }
+  .heroAbout {
+    width: 90vw;
+    max-width: 90vw;
+    top: 70%;
+    right: 3%;
+    text-indent: 30vw;
+    p {
+      font-size: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heroAbout p {
+    font-size: 20px;
+  }
+  .heroContent {
+    margin-bottom: 0px;
+  }
+  .fullStack {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+  .software {
+    font-size: 63px;
+    line-height: 110px;
+  }
+  .developer {
+    font-size: 85px;
+    line-height: 130px;
+  }
+  .hero {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .fullStack {
+    font-size: 20px;
+    margin-bottom: -5px;
+  }
+  .software {
+    font-size: 51px;
+    line-height: 100px;
+  }
+  .developer {
+    font-size: 70px;
+    line-height: 95px;
+  }
+  .time {
+    top: 20%;
+    right: 35%;
+  }
+  .heroAbout p {
+    font-size: 16px;
+  }
+  .napoleon {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .date {
+    font-size: 50px;
+    width: 55px;
+  }
+  .dateMonth {
+    font-size: 14px;
+  }
+  .month {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .napoleon {
+    background-position: center 13%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wanderer {
+    background-position: center 45%;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .date {
+    width: 150px;
+  }
+}
