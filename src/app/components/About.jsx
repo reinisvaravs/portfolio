@@ -7,19 +7,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 // icons
 import portret from "../../../public/assets/portret.webp";
-import postgressql from "../../../public/assets/postgressql.svg";
-import node from "../../../public/assets/node.svg";
-import ex from "../../../public/assets/express.svg";
-import discord from "../../../public/assets/discord.svg";
-import react from "../../../public/assets/react.svg";
-import stripe from "../../../public/assets/stripe.svg";
-import openai from "../../../public/assets/openai.svg";
-import css from "../../../public/assets/css.svg";
-import make from "../../../public/assets/make.svg";
-import apify from "../../../public/assets/apify.svg";
-import airtable from "../../../public/assets/airtable.svg";
-import gsap_logo from "../../../public/assets/gsap.svg";
-import js from "../../../public/assets/js.svg";
+import { techStacks } from "../config/techIcons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +16,7 @@ const About = forwardRef((props, ref) => {
   const nameRef = useRef(null);
 
   const words =
-    `               I’m an AI automation engineer from Latvia focused on helping businesses run faster and more efficiently through smart no-code systems. Using tools like Make and OpenAI - and backed by my full-stack experience with the PERN stack (PostgreSQL, Express, React, Node.js) - I build powerful automations that eliminate manual work and boost performance.`.split(
+    `               I'm an AI automation engineer from Latvia focused on helping businesses run faster and more efficiently through smart no-code systems. Using tools like Make and OpenAI - and backed by my full-stack experience with the PERN stack (PostgreSQL, Express, React, Node.js) - I build powerful automations that eliminate manual work and boost performance.`.split(
       " "
     );
 
@@ -120,31 +108,6 @@ const About = forwardRef((props, ref) => {
     return () => ctx.revert();
   }, []);
 
-  const frontendTech = [
-    { name: "React", icon: react },
-    { name: "CSS", icon: css },
-    { name: "GSAP", icon: gsap_logo },
-  ];
-
-  const backendTech = [
-    { name: "Javascript", icon: js },
-    { name: "Node.js", icon: node },
-    { name: "Express.js", icon: ex },
-    { name: "PostgreSQL", icon: postgressql },
-  ];
-
-  const apiTech = [
-    { name: "OpenAI", icon: openai },
-    { name: "Stripe", icon: stripe },
-    { name: "Discord.js", icon: discord },
-  ];
-
-  const makeTech = [
-    { name: "Make", icon: make },
-    { name: "Apify", icon: apify },
-    { name: "Airtable", icon: airtable },
-  ];
-
   return (
     <>
       <h1 className="techGridH1">Tech stack</h1>
@@ -152,7 +115,7 @@ const About = forwardRef((props, ref) => {
         <div className="techGroup">
           <h2 className="techGridH2">Frontend</h2>
           <div className="techGrid">
-            {frontendTech.map((item, i) => (
+            {techStacks.frontend.map((item, i) => (
               <div className="techItem" key={i}>
                 <img src={item.icon} alt={item.name} className="techIcon" />
                 <p className="techName">{item.name}</p>
@@ -163,7 +126,7 @@ const About = forwardRef((props, ref) => {
         <div className="techGroup">
           <h2 className="techGridH2">Backend</h2>
           <div className="techGrid">
-            {backendTech.map((item, i) => (
+            {techStacks.backend.map((item, i) => (
               <div className="techItem" key={i}>
                 <img src={item.icon} alt={item.name} className="techIcon" />
                 <p className="techName">{item.name}</p>
@@ -174,7 +137,7 @@ const About = forwardRef((props, ref) => {
         <div className="techGroup">
           <h2 className="techGridH2">APIs & Integrations</h2>
           <div className="techGrid">
-            {apiTech.map((item, i) => (
+            {techStacks.api.map((item, i) => (
               <div className="techItem" key={i}>
                 <img src={item.icon} alt={item.name} className="techIcon" />
                 <p className="techName">{item.name}</p>
@@ -185,7 +148,7 @@ const About = forwardRef((props, ref) => {
         <div className="techGroup">
           <h2 className="techGridH2">No-code</h2>
           <div className="techGrid">
-            {makeTech.map((item, i) => (
+            {techStacks.make.map((item, i) => (
               <div className="techItem" key={i}>
                 <img src={item.icon} alt={item.name} className="techIcon" />
                 <p className="techName">{item.name}</p>
