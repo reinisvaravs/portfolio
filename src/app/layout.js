@@ -20,9 +20,9 @@ const sixCaps = Six_Caps({
 
 export const metadata = {
   title:
-    "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
+    "Reinis Varavs – AI Automation Engineer & Full-Stack Next.js Developer",
   description:
-    "Official portfolio of Reinis Varavs, an AI Systems Engineer and full-stack specialist building automation solutions using OpenAI and modern technologies.",
+    "Reinis Varavs builds advanced AI automation systems and full-stack web platforms using Next.js, OpenAI, and scalable tools like Make.com. Founder, engineer, and systems builder.",
   metadataBase: new URL("https://reinisvaravs.com"),
   alternates: {
     canonical: "/",
@@ -44,28 +44,28 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
+      "Reinis Varavs – AI Automation Engineer & Full-Stack Next.js Developer",
     description:
-      "Explore the official portfolio of Reinis Varavs, an AI Systems Engineer building next-generation automation systems powered by OpenAI and full-stack frameworks.",
+      "Explore the portfolio of Reinis Varavs, a systems-focused engineer building AI automations and full-stack applications using Next.js, OpenAI, and modern cloud tooling.",
     url: "https://reinisvaravs.com",
     siteName: "Reinis Varavs Portfolio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://reinisvaravs.com/preview.png",
+        url: "https://reinisvaravs.com/preview.png", // swap image contents as needed
         width: 1200,
         height: 630,
-        alt: "Reinis Varavs Portfolio Preview",
+        alt: "Preview of Reinis Varavs – AI Automation Engineer & Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
+      "Reinis Varavs – AI Automation Engineer & Full-Stack Next.js Developer",
     description:
-      "Explore the official portfolio of Reinis Varavs, an AI Systems Engineer building next-generation automation systems powered by OpenAI and full-stack frameworks.",
+      "Custom AI automations and full-stack Next.js systems for modern businesses. Built with OpenAI, Make.com, Vercel, and scalable web frameworks.",
     images: ["https://reinisvaravs.com/preview.png"],
     creator: "@reinisvaravs",
   },
@@ -76,9 +76,9 @@ export const metadata = {
       name: "Reinis Varavs",
       alternateName: "Reinis Vāravs",
       url: "https://reinisvaravs.com",
-      jobTitle: "AI Systems Engineer",
+      jobTitle: "AI Automation Engineer",
       description:
-        "Reinis Varavs is an AI Systems Engineer specializing in building automation solutions using OpenAI and modern full-stack technologies.",
+        "Reinis Varavs is an AI systems engineer and full-stack developer helping businesses unlock scale through automation using Next.js, OpenAI, and modern frameworks.",
       sameAs: [
         "https://github.com/reinisvaravs",
         "https://www.instagram.com/reinisvaravs/",
