@@ -23,6 +23,21 @@ export const metadata = {
     "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
   description:
     "Official portfolio of Reinis Varavs, an AI Systems Engineer and full-stack specialist building automation solutions using OpenAI and modern technologies.",
+  metadataBase: new URL("https://reinisvaravs.com"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
@@ -33,6 +48,9 @@ export const metadata = {
     description:
       "Explore the official portfolio of Reinis Varavs, an AI Systems Engineer building next-generation automation systems powered by OpenAI and full-stack frameworks.",
     url: "https://reinisvaravs.com",
+    siteName: "Reinis Varavs Portfolio",
+    locale: "en_US",
+    type: "website",
     images: [
       {
         url: "https://reinisvaravs.com/preview.png",
@@ -42,31 +60,36 @@ export const metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
+    description:
+      "Explore the official portfolio of Reinis Varavs, an AI Systems Engineer building next-generation automation systems powered by OpenAI and full-stack frameworks.",
+    images: ["https://reinisvaravs.com/preview.png"],
+    creator: "@reinisvaravs",
+  },
+  other: {
+    "application-ld+json": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Reinis Varavs",
+      alternateName: "Reinis Vāravs",
+      url: "https://reinisvaravs.com",
+      jobTitle: "AI Systems Engineer",
+      description:
+        "Reinis Varavs is an AI Systems Engineer specializing in building automation solutions using OpenAI and modern full-stack technologies.",
+      sameAs: [
+        "https://github.com/reinisvaravs",
+        "https://www.instagram.com/reinisvaravs/",
+      ],
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" translate="no">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Reinis Varavs",
-              alternateName: "Reinis Vāravs",
-              url: "https://reinisvaravs.com",
-              jobTitle: "AI Systems Engineer",
-              description:
-                "Reinis Varavs is an AI Systems Engineer specializing in building automation solutions using OpenAI and modern full-stack technologies.",
-            }),
-          }}
-        />
-      </head>
       <body
         className={`${pinyon.variable} ${dorsa.variable} ${bodoni.variable} ${sixCaps.variable}`}
       >
