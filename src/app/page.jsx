@@ -59,7 +59,7 @@ export default function Home() {
       <div className="loadingCover" />
       <div className="videoDiv">
         <video className="video" autoPlay loop muted playsInline preload="auto">
-          <source src="../../public/assets/matrixBg.mp4" type="video/mp4" />
+          <source src="/assets/matrixBg.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="appContent">
