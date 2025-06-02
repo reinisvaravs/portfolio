@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 // icons
-import portret from "../../../public/assets/portret.webp";
 import { techStacks } from "../config/techIcons";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -170,7 +169,11 @@ const About = forwardRef((props, ref) => {
           </p>
         </div>
         <div className="portretDiv">
-          <img src={portret} alt="Reinis photo" className="portret" />
+          <img
+            src="/assets/portret.webp"
+            alt="Reinis photo"
+            className="portret"
+          />
           <div className="portretBorder" />
         </div>
       </div>

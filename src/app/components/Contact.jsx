@@ -6,8 +6,6 @@ import { ContactDetail, IconDetail } from "../components/ContactDetail";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { forwardRef } from "react";
-import instagram from "../../../public/assets/instagram.webp";
-import github from "../../../public/assets/github.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,12 +92,12 @@ const Contact = forwardRef((props, ref) => {
           <div className="IconDetailDiv">
             <IconDetail
               href="https://www.instagram.com/reinisvaravs/"
-              icon={instagram}
+              icon="/assets/instagram.webp"
               name="Instagram"
             />
             <IconDetail
               href="https://github.com/reinisvaravs/"
-              icon={github}
+              icon="/assets/github.svg"
               name="Github"
             />
             {/* <IconDetail
