@@ -4,6 +4,7 @@ const techIcons = {
   node: "/assets/node.svg",
   express: "/assets/express.svg",
   discord: "/assets/discord.svg",
+  next: "/assets/next.svg",
   react: "/assets/react.svg",
   openai: "/assets/openai.svg",
   css: "/assets/css.svg",
@@ -46,6 +47,7 @@ export const techStacks = {
     { name: "Retell AI", icon: techIcons.retell },
   ],
   frontend: [
+    { name: "Next.js", icon: techIcons.next },
     { name: "React", icon: techIcons.react },
     { name: "CSS", icon: techIcons.css },
     { name: "GSAP", icon: techIcons.gsap },
