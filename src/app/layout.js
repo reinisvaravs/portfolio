@@ -1,6 +1,5 @@
 import { Pinyon_Script, Dorsa, Bodoni_Moda, Six_Caps } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const pinyon = Pinyon_Script({
   weight: "400",
@@ -24,6 +23,10 @@ export const metadata = {
     "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
   description:
     "Official portfolio of Reinis Varavs, an AI Systems Engineer and full-stack specialist building automation solutions using OpenAI and modern technologies.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title:
       "Reinis Varavs - AI Systems Engineer | Full-Stack & Automation Specialist",
@@ -44,11 +47,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" translate="no">
-      <Head>
+      <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.png" />
-
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -65,8 +66,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-      </Head>
-
+      </head>
       <body
         className={`${pinyon.variable} ${dorsa.variable} ${bodoni.variable} ${sixCaps.variable}`}
       >
