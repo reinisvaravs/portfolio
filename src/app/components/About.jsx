@@ -159,7 +159,7 @@ const About = forwardRef((props, ref) => {
       <div className="aboutSection" ref={ref}>
         <div className="about textHeading" ref={nameRef}>
           <h1 className="nameAnim">Hello. I am Reinis</h1>
-          <h2 className="nameAnim">Roberts Vāravs</h2>
+          <h2 className="nameAnim">Roberts Varavs</h2>
           <p ref={headingRef}>
             {words.map((word, i) => (
               <span key={i} className="split-child">
