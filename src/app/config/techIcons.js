@@ -15,6 +15,8 @@ const techIcons = {
   gsap: "/assets/gsap.svg",
   javascript: "/assets/js.svg",
   retell: "/assets/retell.png",
+  twilio: "/assets/twilio.svg",
+  cal: "/assets/cal.jpg",
 };
 
 // Tech stack configurations
@@ -43,8 +45,10 @@ export const techStacks = {
     { name: "Airtable", icon: techIcons.airtable },
   ],
   agent: [
+    { name: "Twilio", icon: techIcons.twilio },
     { name: "Make", icon: techIcons.make },
     { name: "Retell AI", icon: techIcons.retell },
+    { name: "Cal.com", icon: techIcons.cal },
   ],
   frontend: [
     { name: "Next.js", icon: techIcons.next },
