@@ -9,14 +9,12 @@ const techIcons = {
   openai: "/assets/openai.svg",
   css: "/assets/css.svg",
   make: "/assets/make.svg",
-  airtable: "/assets/airtable.svg",
   stripe: "/assets/stripe.svg",
   apify: "/assets/apify.svg",
   gsap: "/assets/gsap.svg",
   javascript: "/assets/js.svg",
   retell: "/assets/retell.png",
   twilio: "/assets/twilio.svg",
-  cal: "/assets/cal.jpg",
 };
 
 // Tech stack configurations
@@ -42,13 +40,14 @@ export const techStacks = {
   make: [
     { name: "Make", icon: techIcons.make },
     { name: "Apify", icon: techIcons.apify },
-    { name: "Airtable", icon: techIcons.airtable },
+    { name: "Twilio", icon: techIcons.twilio },
+    { name: "Retell AI", icon: techIcons.retell },
   ],
+
   agent: [
     { name: "Twilio", icon: techIcons.twilio },
     { name: "Make", icon: techIcons.make },
     { name: "Retell AI", icon: techIcons.retell },
-    { name: "Cal.com", icon: techIcons.cal },
   ],
   frontend: [
     { name: "Next.js", icon: techIcons.next },
