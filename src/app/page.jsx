@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Work from "./components/Work";
@@ -19,6 +19,23 @@ export default function Home() {
   const workRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
+  const [isNightMode, setIsNightMode] = useState(false);
+
+  useEffect(() => {
+    const checkTime = () => {
+      const hour = new Date().getHours();
+      // Dark mode from midnight (00:00) to 6 AM
+      setIsNightMode(hour >= 0 && hour < 6);
+    };
+
+    // Check immediately
+    checkTime();
+
+    // Set up interval to check every minute
+    const interval = setInterval(checkTime, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -55,7 +72,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg" />
+      <div className={`bg ${isNightMode ? "night-mode" : ""}`} />
       <div className="loadingCover" />
       <div className="videoDiv">
         <video className="video" autoPlay loop muted playsInline preload="auto">
@@ -63,7 +80,7 @@ export default function Home() {
         </video>
       </div>
       <div className="appContent">
-        <div className="bg" />
+        <div className={`bg ${isNightMode ? "night-mode" : ""}`} />
         <Header
           onWorksClick={() =>
             workRef.current?.scrollIntoView({ behavior: "smooth" })
