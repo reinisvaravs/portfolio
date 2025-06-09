@@ -100,11 +100,6 @@ const Contact = forwardRef((props, ref) => {
               icon="/assets/github.svg"
               name="Github"
             />
-            {/* <IconDetail
-              href="https://www.linkedin.com/in/reinis-varavs/"
-              icon={linkedin}
-              name="LinkedIn"
-            /> */}
           </div>
         </div>
       </div>
