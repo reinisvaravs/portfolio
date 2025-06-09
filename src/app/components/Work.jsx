@@ -60,8 +60,8 @@ const Work = forwardRef((props, ref) => {
       <WorkItem
         name="AI Voice Agent"
         bg="/assets/ai_voice_agent.png"
-        link=""
-        linkText="Details coming soon..."
+        link="https://lintraai.com"
+        linkText="lintraai.com"
         description="A voice-based AI assistant built with Retell.ai and Make.com. It can call real phone numbers, talk naturally with humans, ask questions, take notes, and book meetings. Perfect for automating lead calls or client follow-ups. Feels like a human, but runs 24/7. Integrates with tools like CRMs and calendars. Ideal for sales teams looking to scale without losing the personal touch."
         tech={techStacks.agent}
       />
@@ -88,7 +88,7 @@ const Work = forwardRef((props, ref) => {
         name="E-commerce Store"
         bg="/assets/ecom.webp"
         link="https://frontend-ecom-r8j6.onrender.com"
-        linkText="reinisvaravs.com/store"
+        linkText="frontend-ecom-r8j6.onrender.com"
         description="A full-stack e-commerce platform with secure user registration, test-mode Stripe subscriptions, and dynamic access control for premium content. No real payments are processed. The React frontend is clean and minimal for demo purposes."
         tech={techStacks.ecom}
       />
