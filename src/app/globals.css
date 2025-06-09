@@ -55,7 +55,6 @@ body {
 
 .bg.night-mode {
   background-image: url("/assets/bm.jpg");
-  opacity: 0.8;
 }
 
 .loadingCover {
