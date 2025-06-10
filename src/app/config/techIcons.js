@@ -15,6 +15,7 @@ const techIcons = {
   javascript: "/assets/js.svg",
   retell: "/assets/retell.png",
   twilio: "/assets/twilio.svg",
+  tailwind: "/assets/tailwind.svg",
 };
 
 // Tech stack configurations
@@ -52,7 +53,7 @@ export const techStacks = {
   frontend: [
     { name: "Next.js", icon: techIcons.next },
     { name: "React", icon: techIcons.react },
-    { name: "CSS", icon: techIcons.css },
+    { name: "Tailwind", icon: techIcons.tailwind },
     { name: "GSAP", icon: techIcons.gsap },
   ],
   backend: [
