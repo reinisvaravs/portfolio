@@ -14,6 +14,9 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
         duration: 0.5,
         delay: 1.7,
         opacity: 1,
+        onComplete: setTimeout(() => {
+          handleScroll();
+        }, 500),
       });
     }, headerRef);
 
@@ -33,64 +36,58 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
     });
   }, []);
 
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    const progressBar = document.querySelector(".progressBar");
+    if (progressBar) {
+      progressBar.style.width = `${scrollPercent}%`;
+    }
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-
-      const progressBar = document.querySelector(".progressBar");
-      if (progressBar) {
-        progressBar.style.width = `${scrollPercent}%`;
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
+    <header ref={headerRef}>
       <div className="progressBarDiv">
         <div className="progressBar" />
       </div>
-      <header ref={headerRef}>
-        <div className="name">
-          <p>Reinis Varavs</p>
-          <p className="headerProf">AI Automation Engineer</p>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <button className="navBtns" onClick={onWorksClick}>
-                works
-              </button>
-            </li>
-            <li>
-              <button className="navBtns ignoreBtns">
-                |
-              </button>
-            </li>
-            <li>
-              <button className="navBtns" onClick={onAboutClick}>
-                about
-              </button>
-            </li>
-            <li>
-              <button className="navBtns ignoreBtns">
-                |
-              </button>
-            </li>
-            <li>
-              <button className="navBtns" onClick={onContactClick}>
-                contact
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
+      <div className="name">
+        <p>Reinis Varavs</p>
+        <p className="headerProf">AI Automation Engineer</p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <button className="navBtns" onClick={onWorksClick}>
+              works
+            </button>
+          </li>
+          <li>
+            <button className="navBtns ignoreBtns">|</button>
+          </li>
+          <li>
+            <button className="navBtns" onClick={onAboutClick}>
+              about
+            </button>
+          </li>
+          <li>
+            <button className="navBtns ignoreBtns">|</button>
+          </li>
+          <li>
+            <button className="navBtns" onClick={onContactClick}>
+              contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 
