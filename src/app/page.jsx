@@ -23,9 +23,9 @@ export default function Home({ slug }) {
 
   useEffect(() => {
     const checkTime = () => {
-      if (slug === "dayBg") {
+      if (slug === "day") {
         setIsNightMode(false);
-      } else if (slug === "nightBg") {
+      } else if (slug === "night") {
         setIsNightMode(true);
       } else {
         const hour = new Date().getHours();
