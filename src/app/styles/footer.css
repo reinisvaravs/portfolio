@@ -9,62 +9,8 @@ footer {
   font-family: "Bodoni Moda", serif;
 }
 
-.authorDiv {
-  width: 40%;
-}
-
 .author {
   color: rgb(208, 208, 208);
   text-align: center;
-  font-size: clamp(10px, 1.6vw, 16px);
-}
-
-.footerButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  width: 60%;
-  align-items: center;
-}
-
-.footerButtons ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding-left: 20px;
-}
-
-.footerButtons ul li {
-  padding-left: 5px;
-}
-
-.navBtns {
-  font-size: clamp(10px, 1.5vw, 16px);
-  color: #fff;
-  text-decoration: none;
-  background-color: rgb(255, 255, 255, 0.1);
-  border-radius: 3px;
-  border: none;
-  cursor: pointer;
-  font-family: "Bodoni Moda", serif;
-  font-weight: 100;
-  letter-spacing: 1px;
-  padding: 1px 6px 2px 6px;
-  border: 1px solid transparent;
-  transition: all 0.5s ease;
-}
-
-.navBtns:hover {
-  background-color: rgb(255, 255, 255, 0.3);
-  border: 1px solid rgb(255, 255, 255, 0.3);
-  border-radius: 20px;
-}
-
-.ignoreBtns {
-  pointer-events: none;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
+  font-size: clamp(12px, 1.8vw, 16px);
 }

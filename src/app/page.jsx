@@ -1,6 +1,5 @@
-"use client";
+"use client"
 
-import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Work from "./components/Work";
@@ -12,11 +11,11 @@ import "./globals.css";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home({ slug }) {
-  const workRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
   const [isNightMode, setIsNightMode] = useState(false);
@@ -71,32 +70,12 @@ export default function Home({ slug }) {
       <div className="loadingCover" />
       <div className="appContent">
         <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />
-        <Header
-          onWorksClick={() =>
-            workRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-          onAboutClick={() =>
-            aboutRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-          onContactClick={() =>
-            contactRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-        />
+        <Header />
         <Hero />
-        <Work ref={workRef} />
+        <Work />
         <About ref={aboutRef} />
         <Contact ref={contactRef} />
-        <Footer
-          onWorksClick={() =>
-            workRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-          onAboutClick={() =>
-            aboutRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-          onContactClick={() =>
-            contactRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-        />
+        <Footer />
       </div>
     </>
   );

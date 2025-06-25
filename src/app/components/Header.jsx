@@ -2,9 +2,12 @@
 
 import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import "../styles/header.css";
 
-function Header({ onWorksClick, onAboutClick, onContactClick }) {
+gsap.registerPlugin(ScrollToPlugin);
+
+function Header() {
   const headerRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -55,6 +58,14 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToWork = (section) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: section, offsetY: 0 },
+      ease: "power2.inOut",
+    });
+  };
+
   return (
     <header ref={headerRef}>
       <div className="progressBarDiv">
@@ -67,7 +78,7 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
       <nav>
         <ul>
           <li>
-            <button className="navBtns" onClick={onWorksClick}>
+            <button className="navBtns" onClick={() => scrollToWork(".work")}>
               works
             </button>
           </li>
@@ -75,7 +86,10 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
             <button className="navBtns ignoreBtns">|</button>
           </li>
           <li>
-            <button className="navBtns" onClick={onAboutClick}>
+            <button
+              className="navBtns"
+              onClick={() => scrollToWork(".techGridH1")}
+            >
               about
             </button>
           </li>
@@ -83,7 +97,10 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
             <button className="navBtns ignoreBtns">|</button>
           </li>
           <li>
-            <button className="navBtns" onClick={onContactClick}>
+            <button
+              className="navBtns"
+              onClick={() => scrollToWork(".contactsSection")}
+            >
               contact
             </button>
           </li>
