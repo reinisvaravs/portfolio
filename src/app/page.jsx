@@ -26,7 +26,6 @@ export default function Home() {
       const hour = new Date().getHours();
       // Dark mode from midnight (00:00) to 6 AM
       setIsNightMode(hour >= 0 && hour < 6);
-      setIsNightMode(true)
     };
 
     // Check immediately
