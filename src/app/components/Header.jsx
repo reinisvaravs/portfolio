@@ -14,9 +14,11 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
         duration: 0.5,
         delay: 1.7,
         opacity: 1,
-        onComplete: setTimeout(() => {
-          handleScroll();
-        }, 500),
+        onComplete: () => {
+          setTimeout(() => {
+            handleScroll();
+          }, 500);
+        },
       });
     }, headerRef);
 
