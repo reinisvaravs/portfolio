@@ -5,12 +5,13 @@ header {
   padding: 0 3%;
   z-index: 2;
   position: fixed;
-  top: 0;
+  top: 0%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 0;
 }
 
 .progressBarDiv {

@@ -25,6 +25,7 @@
   position: absolute;
   top: 20%;
   right: 25%;
+  opacity: 0;
 }
 
 .date {
@@ -74,10 +75,17 @@
   top: 55%;
   right: 3%;
   text-indent: 15vw;
+  opacity: 0;
   p {
     font-family: "Bodoni Moda", serif;
     font-size: 30px;
   }
+}
+
+.heroAnim {
+  opacity: 0;
+  rotate: 5deg;
+  transform: translateY(50px);
 }
 
 @media screen and (max-width: 1200px) {

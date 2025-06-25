@@ -9,10 +9,11 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(headerRef.current, {
-        y: -100,
+      gsap.to(headerRef.current, {
+        y: 0,
         duration: 0.5,
         delay: 1.7,
+        opacity: 1,
       });
     }, headerRef);
 

@@ -59,20 +59,20 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".heroAnim", {
-        y: 50,
+      gsap.to(".heroAnim", {
+        y: 0,
+        rotation: "0deg",
+        opacity: 1,
         duration: 0.4,
-        rotation: "5deg",
         delay: 0.7,
-        opacity: 0,
       });
-      gsap.from(".time", {
-        opacity: 0,
+      gsap.to(".time", {
+        opacity: 1,
         duration: 0.5,
         delay: 0.5,
       });
-      gsap.from(".heroAbout", {
-        opacity: 0,
+      gsap.to(".heroAbout", {
+        opacity: 1,
         duration: 0.5,
         delay: 1,
       });
