@@ -1,13 +1,32 @@
-"use client";
-
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "../styles/hero.css";
+import { useParams } from "next/navigation";
 
 const Hero = () => {
   const [animatedDate, setAnimatedDate] = useState("00");
   const [animatedMonth, setAnimatedMonth] = useState("jan");
   const heroRef = useRef(null);
+
+  const [isNightMode, setIsNightMode] = useState(false);
+  const slug = useParams().slug;
+
+  useEffect(() => {
+    const checkTime = () => {
+      if (slug === "day") {
+        setIsNightMode(false);
+      } else if (slug === "night") {
+        setIsNightMode(true);
+      } else {
+        const hour = new Date().getHours();
+        setIsNightMode(hour >= 0 && hour < 6);
+      }
+    };
+
+    checkTime();
+    const interval = setInterval(checkTime, 60000);
+    return () => clearInterval(interval);
+  }, [slug]);
 
   useEffect(() => {
     const now = new Date();
@@ -82,36 +101,39 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero" ref={heroRef}>
-      <div className="heroContent">
-        <div className="time">
-          <div>
-            <p className="date">{animatedDate}</p>
+    <>
+      <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />;
+      <div className="hero" ref={heroRef}>
+        <div className="heroContent">
+          <div className="time">
+            <div>
+              <p className="date">{animatedDate}</p>
+            </div>
+            <div className="dateMonth">
+              <p className="month">{animatedMonth}</p>
+              <p>available</p>
+              <p>for work</p>
+            </div>
           </div>
-          <div className="dateMonth">
-            <p className="month">{animatedMonth}</p>
-            <p>available</p>
-            <p>for work</p>
+          <div className="fullStack">
+            <p>AI</p>
           </div>
-        </div>
-        <div className="fullStack">
-          <p>AI</p>
-        </div>
-        <div className="software">
-          <h1 className="heroAnim">AUTOMATION</h1>
-        </div>
-        <div className="developer">
-          <h1 className="heroAnim">ENGINEER</h1>
-        </div>
-        <div className="heroAbout">
-          <p>
-            AI Automation Engineer from Latvia. I build smart systems with code
-            and no-code tools to streamline operations and eliminate manual
-            overhead.
-          </p>
+          <div className="software">
+            <h1 className="heroAnim">AUTOMATION</h1>
+          </div>
+          <div className="developer">
+            <h1 className="heroAnim">ENGINEER</h1>
+          </div>
+          <div className="heroAbout">
+            <p>
+              AI Automation Engineer from Latvia. I build smart systems with
+              code and no-code tools to streamline operations and eliminate
+              manual overhead.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
