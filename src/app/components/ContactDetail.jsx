@@ -1,10 +1,40 @@
 import "../styles/contacts.css";
+import { useEffect, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { MdContentCopy } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
-import { useState } from "react";
 
 export function ContactDetail({ href, detailContent, detailType }) {
   const [isCopied, setIsCopied] = useState(false);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const details = gsap.utils.toArray(".detailAnim");
+    details.forEach((el, i) => {
+      gsap.from(el, {
+        x: -100,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+    const socialMedia = gsap.utils.toArray(".contactIcon");
+    socialMedia.forEach((el, i) => {
+      gsap.from(el, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  }, []);
 
   return (
     <p className="detail detailAnim">

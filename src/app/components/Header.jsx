@@ -4,11 +4,31 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import "../styles/header.css";
+import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(ScrollToPlugin);
 
 function Header() {
   const headerRef = useRef(null);
+
+  useEffect(() => {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+      });
+  
+      const raf = (time) => {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+  
+      requestAnimationFrame(raf);
+  
+      return () => {
+        lenis.destroy();
+      };
+    }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

@@ -8,16 +8,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./globals.css";
 
-import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home({ slug }) {
-  const contactRef = useRef(null);
-  const aboutRef = useRef(null);
   const [isNightMode, setIsNightMode] = useState(false);
 
   useEffect(() => {
@@ -38,25 +35,6 @@ export default function Home({ slug }) {
   }, [slug]);
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-    });
-
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
-  useEffect(() => {
     gsap.to(".loadingCover", {
       opacity: 0,
       delay: 1.3,
@@ -73,8 +51,8 @@ export default function Home({ slug }) {
         <Header />
         <Hero />
         <Work />
-        <About ref={aboutRef} />
-        <Contact ref={contactRef} />
+        <About />
+        <Contact />
         <Footer />
       </div>
     </>
