@@ -19,12 +19,11 @@ const Contact = forwardRef((props, ref) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const details = gsap.utils.toArray(".detail");
-      // const socialMedia = gsap.utils.toArray(".contactIcon");
+      const details = gsap.utils.toArray(".detailAnim");
       details.forEach((el, i) => {
         gsap.from(el, {
-          scale: 1.1,
-          x: 20,
+          x: -100,
+          opacity: 0,
           scrollTrigger: {
             trigger: el,
             start: "top 90%",
@@ -32,38 +31,20 @@ const Contact = forwardRef((props, ref) => {
           },
         });
       });
-      // socialMedia.forEach((el, i) => {
-      //   gsap.from(el, {
-      //     scale: 1.3,
-      //     scrollTrigger: {
-      //       trigger: el,
-      //       start: "top 90%",
-      //       toggleActions: "play none none reverse",
-      //     },
-      //   });
-      // });
-    }, contactRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const btns = document.querySelectorAll(".detail");
-      const isSmallScreen = window.innerWidth <= 900;
-
-      btns.forEach((btn) => {
-        btn.classList.toggle("detailAnim", !isSmallScreen);
+      const socialMedia = gsap.utils.toArray(".contactIcon");
+      socialMedia.forEach((el, i) => {
+        gsap.from(el, {
+          opacity: 0,
+          delay: 0.5,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
-    };
-
-    // Initial check
-    handleResize();
-
-    // Listen to resize
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
+    }, contactRef);
+    return () => ctx.revert();
   }, []);
 
   return (
