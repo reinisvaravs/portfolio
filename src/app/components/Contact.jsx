@@ -35,10 +35,9 @@ const Contact = forwardRef((props, ref) => {
       socialMedia.forEach((el, i) => {
         gsap.from(el, {
           opacity: 0,
-          delay: 0.5,
           scrollTrigger: {
             trigger: el,
-            start: "top 90%",
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         });
