@@ -57,12 +57,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 200);
-  }, []);
-
-  useEffect(() => {
     gsap.to(".loadingCover", {
       opacity: 0,
       delay: 1.3,
