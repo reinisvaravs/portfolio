@@ -11,6 +11,7 @@ import "./globals.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useState } from "react";
+import LoadingCover from "./components/LoadingCover";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,18 +35,12 @@ export default function Home({ slug }) {
     return () => clearInterval(interval);
   }, [slug]);
 
-  useEffect(() => {
-    gsap.to(".loadingCover", {
-      opacity: 0,
-      delay: 1.3,
-      duration: 1,
-    });
-  }, []);
+  
 
   return (
     <>
       <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />
-      <div className="loadingCover" />
+      <LoadingCover/>
       <div className="appContent">
         <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />
         <Header />
