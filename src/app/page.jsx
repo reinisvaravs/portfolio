@@ -66,10 +66,10 @@ export default function Home() {
 
   return (
     <>
-      <div className={`bg ${isNightMode ? "night-mode" : ""}`} />
+      <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />
       <div className="loadingCover" />
       <div className="appContent">
-        <div className={`bg ${isNightMode ? "night-mode" : ""}`} />
+        <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />
         <Header
           onWorksClick={() =>
             workRef.current?.scrollIntoView({ behavior: "smooth" })
