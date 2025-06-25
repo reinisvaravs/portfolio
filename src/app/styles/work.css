@@ -154,6 +154,7 @@
   min-width: 410px;
   min-height: 240px;
   pointer-events: none;
+  border: 2px solid transparent;
 }
 
 @media screen and (max-width: 900px) {

@@ -44,15 +44,15 @@ export function openPopup({ img, name, link, linkText, description, tech }) {
       ? { left: "70%", top: "50%", scale: 1, transform: "translateX(8px)" } // medium
       : { left: "70%", top: "50%", scale: 1.3, transform: "translateX(8px)" }; // large
 
-    gsap.set(clone, {
-      position: "fixed",
-      top: img.getBoundingClientRect().top,
-      left: img.getBoundingClientRect().left,
-      zIndex: 9999,
-      backgroundSize: "163%",
-      backgroundPosition: "center",
-      transform: cloneTarget.transform || "translate(0)",
-    });
+  gsap.set(clone, {
+    position: "fixed",
+    top: img.getBoundingClientRect().top,
+    left: img.getBoundingClientRect().left,
+    zIndex: 9999,
+    backgroundSize: "163%",
+    backgroundPosition: "center",
+    transform: cloneTarget.transform || "translate(0)",
+  });
 
   gsap.to(clone, {
     top: cloneTarget.top,
@@ -189,7 +189,6 @@ export function openPopup({ img, name, link, linkText, description, tech }) {
 
   document.body.style.overflow = "hidden";
   document.documentElement.style.overflow = "hidden";
-  document.querySelector(".videoDiv").style.display = "none";
 
   window.addEventListener("resize", handleResize);
 }
@@ -281,6 +280,4 @@ export function closePopup() {
       });
     },
   });
-
-  document.querySelector(".videoDiv").style.display = "block";
 }
