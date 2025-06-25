@@ -1,3 +1,4 @@
+"use client";
 import "../styles/contacts.css";
 import { useEffect, useState } from "react";
 import gsap from "gsap";

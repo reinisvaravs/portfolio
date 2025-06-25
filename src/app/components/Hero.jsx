@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "../styles/hero.css";

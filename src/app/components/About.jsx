@@ -1,3 +1,4 @@
+"use client";
 import "../styles/about.css";
 import { forwardRef, useLayoutEffect } from "react";
 import { useEffect, useRef } from "react";

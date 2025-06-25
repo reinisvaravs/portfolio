@@ -1,5 +1,3 @@
-"use client";
-
 import "./globals.css";
 import LoadingCover from "./components/LoadingCover";
 import Header from "./components/Header";
