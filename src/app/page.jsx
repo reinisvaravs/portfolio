@@ -74,11 +74,6 @@ export default function Home() {
     <>
       <div className={`bg ${isNightMode ? "night-mode" : ""}`} />
       <div className="loadingCover" />
-      <div className="videoDiv">
-        <video className="video" autoPlay loop muted playsInline preload="auto">
-          <source src="/assets/matrixBg.mp4" type="video/mp4" />
-        </video>
-      </div>
       <div className="appContent">
         <div className={`bg ${isNightMode ? "night-mode" : ""}`} />
         <Header

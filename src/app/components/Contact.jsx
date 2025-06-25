@@ -20,13 +20,11 @@ const Contact = forwardRef((props, ref) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const details = gsap.utils.toArray(".detail");
-      const socialMedia = gsap.utils.toArray(".socialMedia");
+      // const socialMedia = gsap.utils.toArray(".contactIcon");
       details.forEach((el, i) => {
         gsap.from(el, {
-          x: -600,
-          opacity: 0,
-          duration: 1,
-          delay: i * 0.2,
+          scale: 1.1,
+          x: 20,
           scrollTrigger: {
             trigger: el,
             start: "top 90%",
@@ -34,19 +32,16 @@ const Contact = forwardRef((props, ref) => {
           },
         });
       });
-      socialMedia.forEach((el, i) => {
-        gsap.from(el, {
-          x: -600,
-          opacity: 0,
-          duration: 1,
-          delay: i * 0.2,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
+      // socialMedia.forEach((el, i) => {
+      //   gsap.from(el, {
+      //     scale: 1.3,
+      //     scrollTrigger: {
+      //       trigger: el,
+      //       start: "top 90%",
+      //       toggleActions: "play none none reverse",
+      //     },
+      //   });
+      // });
     }, contactRef);
 
     return () => ctx.revert();

@@ -19,16 +19,6 @@ const Work = forwardRef((props, ref) => {
         scrub: true,
       },
     });
-
-    gsap.to(".videoDiv", {
-      opacity: 0.1,
-      scrollTrigger: {
-        trigger: ".contactsSection",
-        start: "top 60%", // Start when hits bottom of viewport
-        end: "bottom bottom", // End when is fully in view
-        scrub: true,
-      },
-    });
   }, []);
 
   useEffect(() => {
