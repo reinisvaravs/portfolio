@@ -7,6 +7,7 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+  devIndicators: false,
 };
 
 export default nextConfig;

@@ -15,7 +15,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Home() {
+export default function Home({ slug }) {
   const workRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
@@ -23,19 +23,20 @@ export default function Home() {
 
   useEffect(() => {
     const checkTime = () => {
-      const hour = new Date().getHours();
-      // Dark mode from midnight (00:00) to 6 AM
-      setIsNightMode(hour >= 0 && hour < 6);
+      if (slug === "dayBg") {
+        setIsNightMode(false);
+      } else if (slug === "nightBg") {
+        setIsNightMode(true);
+      } else {
+        const hour = new Date().getHours();
+        setIsNightMode(hour >= 0 && hour < 6);
+      }
     };
 
-    // Check immediately
     checkTime();
-
-    // Set up interval to check every minute
     const interval = setInterval(checkTime, 60000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [slug]);
 
   useEffect(() => {
     const lenis = new Lenis({
