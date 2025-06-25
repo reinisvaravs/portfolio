@@ -1,15 +1,13 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "../styles/hero.css";
-import { useParams } from "next/navigation";
 
-const Hero = () => {
+const Hero = (slug) => {
   const [animatedDate, setAnimatedDate] = useState("00");
   const [animatedMonth, setAnimatedMonth] = useState("jan");
   const heroRef = useRef(null);
 
   const [isNightMode, setIsNightMode] = useState(false);
-  const slug = useParams().slug;
 
   useEffect(() => {
     const checkTime = () => {
