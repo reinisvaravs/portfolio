@@ -46,7 +46,7 @@ body {
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
-  opacity: 0.5;
+  opacity: 0.4;
   transition: background-image 0.5s ease;
   will-change: background-image;
   transform: translateZ(0);

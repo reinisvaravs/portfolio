@@ -63,17 +63,27 @@ function Header({ onWorksClick, onAboutClick, onContactClick }) {
         <nav>
           <ul>
             <li>
-              <button className="btns throughWhite" onClick={onWorksClick}>
-                works |
+              <button className="navBtns" onClick={onWorksClick}>
+                works
               </button>
             </li>
             <li>
-              <button className="btns throughWhite" onClick={onAboutClick}>
-                about |
+              <button className="navBtns ignoreBtns">
+                |
               </button>
             </li>
             <li>
-              <button className="btns throughWhite" onClick={onContactClick}>
+              <button className="navBtns" onClick={onAboutClick}>
+                about
+              </button>
+            </li>
+            <li>
+              <button className="navBtns ignoreBtns">
+                |
+              </button>
+            </li>
+            <li>
+              <button className="navBtns" onClick={onContactClick}>
                 contact
               </button>
             </li>

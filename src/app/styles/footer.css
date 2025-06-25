@@ -16,7 +16,7 @@ footer {
 .author {
   color: rgb(208, 208, 208);
   text-align: center;
-  font-size: clamp(10px, 1.5vw, 16px);
+  font-size: clamp(10px, 1.6vw, 16px);
 }
 
 .footerButtons {
@@ -40,36 +40,31 @@ footer {
   padding-left: 5px;
 }
 
-.footerButtons ul li button {
-  color: rgb(208, 208, 208);
+.navBtns {
+  font-size: clamp(10px, 1.5vw, 16px);
+  color: #fff;
   text-decoration: none;
-  background: transparent;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 3px;
   border: none;
   cursor: pointer;
-  font-size: clamp(10px, 1.5vw, 16px);
   font-family: "Bodoni Moda", serif;
   font-weight: 100;
   letter-spacing: 1px;
-}
-
-.throughWhite {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-}
-
-.throughWhite::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  width: 0;
-  height: 1px;
-  background: white;
-  transition: all 0.7s ease;
-}
-
-.throughWhite:hover::after {
-  width: 100%;
+  padding: 1px 6px 2px 6px;
+  border: 1px solid transparent;
   transition: all 0.5s ease;
+}
+
+.navBtns:hover {
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+.ignoreBtns {
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 }
