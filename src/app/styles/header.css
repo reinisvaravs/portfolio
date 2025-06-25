@@ -44,7 +44,7 @@ header::after {
 }
 
 .name {
-  font-family: "Bodoni Moda", serif;
+  font-family: "Bodoni Moda", "Courier New";
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -55,7 +55,7 @@ header::after {
 }
 
 .headerProf {
-  font-family: Roboto, sans-serif;
+  font-family: Poppins, "Courier New";
   text-transform: uppercase;
 }
 
@@ -104,8 +104,6 @@ header ul li {
 
 .ignoreBtns {
   pointer-events: none;
-  padding: 0;
-  margin: 0;
   background-color: transparent;
 }
 

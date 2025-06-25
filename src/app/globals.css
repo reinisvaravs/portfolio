@@ -1,17 +1,17 @@
 /* Universal fallback in case of browser-specific parsing issues */
 ::selection {
-  background: #ffffff;
-  color: #111111;
+  background: white;
+  color: black;
 }
 
 ::-moz-selection {
-  background: #ffffff;
-  color: #111111;
+  background: white;
+  color: black;
 }
 
 ::-webkit-selection {
-  background: #ffffff;
-  color: #111111;
+  background: white;
+  color: black;
 }
 
 * {
