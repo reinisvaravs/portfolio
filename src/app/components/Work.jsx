@@ -15,7 +15,7 @@ const Work = forwardRef((props, ref) => {
       scrollTrigger: {
         trigger: ".work",
         start: "top bottom", // Start when .work hits bottom of viewport
-        end: "90% bottom", // End when .work is fully in view
+        end: "70% bottom", // End when .work is fully in view
         scrub: true,
       },
     });
