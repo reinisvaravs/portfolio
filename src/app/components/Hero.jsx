@@ -8,7 +8,8 @@ const Hero = () => {
   const [animatedMonth, setAnimatedMonth] = useState("jan");
   const heroRef = useRef(null);
 
-  const themeBg = 6 > new Date().getHours() >= 0;
+  const themeBg = 6 > new Date().getHours();
+  console.log(new Date().getHours());
 
   useEffect(() => {
     const now = new Date();
