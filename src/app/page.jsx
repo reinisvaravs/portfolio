@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <LoadingCover />
       <div className="appContent">
-        {/* uses client */}<Header />
-        {/* uses client */}<Hero />
+        {/* iDK */}<Header />
+        {/* iDK */}<Hero />
         {/* DONE ? */}<Work />
         {/* DONE ? */}<About />
         {/* DONE ? */}<Contact />
