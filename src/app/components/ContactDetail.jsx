@@ -1,6 +1,6 @@
 "use client";
 import "../styles/contacts.css";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { MdContentCopy } from "react-icons/md";
@@ -8,37 +8,28 @@ import { FaCheck } from "react-icons/fa";
 
 export function ContactDetail({ href, detailContent, detailType }) {
   const [isCopied, setIsCopied] = useState(false);
+  const detailRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
-    const details = gsap.utils.toArray(".detailAnim");
-    details.forEach((el, i) => {
-      gsap.from(el, {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(detailRef.current, {
         x: -100,
         opacity: 0,
         scrollTrigger: {
-          trigger: el,
+          trigger: detailRef.current,
           start: "top 90%",
           toggleActions: "play none none reverse",
         },
       });
-    });
-    const socialMedia = gsap.utils.toArray(".contactIcon");
-    socialMedia.forEach((el, i) => {
-      gsap.from(el, {
-        opacity: 0,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      });
-    });
+    }, detailRef);
+
+    return () => ctx.revert(); // cleanup
   }, []);
 
   return (
-    <p className="detail detailAnim">
+    <p className="detail detailAnim" ref={detailRef}>
       {detailType}:{" "}
       <a href={href} target="_blank" rel="noopener noreferrer">
         {detailContent}
@@ -60,6 +51,23 @@ export function ContactDetail({ href, detailContent, detailType }) {
 }
 
 export function IconDetail({ href, icon, name }) {
+  const iconRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(iconRef.current, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: iconRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, iconRef);
+
+    return () => ctx.revert(); // cleanup
+  }, []);
+
   return (
     <a
       className="contactIconDiv"
@@ -67,7 +75,7 @@ export function IconDetail({ href, icon, name }) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img className="contactIcon" src={icon} />
+      <img className="contactIcon" ref={iconRef} src={icon} />
       <p>{name}</p>
     </a>
   );

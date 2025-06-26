@@ -4,8 +4,6 @@ import AboutText from "./AboutText";
 import Tech from "./Tech";
 
 const About = () => {
-  
-
   return (
     <>
       <h1 className="techGridH1">Tech stack</h1>
