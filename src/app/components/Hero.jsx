@@ -3,29 +3,12 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "../styles/hero.css";
 
-const Hero = (slug) => {
+const Hero = () => {
   const [animatedDate, setAnimatedDate] = useState("00");
   const [animatedMonth, setAnimatedMonth] = useState("jan");
   const heroRef = useRef(null);
 
-  const [isNightMode, setIsNightMode] = useState(false);
-
-  useEffect(() => {
-    const checkTime = () => {
-      if (slug === "day") {
-        setIsNightMode(false);
-      } else if (slug === "night") {
-        setIsNightMode(true);
-      } else {
-        const hour = new Date().getHours();
-        setIsNightMode(hour >= 0 && hour < 6);
-      }
-    };
-
-    checkTime();
-    const interval = setInterval(checkTime, 60000);
-    return () => clearInterval(interval);
-  }, [slug]);
+  const themeBg = 6 > new Date().getHours() >= 0;
 
   useEffect(() => {
     const now = new Date();
@@ -101,7 +84,7 @@ const Hero = (slug) => {
 
   return (
     <>
-      <div className={`bg ${isNightMode ? "nightBg" : "dayBg"}`} />;
+      <div className={`bg ${themeBg ? "nightBg" : ""}`} />;
       <div className="hero" ref={heroRef}>
         <div className="heroContent">
           <div className="time">

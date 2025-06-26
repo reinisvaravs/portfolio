@@ -38,6 +38,7 @@ body {
 }
 
 .bg {
+  background-image: url("/assets/car.webp");
   background-position: center 80%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,10 +51,6 @@ body {
   will-change: background-image;
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-.dayBg {
-  background-image: url("/assets/car.webp");
 }
 
 .nightBg {

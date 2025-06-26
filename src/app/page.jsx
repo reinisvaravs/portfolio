@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <LoadingCover />
       <div className="appContent">
-        <Header />
-        <Hero />
-        <Work />
-        <About />
-        <Contact />
-        <Footer />
+        {/* uses client */}<Header />
+        {/* uses client */}<Hero />
+        {/* DONE ? */}<Work />
+        {/* DONE ? */}<About />
+        {/* DONE ? */}<Contact />
+        {/* DONE ? */}<Footer />
       </div>
     </>
   );
