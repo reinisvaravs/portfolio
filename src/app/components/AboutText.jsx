@@ -77,26 +77,16 @@ function AboutText() {
   }, []);
 
   return (
-    <div className="aboutSection">
-      <div className="about textHeading" ref={nameRef}>
-        <h1 className="nameAnim">Hello. I am Reinis</h1>
-        <h2 className="nameAnim">Roberts Varavs</h2>
-        <p ref={headingRef}>
-          {words.map((word, i) => (
-            <span key={i} className="split-child">
-              <span style={{ display: "inline-block" }}>{word}</span>
-            </span>
-          ))}
-        </p>
-      </div>{" "}
-      <div className="portretDiv">
-        <img
-          src="/assets/portret.webp"
-          alt="Reinis photo"
-          className="portret"
-        />
-        <div className="portretBorder" />
-      </div>
+    <div className="about textHeading" ref={nameRef}>
+      <h1 className="nameAnim">Hello. I am Reinis</h1>
+      <h2 className="nameAnim">Roberts Varavs</h2>
+      <p ref={headingRef}>
+        {words.map((word, i) => (
+          <span key={i} className="split-child">
+            <span style={{ display: "inline-block" }}>{word}</span>
+          </span>
+        ))}
+      </p>
     </div>
   );
 }

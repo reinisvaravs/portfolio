@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <LoadingCover />
       <div className="appContent">
-        {/* iDK */}<Header />
-        {/* iDK */}<Hero />
-        {/* DONE ? */}<Work />
-        {/* DONE ? */}<About />
-        {/* DONE ? */}<Contact />
-        {/* DONE ? */}<Footer />
+        <Header />
+        <Hero />
+        <Work />
+        <About />
+        <Contact />
+        <Footer />
       </div>
     </>
   );

@@ -1,5 +1,4 @@
 import "../styles/about.css";
-// icons
 import AboutText from "./AboutText";
 import Tech from "./Tech";
 
@@ -25,7 +24,17 @@ const About = () => {
           <Tech category="make" />
         </div>
       </div>
-      <AboutText />
+      <div className="aboutSection">
+        <AboutText />
+        <div className="portretDiv">
+          <img
+            src="/assets/portret.webp"
+            alt="Reinis photo"
+            className="portret"
+          />
+          <div className="portretBorder" />
+        </div>
+      </div>
     </>
   );
 };

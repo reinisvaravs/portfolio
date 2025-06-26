@@ -85,8 +85,8 @@ const Hero = () => {
   return (
     <>
       <div className={`bg ${themeBg ? "nightBg" : ""}`} />;
-      <div className="hero" ref={heroRef}>
-        <div className="heroContent">
+      <div className="hero">
+        <div className="heroContent" ref={heroRef}>
           <div className="time">
             <div>
               <p className="date">{animatedDate}</p>
