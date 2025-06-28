@@ -50,14 +50,24 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title:
-    "Reinis Varavs - AI Automation Engineer & Full-Stack Next.js Developer",
+  // Primary title for search results and browser tabs
+  title: "Reinis Varavs | AI Automation Engineer & Full-Stack Developer",
+
+  // Comprehensive description for search snippets
   description:
-    "Reinis Varavs builds advanced AI automation systems and full-stack web platforms using Next.js, OpenAI, and scalable tools like Make.com. Founder, engineer, and systems builder.",
+    "Reinis Varavs is an AI automation engineer and full-stack developer from Latvia. Specializing in AI voice systems, automation workflows, and scalable web applications.",
+
+  // Keywords for search engines (still relevant for some platforms)
+  keywords:
+    "Reinis Varavs, Reinis Vāravs, AI automation engineer, AI automation developer, full-stack developer, AI voice systems, automation consultant, Latvia developer, OpenAI developer, Make.com automation",
+
+  // Canonical URL and base configuration
   metadataBase: new URL("https://reinisvaravs.com"),
   alternates: {
     canonical: "/",
   },
+
+  // Search engine crawling instructions
   robots: {
     index: true,
     follow: true,
@@ -67,54 +77,120 @@ export const metadata = {
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+      noimageindex: false,
     },
   },
+
+  // Favicon and app icons
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.png",
   },
+
+  // Open Graph for social media sharing
   openGraph: {
-    title:
-      "Reinis Varavs - AI Automation Engineer & Full-Stack Next.js Developer",
+    title: "Reinis Varavs | AI Automation Engineer & Full-Stack Developer",
     description:
-      "Explore the portfolio of Reinis Varavs, a systems-focused engineer building AI automations and full-stack applications using Next.js, OpenAI, and modern cloud tooling.",
+      "AI automation engineer and full-stack developer from Latvia. Building intelligent systems with OpenAI, Make.com, and modern web technologies.",
     url: "https://reinisvaravs.com",
     siteName: "Reinis Varavs Portfolio",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "https://reinisvaravs.com/preview.png", // swap image contents as needed
-        width: 1200,
-        height: 630,
-        alt: "Preview of Reinis Varavs - AI Automation Engineer & Full-Stack Developer",
-      },
-    ],
   },
+
+  // Twitter Card optimization
   twitter: {
-    card: "summary_large_image",
-    title:
-      "Reinis Varavs - AI Automation Engineer & Full-Stack Next.js Developer",
+    card: "summary",
+    title: "Reinis Varavs | AI Automation Engineer & Full-Stack Developer",
     description:
-      "Custom AI automations and full-stack Next.js systems for modern businesses. Built with OpenAI, Make.com, Vercel, and scalable web frameworks.",
-    images: ["https://reinisvaravs.com/preview.png"],
+      "AI automation engineer and full-stack developer from Latvia. Specializing in AI voice systems, automation workflows, and scalable web applications.",
     creator: "@reinisvaravs",
+    site: "@reinisvaravs",
   },
+
+  // Structured data for rich snippets
   other: {
-    "application-ld+json": {
+    "application-ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Reinis Varavs",
-      alternateName: "Reinis Vāravs",
+      alternateName: ["Reinis Vāravs", "Reinis Roberts Vāravs"],
       url: "https://reinisvaravs.com",
       jobTitle: "AI Automation Engineer",
       description:
-        "Reinis Varavs is an AI systems engineer and full-stack developer helping businesses unlock scale through automation using Next.js, OpenAI, and modern frameworks.",
+        "AI automation engineer and full-stack developer specializing in intelligent systems, voice AI, and automation workflows.",
+      nationality: "Latvian",
+      knowsAbout: [
+        "AI Automation",
+        "Full-Stack Development",
+        "OpenAI Integration",
+        "Voice AI Systems",
+        "Make.com Automation",
+        "Next.js Development",
+        "Discord Bot Development",
+        "E-commerce Development",
+      ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "AI Automation Engineer",
+        description:
+          "Building intelligent automation systems and AI-powered applications",
+      },
+      worksFor: {
+        "@type": "Organization",
+        name: "Freelance",
+        description:
+          "Independent AI automation engineer and full-stack developer",
+      },
       sameAs: [
         "https://github.com/reinisvaravs",
         "https://www.instagram.com/reinisvaravs/",
       ],
-    },
+      image: "https://reinisvaravs.com/assets/portret.webp",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "LV",
+        addressRegion: "Latvia",
+      },
+    }),
+
+    // Additional meta tags for better SEO
+    author: "Reinis Varavs",
+    language: "en",
+    "geo.region": "LV",
+    "geo.country": "Latvia",
+    distribution: "global",
+    rating: "general",
+    "revisit-after": "7 days",
+    "google-site-verification": "", // Add your verification code if you have one
+  },
+
+  // Viewport and mobile optimization
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+
+  // Theme color for mobile browsers
+  themeColor: "#131313",
+
+  // Apple-specific meta tags
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Reinis Varavs",
+  },
+
+  // Microsoft-specific meta tags
+  msapplication: {
+    tileColor: "#131313",
+    tileImage: "/favicon.png",
   },
 };
 
