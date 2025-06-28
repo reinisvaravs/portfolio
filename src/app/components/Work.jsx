@@ -12,13 +12,14 @@ const Work = () => {
       </div>
 
       <WorkItem
-        name="AI Voice Agent"
+        name="AI Receptionist"
         bg="/assets/ai_voice_agent.png"
-        link="https://lintraai.com"
-        linkText="lintraai.com"
-        description="A voice-based AI assistant built with Retell.ai and Make.com. It can call real phone numbers, talk naturally with humans, ask questions, take notes, and book meetings. Perfect for automating lead calls or client follow-ups. Feels like a human, but runs 24/7. Integrates with tools like CRMs and calendars. Ideal for sales teams looking to scale without losing the personal touch. <i>Lintraai</i> is my business, where I build AI agents for clients. Check out the demo on the website."
+        link="https://setinbound.com"
+        linkText="setinbound.com"
+        description="SetInbound delivers a 24/7 AI-powered voice receptionist that answers and books leads in under 60 seconds. Stop losing money to missed calls or overwhelmed staff. Our AI sounds human, handles scheduling, and syncs with your CRM - no training, no burnout, no missed opportunities. Perfect for appointment-based businesses that want to convert more leads and scale without adding payroll. Try the demo on our site."
         tech={techStacks.agent}
       />
+
       <WorkItem
         name="Discord OpenAI Bot"
         bg="/assets/bot.webp"
