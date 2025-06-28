@@ -55,11 +55,11 @@ export const metadata = {
 
   // Comprehensive description for search snippets
   description:
-    "Reinis Varavs is an AI automation engineer and full-stack developer from Latvia. Specializing in AI voice systems, automation workflows, and scalable web applications.",
+    "Reinis Varavs is an AI automation engineer and full-stack developer from Latvia. Founder of SetInbound.com - AI voice receptionist platform. Specializing in AI voice systems, automation workflows, and scalable web applications.",
 
   // Keywords for search engines (still relevant for some platforms)
   keywords:
-    "Reinis Varavs, Reinis Vāravs, AI automation engineer, AI automation developer, full-stack developer, AI voice systems, automation consultant, Latvia developer, OpenAI developer, Make.com automation",
+    "Reinis Varavs, Reinis Vāravs, AI automation engineer, AI automation developer, full-stack developer, AI voice systems, automation consultant, Latvia developer, OpenAI developer, Make.com automation, SetInbound founder, AI receptionist",
 
   // Canonical URL and base configuration
   metadataBase: new URL("https://reinisvaravs.com"),
@@ -95,7 +95,7 @@ export const metadata = {
   openGraph: {
     title: "Reinis Varavs | AI Automation Engineer & Full-Stack Developer",
     description:
-      "AI automation engineer and full-stack developer from Latvia. Building intelligent systems with OpenAI, Make.com, and modern web technologies.",
+      "AI automation engineer and full-stack developer from Latvia. Founder of SetInbound.com - AI voice receptionist platform. Building intelligent systems with OpenAI, Make.com, and modern web technologies.",
     url: "https://reinisvaravs.com",
     siteName: "Reinis Varavs Portfolio",
     locale: "en_US",
@@ -122,7 +122,7 @@ export const metadata = {
       url: "https://reinisvaravs.com",
       jobTitle: "AI Automation Engineer",
       description:
-        "AI automation engineer and full-stack developer specializing in intelligent systems, voice AI, and automation workflows.",
+        "AI automation engineer and full-stack developer specializing in intelligent systems, voice AI, and automation workflows. Founder of SetInbound.com.",
       nationality: "Latvian",
       knowsAbout: [
         "AI Automation",
@@ -133,6 +133,8 @@ export const metadata = {
         "Next.js Development",
         "Discord Bot Development",
         "E-commerce Development",
+        "AI Voice Receptionists",
+        "Business Automation",
       ],
       hasOccupation: {
         "@type": "Occupation",
@@ -142,15 +144,22 @@ export const metadata = {
       },
       worksFor: {
         "@type": "Organization",
-        name: "Freelance",
+        name: "SetInbound",
+        url: "https://setinbound.com",
+        description: "AI voice receptionist platform",
+      },
+      founderOf: {
+        "@type": "Organization",
+        name: "SetInbound",
+        url: "https://setinbound.com",
         description:
-          "Independent AI automation engineer and full-stack developer",
+          "AI voice receptionist platform for appointment-based businesses",
       },
       sameAs: [
         "https://github.com/reinisvaravs",
         "https://www.instagram.com/reinisvaravs/",
+        "https://setinbound.com",
       ],
-      image: "https://reinisvaravs.com/assets/portret.webp",
       address: {
         "@type": "PostalAddress",
         addressCountry: "LV",
