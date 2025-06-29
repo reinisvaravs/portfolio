@@ -9,7 +9,8 @@ const Hero = () => {
   const heroRef = useRef(null);
 
   const themeBg = 6 > new Date().getHours();
-  console.log(new Date().getHours());
+  console.log("hour: " + new Date().getHours());
+  console.log("night? " + themeBg)
 
   useEffect(() => {
     const now = new Date();

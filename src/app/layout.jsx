@@ -178,17 +178,6 @@ export const metadata = {
     "google-site-verification": "", // Add your verification code if you have one
   },
 
-  // Viewport and mobile optimization
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-
-  // Theme color for mobile browsers
-  themeColor: "#131313",
-
   // Apple-specific meta tags
   appleWebApp: {
     capable: true,
@@ -201,6 +190,15 @@ export const metadata = {
     tileColor: "#131313",
     tileImage: "/favicon.png",
   },
+};
+
+// Viewport configuration for Next.js 15
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#131313",
 };
 
 export default function RootLayout({ children }) {
