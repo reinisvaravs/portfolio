@@ -141,14 +141,19 @@
   min-height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
-}
-
-.workWebsite {
+  background-color: black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 100%;
 }
+
+/* .workWebsite {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 100%;
+} */
 
 .fixedPopup {
   min-width: 410px;

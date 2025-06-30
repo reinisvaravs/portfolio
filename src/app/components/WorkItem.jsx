@@ -68,7 +68,7 @@ function WorkItem({ name, bg, link, linkText, description, tech }) {
     <div className="workItem">
       <div className="workImgDiv" ref={itemRef}>
         <div
-          className="workWebsite workImg"
+          className="workImg"
           style={{ backgroundImage: `url(${bg})` }}
           onClick={(e) => handleOpen(e)}
         ></div>
