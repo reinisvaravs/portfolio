@@ -6,9 +6,6 @@ const Contact = () => {
     <section className="contactsSection">
       <div className="contactsContainer">
         <h4 className="contactsHeading">contact.</h4>
-        <p className="subHeading">
-          Feel free to reach out! Text, DM or send me an email.
-        </p>
         <div className="emailDiv">
           <ContactDetail
             href="tel:+371 28816633"
