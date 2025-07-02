@@ -8,8 +8,6 @@ const Hero = () => {
   const [animatedMonth, setAnimatedMonth] = useState("jan");
   const heroRef = useRef(null);
 
-  const themeBg = 6 > new Date().getHours();
-
   useEffect(() => {
     const now = new Date();
     const date = now.getDate();
@@ -84,7 +82,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className={`bg ${themeBg ? "nightBg" : ""}`} />;
+      <div className="bg" />;
       <div className="hero">
         <div className="heroContent" ref={heroRef}>
           <div className="time">

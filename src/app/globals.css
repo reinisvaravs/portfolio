@@ -38,7 +38,7 @@ body {
 }
 
 .bg {
-  background-image: url("/assets/car.webp");
+  background-image: url("/assets/god.jpg");
   background-position: center 80%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,10 +51,6 @@ body {
   will-change: background-image;
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-.nightBg {
-  background-image: url("/assets/bm.jpg");
 }
 
 .loadingCover {
