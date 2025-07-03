@@ -107,8 +107,16 @@ const Hero = () => {
           <div className="heroAbout">
             <p>
               AI Automation Engineer from Latvia. I build smart systems with
-              code and no-code tools to streamline operations and eliminate
-              manual overhead.
+              code and no-code tools - mainly Make.com and Javascript. Founder
+              of{" "}
+              <a
+                href="https://setinbound.com"
+                target="_blank"
+                className="setinboundLink"
+              >
+                Setinbound.com,
+              </a>{" "}
+              where I offer AI receptionist creation for other businesses.
             </p>
           </div>
         </div>

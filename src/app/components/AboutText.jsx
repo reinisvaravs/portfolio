@@ -8,7 +8,7 @@ function AboutText() {
   const nameRef = useRef(null);
 
   const words =
-    `               I'm an AI automation engineer from Latvia focused on helping businesses run faster and more efficiently through smart no-code systems. Using tools like Make and OpenAI - and backed by my full-stack experience with the PERN stack (PostgreSQL, Express, React, Node.js) - I build powerful automations that eliminate manual work and boost performance.`.split(
+    `I'm an AI automation engineer from Latvia focused on helping businesses run faster and more efficiently through smart code and no-code systems. Using mainly tools like Make.com and Javascript, I build powerful automations that eliminate manual work and boost performance.`.split(
       " "
     );
 
