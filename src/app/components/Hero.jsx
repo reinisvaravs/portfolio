@@ -82,7 +82,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="bg" />;
+      <div className="bg" />
       <div className="hero">
         <div className="heroContent" ref={heroRef}>
           <div className="time">
