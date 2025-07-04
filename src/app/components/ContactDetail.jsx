@@ -50,7 +50,7 @@ export function ContactDetail({ href, detailContent, detailType }) {
   );
 }
 
-export function IconDetail({ href, icon, name }) {
+export function IconDetail({ href, icon, name, styles }) {
   const iconRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -75,7 +75,7 @@ export function IconDetail({ href, icon, name }) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img className="contactIcon" ref={iconRef} src={icon} />
+      <img className={styles} ref={iconRef} src={icon} />
       <p>{name}</p>
     </a>
   );
