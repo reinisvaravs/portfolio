@@ -6,7 +6,6 @@ import {
   Poppins,
 } from "next/font/google";
 import "./globals.css";
-import BackgroundToggle from "./components/BackgroundToggle";
 
 // Pinyon Script - Available weights: 400
 // Used in: hero.css for main title
