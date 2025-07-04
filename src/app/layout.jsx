@@ -208,7 +208,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${pinyon.variable} ${poppins.variable} ${dorsa.variable} ${bodoni.variable} ${sixCaps.variable}`}
       >
-        <BackgroundToggle />
         {children}
       </body>
     </html>
