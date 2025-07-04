@@ -13,7 +13,7 @@ const Work = () => {
 
       <WorkItem
         name="AI Receptionist"
-        bg="/images/setinbound.png"
+        bg="/images/setinbound.webp"
         link="https://setinbound.com"
         linkText="setinbound.com"
         description="SetInbound.com is a company I run with my brother. We offer AI voice agents - basically AI receptionists. The AI agent picks up every call, sounds human, and handles appointment scheduling or questions independently. You can feed it docs or websites, so it always has the answers. You can prompt what it should say and what to ask, so it can collect any details you need from callers and save them for you in a database. This is useful for any business with lots of customer calls they don't want to miss. A demo is available on my site down below - simply call the phone number."

@@ -13,7 +13,7 @@ const techIcons = {
   apify: "/icons/ui/apify.svg",
   gsap: "/icons/ui/gsap.svg",
   javascript: "/icons/ui/js.svg",
-  retell: "/icons/ui/retell.png",
+  retell: "/icons/ui/retell.webp",
   twilio: "/icons/ui/twilio.svg",
   tailwind: "/icons/ui/tailwind.svg",
 };
