@@ -28,7 +28,7 @@ const About = () => {
         <AboutText />
         <div className="portretDiv">
           <img
-            src="/assets/portret.webp"
+            src="/images/portret.webp"
             alt="Reinis photo"
             className="portret"
           />

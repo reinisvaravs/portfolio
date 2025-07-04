@@ -20,12 +20,12 @@ const Contact = () => {
           <div className="IconDetailDiv">
             <IconDetail
               href="https://www.instagram.com/reinisvaravs/"
-              icon="/assets/instagram.webp"
+              icon="/icons/social/instagram.webp"
               name="Instagram"
             />
             <IconDetail
               href="https://github.com/reinisvaravs/"
-              icon="/assets/github.svg"
+              icon="/icons/social/github.svg"
               name="Github"
             />
           </div>
