@@ -272,7 +272,7 @@ export function closePopup() {
         toggleActions: "play none none reverse",
         onUpdate: (self) => {
           gsap.to(".bg", {
-            opacity: 1 - self.progress, // fade from 1 to 0
+            opacity: 0.5 - self.progress,
             overwrite: true,
             duration: 0.2,
           });
