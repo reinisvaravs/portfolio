@@ -31,8 +31,6 @@ export const techStacks = {
   ecom: [
     { name: "JavaScript", icon: techIcons.javascript },
     { name: "React", icon: techIcons.react },
-    { name: "CSS", icon: techIcons.css },
-    { name: "GSAP", icon: techIcons.gsap },
     { name: "Node.js", icon: techIcons.node },
     { name: "Express.js", icon: techIcons.express },
     { name: "PostgreSQL", icon: techIcons.postgressql },

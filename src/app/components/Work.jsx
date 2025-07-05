@@ -36,11 +36,11 @@ const Work = () => {
         tech={techStacks.make}
       />
       <WorkItem
-        name="E-commerce Store"
+        name="E-com Backend"
         bg="/images/ecom.webp"
         link="https://frontend-ecom-r8j6.onrender.com"
         linkText="frontend-ecom-r8j6.onrender.com"
-        description="It's a full-stack e-commerce platform with secure user registration and test-mode Stripe subscriptions. No real payments are processed. The React frontend is clean and minimal for demo purposes. I just wanted to learn how to make custom e-commerce websites. The main part is the backend."
+        description="A backend-focused e-commerce site with secure user registration and test-mode Stripe subscriptions (no real payments processed). The React frontend is minimal and built for demonstration purposes. The core emphasis is on building a custom, scalable backend architecture."
         tech={techStacks.ecom}
       />
 
