@@ -135,19 +135,19 @@ export function openPopup({ img, name, link, linkText, description, tech }) {
     gsap.fromTo(
       popupContainer.querySelector(".backBtn"),
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.7, delay: 2.5 }
+      { opacity: 1, y: 0, duration: 0.7, delay: 2.2 }
     );
 
     gsap.fromTo(
       popupContainer.querySelector(".popupHeading"),
       { opacity: 0, rotate: "5deg", y: 100 },
-      { opacity: 1, rotate: 0, y: 0, duration: 1, delay: 1 }
+      { opacity: 1, rotate: 0, y: 0, duration: 0.7, delay: 0.7 }
     );
 
     gsap.fromTo(
       popupContainer.querySelector(".popupParagraph"),
       { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 1, delay: 1.2 }
+      { opacity: 1, y: 0, duration: 0.7, delay: 1.2 }
     );
 
     const popupLinks = popupContainer.querySelectorAll(".popupLink");
@@ -159,8 +159,8 @@ export function openPopup({ img, name, link, linkText, description, tech }) {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          delay: 1.5 + index * 0.2, // staggered appearance
+          duration: 0.7,
+          delay: 1.5 + index * 0.1,
         }
       );
     });
