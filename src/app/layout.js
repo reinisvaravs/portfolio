@@ -34,7 +34,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Reinis Varavs - AI Automation Engineer | Software Engineer",
+  title: "Reinis Varavs - AI Developer & Full-Stack Engineer",
   description:
     "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
   metadataBase: new URL("https://reinisvaravs.com"),
@@ -61,7 +61,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Reinis Varavs - AI Automation Engineer | Software Engineer",
+    title: "Reinis Varavs - AI Developer & Full-Stack Engineer",
     description:
       "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
     url: "https://reinisvaravs.com",
@@ -71,8 +71,8 @@ export const metadata = {
     images: [],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Reinis Varavs - AI Automation Engineer | Software Engineer",
+    card: "summary",
+    title: "Reinis Varavs - AI Developer & Full-Stack Engineer",
     description:
       "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
     images: [],
@@ -85,7 +85,7 @@ export const metadata = {
       name: "Reinis Varavs",
       alternateName: "Reinis Vāravs",
       url: "https://reinisvaravs.com",
-      jobTitle: "Software Engineer",
+      jobTitle: "AI Developer & Full-Stack Engineer",
       description:
         "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
       sameAs: [
