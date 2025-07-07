@@ -126,11 +126,20 @@ header ul li {
   }
 }
 
-@media screen and (max-width: 350px) {
-  .name {
-    font-size: 14px;
+@media screen and (max-width: 450px) {
+  .ignoreBtns {
+    display: none;
   }
-  header ul li button {
-    font-size: 14px;
+  .navBtns {
+    margin: -2px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header nav {
+    display: none;
+  }
+  .name {
+    margin-left: 5px;
   }
 }
