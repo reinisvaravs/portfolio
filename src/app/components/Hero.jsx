@@ -116,7 +116,7 @@ const Hero = () => {
               >
                 Setinbound.com,
               </a>{" "}
-              where I offer AI receptionist creation for other businesses.
+              where I offer AI call agent creation for other businesses.
             </p>
           </div>
         </div>

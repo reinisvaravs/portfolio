@@ -107,7 +107,7 @@ function Header() {
           <li>
             <button
               className="navBtns"
-              onClick={() => scrollToWork(".techGridH1")}
+              onClick={() => scrollToWork(".aboutSection")}
             >
               about
             </button>
