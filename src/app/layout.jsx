@@ -81,16 +81,6 @@ export const metadata = {
     },
   },
 
-  // Favicon and app icons
-  icons: {
-    icon: [
-      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
-    ],
-    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon.png",
-  },
-
   // Open Graph for social media sharing
   openGraph: {
     title: "Reinis Varavs | AI Automation Engineer & Full-Stack Developer",
@@ -175,7 +165,6 @@ export const metadata = {
     distribution: "global",
     rating: "general",
     "revisit-after": "7 days",
-    "google-site-verification": "", // Add your verification code if you have one
   },
 
   // Apple-specific meta tags
@@ -183,12 +172,6 @@ export const metadata = {
     capable: true,
     statusBarStyle: "default",
     title: "Reinis Varavs",
-  },
-
-  // Microsoft-specific meta tags
-  msapplication: {
-    tileColor: "#131313",
-    tileImage: "/favicon.png",
   },
 };
 
@@ -204,6 +187,23 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" translate="no">
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#002a0e" />
+      </head>
       <body
         className={`${pinyon.variable} ${poppins.variable} ${dorsa.variable} ${bodoni.variable} ${sixCaps.variable}`}
       >
