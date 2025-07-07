@@ -42,7 +42,6 @@ export const techStacks = {
     { name: "Twilio", icon: techIcons.twilio },
     { name: "Retell AI", icon: techIcons.retell },
   ],
-
   agent: [
     { name: "Twilio", icon: techIcons.twilio },
     { name: "Make", icon: techIcons.make },
@@ -50,7 +49,7 @@ export const techStacks = {
   ],
   frontend: [
     { name: "Next.js", icon: techIcons.next },
-    { name: "React", icon: techIcons.react },
+    // { name: "React", icon: techIcons.react },
     { name: "Tailwind", icon: techIcons.tailwind },
     { name: "GSAP", icon: techIcons.gsap },
   ],
