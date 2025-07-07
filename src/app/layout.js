@@ -34,10 +34,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title:
-    "Reinis Varavs - AI Automation Engineer & Full-Stack Next.js Developer",
+  title: "Reinis Varavs - AI Automation Engineer | Software Engineer",
   description:
-    "Reinis Varavs builds advanced AI automation systems and full-stack web platforms using Next.js, OpenAI, and scalable tools like Make.com. Founder, engineer, and systems builder.",
+    "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
   metadataBase: new URL("https://reinisvaravs.com"),
   alternates: {
     canonical: "/",
@@ -51,37 +50,32 @@ export const metadata = {
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+      noimageindex: true,
     },
   },
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title:
-      "Reinis Varavs - AI Automation Engineer & Full-Stack Next.js Developer",
+    title: "Reinis Varavs - AI Automation Engineer | Software Engineer",
     description:
-      "Explore the portfolio of Reinis Varavs, a systems-focused engineer building AI automations and full-stack applications using Next.js, OpenAI, and modern cloud tooling.",
+      "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
     url: "https://reinisvaravs.com",
     siteName: "Reinis Varavs Portfolio",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "https://reinisvaravs.com/preview.png", // swap image contents as needed
-        width: 1200,
-        height: 630,
-        alt: "Preview of Reinis Varavs - AI Automation Engineer & Full-Stack Developer",
-      },
-    ],
+    images: [],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Reinis Varavs - AI Automation Engineer & Full-Stack Next.js Developer",
+    title: "Reinis Varavs - AI Automation Engineer | Software Engineer",
     description:
-      "Custom AI automations and full-stack Next.js systems for modern businesses. Built with OpenAI, Make.com, Vercel, and scalable web frameworks.",
-    images: ["https://reinisvaravs.com/preview.png"],
+      "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
+    images: [],
     creator: "@reinisvaravs",
   },
   other: {
@@ -91,12 +85,12 @@ export const metadata = {
       name: "Reinis Varavs",
       alternateName: "Reinis Vāravs",
       url: "https://reinisvaravs.com",
-      jobTitle: "AI Automation Engineer",
+      jobTitle: "Software Engineer",
       description:
-        "Reinis Varavs is an AI systems engineer and full-stack developer helping businesses unlock scale through automation using Next.js, OpenAI, and modern frameworks.",
+        "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
       sameAs: [
         "https://github.com/reinisvaravs",
-        "https://www.instagram.com/reinisvaravs/",
+        "https://www.instagram.com/reinisvaravs",
       ],
     },
   },
@@ -105,6 +99,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" translate="no">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body
         className={`${pinyon.variable} ${poppins.variable} ${dorsa.variable} ${bodoni.variable} ${sixCaps.variable}`}
       >
