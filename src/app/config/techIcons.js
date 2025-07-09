@@ -28,14 +28,6 @@ export const techStacks = {
     { name: "OpenAI", icon: techIcons.openai },
     { name: "Discord.js", icon: techIcons.discord },
   ],
-  ecom: [
-    { name: "JavaScript", icon: techIcons.javascript },
-    { name: "React", icon: techIcons.react },
-    { name: "Node.js", icon: techIcons.node },
-    { name: "Express.js", icon: techIcons.express },
-    { name: "PostgreSQL", icon: techIcons.postgressql },
-    { name: "Stripe", icon: techIcons.stripe },
-  ],
   make: [
     { name: "Make", icon: techIcons.make },
     { name: "Apify", icon: techIcons.apify },

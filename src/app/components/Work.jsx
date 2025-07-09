@@ -35,14 +35,6 @@ const Work = () => {
         description="This is an automated Instagram analytics system using Make, Apify, and Airtable. The system scrapes profiles, posts, and reels daily into Airtable. Useful for marketing agencies, talent managers, and brand teams. Fully automated - no manual tracking needed. It tracks daily growth and every other aspect of the profile and posts. Sold this for 500€."
         tech={techStacks.make}
       />
-      <WorkItem
-        name="E-com Backend"
-        bg="/images/ecom.webp"
-        link="https://frontend-ecom-r8j6.onrender.com"
-        linkText="frontend-ecom-r8j6.onrender.com"
-        description="A backend-focused e-commerce site with secure user registration and test-mode Stripe subscriptions (no real payments processed). The React frontend is minimal and built for demonstration purposes. The core emphasis is on building a custom, scalable backend architecture."
-        tech={techStacks.ecom}
-      />
 
       {/* CSS limit of 6 work items */}
     </div>
