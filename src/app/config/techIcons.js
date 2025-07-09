@@ -9,7 +9,6 @@ const techIcons = {
   openai: "/icons/ui/openai.svg",
   css: "/icons/ui/css.svg",
   make: "/icons/ui/make.svg",
-  stripe: "/icons/ui/stripe.svg",
   apify: "/icons/ui/apify.svg",
   gsap: "/icons/ui/gsap.svg",
   javascript: "/icons/ui/js.svg",
@@ -41,7 +40,6 @@ export const techStacks = {
   ],
   frontend: [
     { name: "Next.js", icon: techIcons.next },
-    // { name: "React", icon: techIcons.react },
     { name: "Tailwind", icon: techIcons.tailwind },
     { name: "GSAP", icon: techIcons.gsap },
   ],
@@ -53,7 +51,6 @@ export const techStacks = {
   ],
   api: [
     { name: "OpenAI", icon: techIcons.openai },
-    { name: "Stripe", icon: techIcons.stripe },
     { name: "Discord.js", icon: techIcons.discord },
   ],
 };
