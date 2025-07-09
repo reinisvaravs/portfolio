@@ -8,6 +8,11 @@
 
 .techGridContainer {
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .techGridH1 {
@@ -189,6 +194,9 @@
   }
   .aboutSection {
     margin-top: -100px;
+  }
+  .techGroup {
+    width: 100%;
   }
 }
 

@@ -48,9 +48,11 @@ export const techStacks = {
     { name: "Node.js", icon: techIcons.node },
     { name: "Express.js", icon: techIcons.express },
     { name: "PostgreSQL", icon: techIcons.postgressql },
-  ],
-  api: [
     { name: "OpenAI", icon: techIcons.openai },
-    { name: "Discord.js", icon: techIcons.discord },
+  ],
+  // api: [{ name: "OpenAI", icon: techIcons.openai }],
+  noCode: [
+    { name: "Make", icon: techIcons.make },
+    { name: "Retell AI", icon: techIcons.retell },
   ],
 };

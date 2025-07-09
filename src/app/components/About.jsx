@@ -12,17 +12,17 @@ const About = () => {
           <Tech category="frontend" />
         </div>
         <div className="techGroup">
+          <h2 className="techGridH2">No-code</h2>
+          <Tech category="noCode" />
+        </div>
+        <div className="techGroup">
           <h2 className="techGridH2">Backend</h2>
           <Tech category="backend" />
         </div>
-        <div className="techGroup">
-          <h2 className="techGridH2">APIs & Integrations</h2>
+        {/* <div className="techGroup">
+          <h2 className="techGridH2">APIs</h2>
           <Tech category="api" />
-        </div>
-        <div className="techGroup">
-          <h2 className="techGridH2">No-code</h2>
-          <Tech category="make" />
-        </div>
+        </div> */}
       </div>
       <div className="aboutSection">
         <AboutText />
