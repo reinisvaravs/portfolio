@@ -7,10 +7,10 @@ function AboutText() {
   const headingRef = useRef(null);
   const nameRef = useRef(null);
 
-  const words =
-    `I'm an AI developer and full-stack engineer from Latvia, focused on helping businesses run faster and more efficiently through smart code and no-code systems. Using mainly tools like Make.com and JavaScript, and currently, working on AI call agents at my company, Setinbound.com.`.split(
-      " "
-    );
+  const aboutText =
+    "I like programming and integrating AI into my work. Currently, I mainly use JavaScript and n8n. I program chatbots, AI agents, and automation systems. Founder of Setinbound.com, where I offer AI chatbot and AI call agent creation for other businesses.";
+
+  const words = aboutText.split(" ");
 
   useEffect(() => {
     const el = headingRef.current;

@@ -92,7 +92,7 @@ function Header() {
       </div>
       <div className="name">
         <p>Reinis Varavs</p>
-        <p className="headerProf">AI Automation Engineer</p>
+        <p className="headerProf">Software Engineer</p>
       </div>
       <nav>
         <ul>
@@ -107,12 +107,12 @@ function Header() {
           <li>
             <button
               className="navBtns"
-              onClick={() => scrollToWork(".aboutSection")}
+              onClick={() => scrollToWork(".techGridH1")}
             >
               about
             </button>
           </li>
-          <li>
+          {/* <li>
             <button className="navBtns ignoreBtns">|</button>
           </li>
           <li>
@@ -122,7 +122,7 @@ function Header() {
             >
               contact
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

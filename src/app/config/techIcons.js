@@ -15,6 +15,8 @@ const techIcons = {
   retell: "/icons/ui/retell.webp",
   twilio: "/icons/ui/twilio.svg",
   tailwind: "/icons/ui/tailwind.svg",
+  n8n: "/icons/ui/n8n.svg",
+  meta: "/icons/ui/meta.svg",
 };
 
 // Tech stack configurations
@@ -24,8 +26,14 @@ export const techStacks = {
     { name: "Node.js", icon: techIcons.node },
     { name: "Express.js", icon: techIcons.express },
     { name: "PostgreSQL", icon: techIcons.postgressql },
-    { name: "OpenAI", icon: techIcons.openai },
+    { name: "OpenAI API", icon: techIcons.openai },
     { name: "Discord.js", icon: techIcons.discord },
+  ],
+  chatbot: [
+    { name: "n8n", icon: techIcons.n8n },
+    { name: "JavaScript", icon: techIcons.javascript },
+    { name: "Graph API", icon: techIcons.meta },
+    { name: "OpenAI API", icon: techIcons.openai },
   ],
   make: [
     { name: "Make", icon: techIcons.make },
@@ -41,18 +49,10 @@ export const techStacks = {
   frontend: [
     { name: "Next.js", icon: techIcons.next },
     { name: "Tailwind", icon: techIcons.tailwind },
-    { name: "GSAP", icon: techIcons.gsap },
   ],
   backend: [
     { name: "Javascript", icon: techIcons.javascript },
-    { name: "Node.js", icon: techIcons.node },
-    { name: "Express.js", icon: techIcons.express },
-    { name: "PostgreSQL", icon: techIcons.postgressql },
-    { name: "OpenAI", icon: techIcons.openai },
-  ],
-  // api: [{ name: "OpenAI", icon: techIcons.openai }],
-  noCode: [
-    { name: "Make", icon: techIcons.make },
-    { name: "Retell AI", icon: techIcons.retell },
+    { name: "n8n", icon: techIcons.n8n },
+    { name: "Graph API", icon: techIcons.meta },
   ],
 };

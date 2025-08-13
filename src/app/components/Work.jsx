@@ -8,15 +8,22 @@ const Work = () => {
     <div className="work">
       <div className="selectedCasesDiv">
         <CgWebsite className="workIcon" />
-        <h1 className="selectedCases">Selected Cases</h1>
+        <h1 className="selectedCases">Latest Projects</h1>
       </div>
-
       <WorkItem
-        name="AI Receptionist"
+        name="AI WhatsApp Chatbot"
         bg="/images/setinbound.webp"
-        link="https://setinbound.com"
-        linkText="setinbound.com"
-        description="SetInbound.com is a company I run with my brother. We offer AI voice agents - basically AI receptionists. The AI agent picks up every call, sounds human, and handles appointment scheduling or questions independently. You can feed it docs or websites, so it always has the answers. You can prompt what it should say and what to ask, so it can collect any details you need from callers and save them for you in a database. This is useful for any business with lots of customer calls they don't want to miss. A demo is available on my site down below - simply call the phone number."
+        link=""
+        linkText="No documentation"
+        description="The AI WhatsApp chabot responds to every message within 10s, sounds human, and handles appointment scheduling or questions independently. You can feed it docs, so it always has the answers by searching the docs using SQL queries or RAG. You can prompt what it should say and what to ask, so it can collect any details you need from leads and save them for you in a CRM, and then also book appointments directly into your calendar. This is useful for any business with lots of leads they don't want to miss or want to respond to instantly after the lead comes in from an ad. It also supports audio messages."
+        tech={techStacks.chatbot}
+      />
+      <WorkItem
+        name="AI Voice Call Agent"
+        bg="/images/setinbound.webp"
+        link=""
+        linkText="No documentation"
+        description="The AI agent picks up every call, sounds human, and handles appointment scheduling or questions independently. You can feed it docs or websites, so it always has the answers. You can prompt what it should say and what to ask, so it can collect any details you need from callers and save them for you in a CRM, and then also book appointments directly into your calendar. This is useful for any business with lots of customer calls they don't want to miss."
         tech={techStacks.agent}
       />
       <WorkItem
@@ -35,7 +42,6 @@ const Work = () => {
         description="This is an automated Instagram analytics system using Make, Apify, and Airtable. The system scrapes profiles, posts, and reels daily into Airtable. Useful for marketing agencies, talent managers, and brand teams. Fully automated - no manual tracking needed. It tracks daily growth and every other aspect of the profile and posts. Sold this for 500€."
         tech={techStacks.make}
       />
-
       {/* CSS limit of 6 work items */}
     </div>
   );

@@ -95,28 +95,20 @@ const Hero = () => {
               <p>for work</p>
             </div>
           </div>
-          <div className="fullStack">
+          {/* <div className="fullStack">
             <p>AI</p>
-          </div>
+          </div> */}
           <div className="software">
-            <h1 className="heroAnim">AUTOMATION</h1>
+            <h1 className="heroAnim">SOFTWARE</h1>
           </div>
           <div className="developer">
             <h1 className="heroAnim">ENGINEER</h1>
           </div>
           <div className="heroAbout">
             <p>
-              AI Automation Engineer from Latvia. I build smart systems with
-              code and no-code tools - mainly Make.com and Javascript. Founder
-              of{" "}
-              <a
-                href="https://setinbound.com"
-                target="_blank"
-                className="setinboundLink"
-              >
-                Setinbound.com,
-              </a>{" "}
-              where I offer AI call agent creation for other businesses.
+              I like programming and integrating AI into my work. Currently, I
+              mainly use JavaScript and n8n. I program chatbots, AI agents, and
+              automation systems.
             </p>
           </div>
         </div>

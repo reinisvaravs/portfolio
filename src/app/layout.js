@@ -34,9 +34,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Reinis Varavs - AI Developer & Full-Stack Engineer",
+  title: "Reinis Varavs - Software Engineer",
   description:
-    "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
+    "I like programming and integrating AI into my work. Currently, I mainly use JavaScript and n8n. I program chatbots, AI agents, and automation systems.",
   metadataBase: new URL("https://reinisvaravs.com"),
   alternates: {
     canonical: "/",
@@ -61,9 +61,9 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Reinis Varavs - AI Developer & Full-Stack Engineer",
+    title: "Reinis Varavs - Software Engineer",
     description:
-      "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
+      "I like programming and integrating AI into my work. Currently, I mainly use JavaScript and n8n. I program chatbots, AI agents, and automation systems.",
     url: "https://reinisvaravs.com",
     siteName: "Reinis Varavs Portfolio",
     locale: "en_US",
@@ -72,9 +72,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Reinis Varavs - AI Developer & Full-Stack Engineer",
+    title: "Reinis Varavs - Software Engineer",
     description:
-      "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
+      "I like programming and integrating AI into my work. Currently, I mainly use JavaScript and n8n. I program chatbots, AI agents, and automation systems.",
     images: [],
     creator: "@reinisvaravs",
   },
@@ -85,9 +85,9 @@ export const metadata = {
       name: "Reinis Varavs",
       alternateName: "Reinis Vāravs",
       url: "https://reinisvaravs.com",
-      jobTitle: "AI Developer & Full-Stack Engineer",
+      jobTitle: "Software Engineer",
       description:
-        "AI Automation Engineer from Latvia building smart systems with code and no-code tools. Founder of Setinbound.com, specializing in Make.com, JavaScript, and AI call agents for businesses.",
+        "I like programming and integrating AI into my work. Currently, I mainly use JavaScript and n8n. I program chatbots, AI agents, and automation systems.",
       sameAs: [
         "https://github.com/reinisvaravs",
         "https://www.instagram.com/reinisvaravs",
